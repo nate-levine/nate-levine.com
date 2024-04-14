@@ -1,19 +1,19 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
 import NavigationBar from './navigationBar'
+import Credits from './credits'
 
 const Layout = ({ children }) => {
 
     return (
-        <div class="bg-[#fbf1c7]">
+        <div>
             <header class="bg-[#ebdbb2] py-3">
                 <NavigationBar />
             </header>
-            <main>
+            <main class="bg-[#fbf1c7]">
                 {children}
             </main>
             <footer>
-                <p>Nate Levine</p>
+                <Credits />
             </footer>
         </div>
     )
