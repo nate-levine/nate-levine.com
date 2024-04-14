@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 const IndexPage = () => {
   return (
     <Layout>
-      <h1>Nate Levine</h1>
+      <h1 class="h-[100vh] text-6xl">Nate Levine</h1>
     </Layout>
   )
 }

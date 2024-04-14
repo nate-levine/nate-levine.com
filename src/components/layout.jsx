@@ -1,15 +1,14 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+import NavigationBar from './navigationBar'
 
 const Layout = ({ children }) => {
+
     return (
-        <div>
-            <nav>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/blog">Blog</Link></li>
-                </ul>
-            </nav>
+        <div class="bg-[#fbf1c7]">
+            <header class="bg-[#ebdbb2] py-3">
+                <NavigationBar />
+            </header>
             <main>
                 {children}
             </main>
