@@ -6,9 +6,9 @@ const NavigationBar = () => {
     const toggleMenu = (e) => {
         const navigationLinks = document.querySelector('.navigation-links')
 
-        navigationLinks.classList.toggle('left-[-100%]')       
+        navigationLinks.classList.toggle('left-[-100%]')
     }
-    
+
     return (
         <nav class="flex justify-between items-center w-[92%] mx-auto">
             <div class="hover:text-gray-500 font-bold">
