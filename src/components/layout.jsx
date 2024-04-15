@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
 
     return (
         <div>
-            <header class="bg-[#ebdbb2] py-3">
+            <header class="bg-[#fbf1c7] py-3">
                 <NavigationBar />
             </header>
             <main class="bg-[#fbf1c7]">

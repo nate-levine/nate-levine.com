@@ -4,9 +4,11 @@ import Layout from '../components/layout'
 const IndexPage = () => {
   return (
     <Layout>
-      <h1 class="h-[100vh] text-6xl">Nate Levine</h1>
+      <div>
+        <h1 class="h-[100vh] text-black text-6xl font-geist font-bold text-[25vw] leading-[19vw] text-right py-20">Nate Levine</h1>
+      </div>
     </Layout>
-  )
+  ) 
 }
 
 
