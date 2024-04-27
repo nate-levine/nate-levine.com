@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Layout from '../components/layout'
+import BlogView from '../components/blogView'
 
 const IndexPage = () => {
 
@@ -15,6 +16,7 @@ const IndexPage = () => {
           <div class="duration-1000 w-[20%] h-[100px] bg-[#83a598]"></div>
           <div class="duration-1000 w-[20%] h-[100px] bg-[#d3869b]"></div>
         </div>
+        <BlogView />
       </div>
     </Layout>
   )
