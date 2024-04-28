@@ -45,7 +45,7 @@ const IndexPage = () => {
           </div>
           <div class="py-20 flex-1">
             <div class="w-[80%] mx-auto">
-              <BlogView cols_md={2} cols_lg={2} />
+              <BlogView />
             </div>
           </div>
         </div>
