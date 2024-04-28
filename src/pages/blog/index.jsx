@@ -8,7 +8,7 @@ const BlogPage = () => {
     <Layout>
       <div class="h-auto min-h-[100vh]">
         <h1 class="text-black text-center text-6xl font-geist font-bold py-20">Blog Posts</h1>
-        <BlogView />
+        <BlogView cols_md={2} cols_lg={3} />
       </div>
     </Layout>
   )

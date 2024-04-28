@@ -9,14 +9,46 @@ const IndexPage = () => {
     <Layout>
       <div class="h-auto min-h-[100vh]">
         <h1 class="text-right text-black text-6xl font-geist font-bold text-[25vw] leading-[19vw] pt-20">Nate Levine</h1>
-        <div class="flex flex-row pb-20">
-          <div class="duration-1000 w-[20%] h-[100px] bg-[#fb4934]"></div>
-          <div class="duration-1000 w-[20%] h-[100px] bg-[#b8bb26]"></div>
-          <div class="duration-1000 w-[20%] h-[100px] bg-[#fabd2f]"></div>
-          <div class="duration-1000 w-[20%] h-[100px] bg-[#83a598]"></div>
-          <div class="duration-1000 w-[20%] h-[100px] bg-[#d3869b]"></div>
+        <div class="flex flex-col lg:flex-row font-geist border-solid border-t-2 border-b-2 border-black">
+          <div class="pt-20 flex-1 border-solid lg:border-r-2 border-black text-xl">
+            <div class="w-[80%] mx-auto leading-8">
+              <h1 class="font-bold text-4xl">What's up?</h1>
+              <br />
+              <p>
+                I'm Nate, a senior at Worcester Polytechnic Institute (WPI). I'm currently pursuing a 
+                Bachelors in mechanical engineering and a minor in computer science.
+              </p>
+              <br />
+              <p>
+                This site is where I share my ideas, interests, and thoughts on topics ranging from
+                software development, to productivity, to food science.
+              </p>
+              <br />
+              <p>
+                I'd recommend you get started by reading one of the featured articles on this page. If
+                you don't have time right now, I'd suggest signing up for my newsletter, where I send
+                out a weekly article about something interesting.
+              </p>
+              <br />
+              <p>
+                For any inquiries please contact me at <a href="mailto:n8levine11@gmail.com" class="underline">n8levine11@gmail.com</a>
+              </p>
+              <br />
+              <p>
+                Other links:
+              </p>
+              <ul class="list-disc list-inside">
+                <li><a href="https://github.com/nate-levine" class="underline">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/nate-levine-/" class="underline">LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="py-20 flex-1">
+            <div class="w-[80%] mx-auto">
+              <BlogView cols_md={2} cols_lg={2} />
+            </div>
+          </div>
         </div>
-        <BlogView />
       </div>
     </Layout>
   )
