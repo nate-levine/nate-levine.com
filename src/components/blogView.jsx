@@ -27,7 +27,7 @@ const BlogView = () => {
             <article key={node.id}>
                 <h2 class="h-full">
                 <Link to={`/blog/${node.frontmatter.slug}`}>
-                    <div class="h-full group font-geist font-bold text-xl p-3 shadow-[2px_2px_0_rgba(0,0,0,1)] border-solid border-2 border-black rounded-2xl hover:bg-black duration-100">
+                    <div class="h-full group font-geist font-bold text-xl p-3 shadow-[8px_8px_0_rgba(0,0,0,1)] border-solid border-2 border-black hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] rounded-2xl hover:bg-black duration-100">
                     <div class="flex flex-col h-full group-hover:text-[#fbf1c7]">
                         <div class="flex-auto">{node.frontmatter.title}</div>
                         <div class="h-2" />
