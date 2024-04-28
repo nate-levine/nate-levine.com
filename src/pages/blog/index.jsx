@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/layout'
-import BlogView from "../../components/blogView"
+import BlogView from '../../components/blogView'
 
 const BlogPage = () => {
   return (
