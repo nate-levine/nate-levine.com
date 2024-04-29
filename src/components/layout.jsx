@@ -6,10 +6,10 @@ const Layout = ({ children }) => {
 
     return (
         <div>
-            <header class="bg-[#fbf1c7] py-5">
+            <header class="bg-primary py-5">
                 <NavigationBar />
             </header>
-            <main class="bg-[#fbf1c7]">
+            <main class="bg-primary">
                 {children}
             </main>
             <footer>

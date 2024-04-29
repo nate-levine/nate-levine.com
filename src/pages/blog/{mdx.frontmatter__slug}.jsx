@@ -6,9 +6,9 @@ const BlogPost = ({ data, children }) => {
   return (
     <Layout>
       <div class="h-auto min-h-[100vh]">
-        <h1 class="text-black text-center text-[7vw] font-geist font-bold pt-20">{data.mdx.frontmatter.title}</h1>
-        <h2 class="text-black text-center text-[2vw] font-geist font-regular pb-20">{data.mdx.frontmatter.date}</h2>
-        <div class="text-black text-xl text-left font-geist font-regular w-[75%] mx-auto pb-10">
+        <h1 class="text-black text-center text-6xl font-sans font-bold pt-20 pb-10">{data.mdx.frontmatter.title}</h1>
+        <h2 class="text-black text-center text-4xl font-sans font-regular pb-20">{data.mdx.frontmatter.date}</h2>
+        <div class="text-black text-xl text-left font-serif w-[50%] mx-auto pb-10 leading-relaxed">
           {children}
         </div>
       </div>

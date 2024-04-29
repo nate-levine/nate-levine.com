@@ -26,5 +26,37 @@ export const onRenderBody = ({ setHeadComponents }) => {
       type="font/woff2"
       crossOrigin="anonymous"
     />,
+    <link
+      key="EBGaramondRegular"
+      rel="preload"
+      href="/fonts/EB-Garamond/eb-garamond-v27-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+    />,
+    <link
+      key="EBGaramondItalic"
+      rel="preload"
+      href="/fonts/EB-Garamond/eb-garamond-v27-latin-italic.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+    />,
+    <link
+      key="EBGaramondBold"
+      rel="preload"
+      href="/fonts/EB-Garamond/eb-garamond-v27-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+    />,
+    <link
+      key="EBGaramondItalicBold"
+      rel="preload"
+      href="/fonts/EB-Garamond/eb-garamond-v27-latin-700italic.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+    />,
   ])
 }

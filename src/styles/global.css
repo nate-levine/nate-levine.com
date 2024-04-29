@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Geist */
+/* geist-italic */
 @font-face {
     font-family: 'Geist Sans';
     font-style: normal;
@@ -9,6 +11,7 @@
     font-display: swap;
     src: url(/fonts/Geist/Geist-Light.woff2) format('woff2');
 }
+/* geist-regular */
 @font-face {
     font-family: 'Geist Sans';
     font-style: normal;
@@ -16,6 +19,7 @@
     font-display: swap;
     src: url(/fonts/Geist/Geist-Regular.woff2) format('woff2');
 }
+/* geist-bold */
 @font-face {
     font-family: 'Geist Sans';
     font-style: normal;
@@ -23,3 +27,37 @@
     font-display: swap;
     src: url(/fonts/Geist/Geist-Bold.woff2) format('woff2');
 }
+
+/* EB Garamond */
+/* eb-garamond-regular - latin */
+@font-face {
+    font-family: 'EB Garamond';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    src: url(/fonts/EB-Garamond/eb-garamond-v27-latin-regular.woff2) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* eb-garamond-italic - latin */
+  @font-face {
+    font-family: 'EB Garamond';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    src: url(/fonts/EB-Garamond/eb-garamond-v27-latin-italic.woff2) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* eb-garamond-700 - latin */
+  @font-face {
+    font-family: 'EB Garamond';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    src: url(/fonts/EB-Garamond/eb-garamond-v27-latin-700.woff2) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* eb-garamond-700italic - latin */
+  @font-face {
+    font-family: 'EB Garamond';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    src: url(/fonts/EB-Garamond/eb-garamond-v27-latin-700italic.woff2) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }

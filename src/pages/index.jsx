@@ -8,8 +8,8 @@ const IndexPage = () => {
   return (
     <Layout>
       <div class="h-auto min-h-[100vh]">
-        <h1 class="text-right text-black text-6xl font-geist font-bold text-[25vw] leading-[19vw] pt-20">Nate Levine</h1>
-        <div class="flex flex-col lg:flex-row font-geist border-solid border-t-2 border-b-2 border-black">
+        <h1 class="text-right text-black text-6xl font-serif font-bold text-[25vw] leading-[19vw] pt-20">Nate Levine</h1>
+        <div class="font-sans flex flex-col lg:flex-row border-solid border-t-2 border-b-2 border-black">
           <div class="py-20 flex-1 border-solid border-b-2 lg:border-b-0 lg:border-r-2 border-black text-xl">
             <div class="w-[80%] mx-auto leading-8">
               <h1 class="font-bold text-4xl">What's up?</h1>
