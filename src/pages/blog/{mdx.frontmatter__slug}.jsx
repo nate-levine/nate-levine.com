@@ -2,6 +2,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../../components/layout'
 import BlogView  from '../../components/blogView'
+import BlogTags from '../../components/blogTags'
 
 const BlogPost = ({ data, children }) => {
   return (
@@ -12,11 +13,7 @@ const BlogPost = ({ data, children }) => {
           <div class="h-8" />
           <h2 class="text-black max-text-2xl font-sans font-regular">{data.mdx.frontmatter.date}</h2>
           <div class="h-8" />
-          <div class="h-flex flex flex-row flex-wrap gap-x-2 gap-y-2 text-sm">
-              <p class="bg-red rounded-full px-3 py-1">Software</p>
-              <p class="bg-green rounded-full px-3 py-1">Productivity</p>
-              <p class="bg-yellow rounded-full px-3 py-1">Review</p>
-          </div>
+          <BlogTags tags={data.mdx.frontmatter.tags} />
           <div class="h-8 border-dashed border-black border-b-2" />
         </div>
         <div class="text-black text-xl text-left font-serif mx-auto pb-10 leading-relaxed">
@@ -40,6 +37,7 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM Do, YYYY")
+        tags
       }
     }
   }
