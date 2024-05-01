@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 
-const BlogView = ({ grid_config }) => {
+const BlogView = ({ grid_config, num_articles }) => {
 
     // Because the graphQL layer is used in a component and not a page, useStaticQuery is necessary
     const data = useStaticQuery(graphql`
@@ -23,7 +23,7 @@ const BlogView = ({ grid_config }) => {
     return (
         <div class={grid_config}>
         {
-            data.allMdx.nodes.map(node => (
+            data.allMdx.nodes.slice(0, num_articles).map(node => (
             <article key={node.id}>
                 <h2 class="h-full">
                 <Link to={`/blog/${node.frontmatter.slug}`}>

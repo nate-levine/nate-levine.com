@@ -1,15 +1,33 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import Layout from "../../components/layout"
+import Layout from '../../components/layout'
+import BlogView  from '../../components/blogView'
 
 const BlogPost = ({ data, children }) => {
   return (
     <Layout>
-      <div class="h-auto min-h-[100vh]">
-        <h1 class="text-black text-center text-6xl font-sans font-bold pt-20 pb-10">{data.mdx.frontmatter.title}</h1>
-        <h2 class="text-black text-center text-4xl font-sans font-regular pb-20">{data.mdx.frontmatter.date}</h2>
-        <div class="text-black text-xl text-left font-serif w-[50%] mx-auto pb-10 leading-relaxed">
+      <div class="h-auto min-h-[100vh] max-w-[85%] sm:w-[640px] mx-auto">
+        <div class="pt-20">
+          <h1 class="text-black text-2xl lg:text-4xl font-sans font-bold">{data.mdx.frontmatter.title}</h1>
+          <div class="h-8" />
+          <h2 class="text-black max-text-2xl font-sans font-regular">{data.mdx.frontmatter.date}</h2>
+          <div class="h-8" />
+          <div class="h-flex flex flex-row flex-wrap gap-x-2 gap-y-2 text-sm">
+              <p class="bg-red rounded-full px-3 py-1">Software</p>
+              <p class="bg-green rounded-full px-3 py-1">Productivity</p>
+              <p class="bg-yellow rounded-full px-3 py-1">Review</p>
+          </div>
+          <div class="h-8 border-dashed border-black border-b-2" />
+        </div>
+        <div class="text-black text-xl text-left font-serif mx-auto pb-10 leading-relaxed">
           {children}
+        </div>
+      </div>
+      <div class="border-solid border-black border-b-2" />
+      <div class="h-fit"> 
+        <div class="py-20 max-w-[75vw] mx-auto">
+          <h1 class="font-bold text-4xl pb-10">Related Articles</h1>
+          <BlogView grid_config={"grid md:grid-cols-1 lg:grid-cols-3 gap-6"} num_articles={3} />
         </div>
       </div>
     </Layout>
@@ -21,7 +39,7 @@ export const query = graphql`
     mdx(id: {eq: $id}) {
       frontmatter {
         title
-        date(formatString: "MM.DD.YY")
+        date(formatString: "MMMM Do, YYYY")
       }
     }
   }
