@@ -4,7 +4,6 @@ import BlogView from '../components/blogView'
 
 const IndexPage = () => {
 
-
   return (
     <Layout>
       <div class="h-auto min-h-[100vh]">

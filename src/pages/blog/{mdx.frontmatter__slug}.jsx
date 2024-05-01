@@ -13,7 +13,7 @@ const BlogPost = ({ data, children }) => {
           <div class="h-8" />
           <h2 class="text-black max-text-2xl font-sans font-regular">{data.mdx.frontmatter.date}</h2>
           <div class="h-8" />
-          <BlogTags tags={data.mdx.frontmatter.tags} />
+          <BlogTags tags={data.mdx.frontmatter.tags} isFeatured={data.mdx.frontmatter.isFeatured} />
           <div class="h-8 border-dashed border-black border-b-2" />
         </div>
         <div class="text-black text-xl text-left font-serif mx-auto pb-10 leading-relaxed">
@@ -38,6 +38,7 @@ export const query = graphql`
         title
         date(formatString: "MMMM Do, YYYY")
         tags
+        isFeatured
       }
     }
   }

@@ -14,6 +14,7 @@ const BlogView = ({ grid_config, num_articles }) => {
                         title
                         slug
                         tags
+                        isFeatured
                     }
                     id
                     excerpt
@@ -34,7 +35,7 @@ const BlogView = ({ grid_config, num_articles }) => {
                         <div class="flex-auto">
                             <div class="font-bold">{node.frontmatter.title}</div>
                             <div class="h-2" />
-                            <BlogTags tags={node.frontmatter.tags} />
+                            <BlogTags tags={node.frontmatter.tags} isFeatured={node.frontmatter.isFeatured} />
                         </div>
                         <div class="h-2" />
                         <div class="h-flex text-right font-bold">{node.frontmatter.date}</div>
