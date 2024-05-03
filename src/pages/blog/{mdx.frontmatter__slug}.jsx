@@ -11,69 +11,8 @@ const BlogPost = ({ data, children }) => {
 
     It needs to be more streamlined, and also suggest better imo
   */
-  const related = (nodes) => {
-    let related_tag_count = []
-
-    /*
-      Count how many tags from each article are shared by the current article
-    */
-    for (var i = 0; i < nodes.length; i++) {
-      const node = nodes[i];
-
-      // Disregard the current article
-      if (node.frontmatter.title == data.mdx.frontmatter.title){
-        related_tag_count[i] = -1
-      // If not the current article, count how many tags it shares with the current one
-      } else {
-        related_tag_count[i] = 0;
-
-        for (var j = 0; j < node.frontmatter.tags.length; j++) {
-          let tag = node.frontmatter.tags[j];
-
-          if (data.mdx.frontmatter.tags.includes(tag)) {
-            related_tag_count[i]++;
-          }
-        }
-      }
-    }
-
-
-    /*
-      Select three article indices with the most related tags
-    */
-   console.log(related_tag_count)
-    let top_related = [];
-    for (var i = 0; i < 3; i++) {
-      let max_index = 0;
-
-      // If the starting index is already in the top related index, increment it
-      if (top_related.includes(max_index)) {
-        max_index++;
-      }
-      
-      for (let j = 0; j < related_tag_count.length; j++) {
-        if (related_tag_count[j] > related_tag_count[max_index]) {
-          // If the index is not already in the top related index list
-          if (!top_related.includes(j)) {
-            max_index = j
-          }
-        }
-      }
-
-      // Add the index to the top related index list
-      top_related.push(max_index);
-    }
-
-    
-    /*
-      Return the three articles with the most related tags
-    */
-    let top_related_articles = []
-    for (var i = 0; i < 3; i++) {
-      top_related_articles.push(nodes[top_related[i]]);
-    }
-    console.log(top_related)
-    return top_related_articles;
+  const firstThree = (nodes) => {
+    return nodes.slice(0, 3)
   }
 
   return (
@@ -95,7 +34,7 @@ const BlogPost = ({ data, children }) => {
       <div class="h-fit"> 
         <div class="py-20 max-w-[75vw] mx-auto">
           <h1 class="font-bold text-4xl pb-10">Related Articles</h1>
-          <BlogView grid_config={"grid md:grid-cols-1 lg:grid-cols-3 gap-6"} func={related} />
+          <BlogView grid_config={"grid md:grid-cols-1 lg:grid-cols-3 gap-6"} filter={firstThree} />
         </div>
       </div>
     </Layout>

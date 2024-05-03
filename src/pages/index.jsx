@@ -48,7 +48,7 @@ const IndexPage = () => {
           </div>
           <div class="py-20 flex-1">
             <div class="w-[80%] mx-auto">
-              <BlogView grid_config={"grid md:grid-cols-2 lg:grid-cols-2 gap-6"} func={isFeatured} />
+              <BlogView grid_config={"grid md:grid-cols-2 lg:grid-cols-2 gap-6"} filter={isFeatured} />
             </div>
           </div>
         </div>
