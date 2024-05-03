@@ -4,6 +4,7 @@ import Layout from '../../components/layout'
 import BlogView from '../../components/blogView'
 
 const BlogPage = () => {
+
   return (
     <Layout>
       <div class="h-auto min-h-[100vh] max-w-[75vw] mx-auto py-20">

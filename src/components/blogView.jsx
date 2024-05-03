@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import BlogTags from './blogTags'
 
-const BlogView = ({ grid_config, num_articles }) => {
+const BlogView = ({ grid_config, func }) => {
 
     // Because the graphQL layer is used in a component and not a page, useStaticQuery is necessary
     const data = useStaticQuery(graphql`
@@ -23,10 +23,15 @@ const BlogView = ({ grid_config, num_articles }) => {
         }
     `)
 
+    // If no first class function is passed as a prop, default them to do nothing
+    if (!func) {
+        func = (nodes) => {return nodes}
+    }
+
     return (
         <div class={grid_config}>
         {
-            data.allMdx.nodes.slice(0, num_articles).map(node => (
+            func(data.allMdx.nodes).map(node => (
             <article key={node.id}>
                 <h2 class="h-full">
                 <Link to={`/blog/${node.frontmatter.slug}`}>
