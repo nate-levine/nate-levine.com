@@ -1,9 +1,9 @@
 import * as React from 'react'
 
 const BlogTags = ({ tags, isFeatured }) => {
-    const colors = ['red', 'green', 'yellow', 'blue', 'purple']
 
-    function getColor(index) {
+    const colors = ['red', 'green', 'yellow', 'blue', 'purple']
+    const getColor = (index) => {
         // Colors cycle through color list
         return colors[index % colors.length]
     }

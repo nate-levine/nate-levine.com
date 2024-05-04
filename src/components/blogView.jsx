@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import BlogTags from './blogTags'
 
-const BlogView = ({ grid_config, filter }) => {
+const BlogView = ({ grid_config, filterFunc }) => {
 
     // Because the graphQL layer is used in a component and not a page, useStaticQuery is necessary
     const data = useStaticQuery(graphql`
@@ -23,6 +23,14 @@ const BlogView = ({ grid_config, filter }) => {
         }
     `)
 
+    // Get a list of all the tags from all the articles
+    let all_tags = []
+    data.allMdx.nodes.forEach(node => (
+        node.frontmatter.tags.forEach(tag => {
+            if (!all_tags.includes(tag)) { all_tags.push(tag) }
+        })
+    ))
+
     /*
         It is not possible to filter data in this component's GraphQL query using variables,
         given that it is static. It also may be less performant since it could require more
@@ -33,14 +41,14 @@ const BlogView = ({ grid_config, filter }) => {
         first-class filter functions to be passed to this component.
     */
     // If no first-class function is passed as a prop, default the filter to do nothing
-    if (!filter) {
-        filter = (nodes) => { return nodes }
+    if (!filterFunc) {
+        filterFunc = (nodes) => { return nodes }
     }
 
     return (
         <div class={grid_config}>
         {
-            filter(data.allMdx.nodes).map(node => (
+            filterFunc(data.allMdx.nodes).map(node => (
             <article key={node.id}>
                 <h2 class="h-full">
                 <Link to={`/blog/${node.frontmatter.slug}`}>

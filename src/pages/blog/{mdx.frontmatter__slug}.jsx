@@ -6,11 +6,6 @@ import BlogTags from '../../components/blogTags'
 
 const BlogPost = ({ data, children }) => {
 
-  /*
-    I'm not happy with this algorithm, but it works for right now
-
-    It needs to be more streamlined, and also suggest better imo
-  */
   const firstThree = (nodes) => {
     return nodes.slice(0, 3)
   }
