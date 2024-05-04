@@ -2,9 +2,9 @@ import * as React from 'react'
 import { useState } from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../../components/layout'
-import BlogView from '../../components/blogView'
+import ArticleView from '../../components/articleView'
 
-const BlogPage = ({ data }) => {
+const ArticlePage = ({ data }) => {
   const [selectedTags, setSelectedTags] = useState([])
 
   let all_tags = []
@@ -30,7 +30,7 @@ const BlogPage = ({ data }) => {
   return (
     <Layout>
       <div class="h-auto min-h-[100vh] max-w-[75vw] mx-auto py-20">
-        <h1 class="text-center text-6xl font-serif font-bold pb-10">Blog Posts</h1>
+        <h1 class="text-center text-6xl font-serif font-bold pb-10">Explore Articles</h1>
         <div class="group flex flex-row flex-wrap gap-x-2 gap-y-2 font-sans font-regular text-sm">
           {
               // Enumerate over each tag
@@ -75,7 +75,7 @@ const BlogPage = ({ data }) => {
           }
         </div>
         <div class="h-10" />
-        <BlogView grid_config={"grid md:grid-cols-2 lg:grid-cols-3 gap-6"} filterFunc={tagFilter} />
+        <ArticleView grid_config={"grid md:grid-cols-2 lg:grid-cols-3 gap-6"} filterFunc={tagFilter} />
       </div>
     </Layout>
   )
@@ -99,6 +99,6 @@ export const query = graphql`
   }
 `
 
-export const Head = () => <title>Blog</title>
+export const Head = () => <title>Article</title>
 
-export default BlogPage
+export default ArticlePage

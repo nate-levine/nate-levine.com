@@ -37,17 +37,17 @@ const NavigationBar = () => {
             <div class="navigation-links md:static absolute md:min-h-fit min-h-[10vh] top-[11%] md:w-auto w-[100%] flex items-center justify-center bg-primary left-0 left-[-100%] border-solid border-black md:border-b-0">
                 <ul class="flex flex-col md:flex-row items-center pt-6 pb-10 md:py-0 gap-6 md:gap-[4vw] w-[85%]">
                     <li class="w-full">
-                        <Link to="/blog" onClick={toggleMenu}>
-                            <div class="w-full md:w-auto p-3 shadow-[8px_8px_0_black] hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] border-solid border-2 border-black rounded-2xl hover:bg-black hover:text-primary duration-100">Blog</div>
+                        <Link to="/articles" onClick={toggleMenu}>
+                            <div class="w-full md:w-auto p-3 shadow-[8px_8px_0_black] hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] border-solid border-2 border-black rounded-2xl hover:bg-black hover:text-primary duration-100">Articles</div>
                         </Link>
                     </li>
                     <li class="w-full">
-                        <Link to="/blog" onClick={toggleMenu}>
+                        <Link to="/articles" onClick={toggleMenu}>
                             <div class="w-full md:w-auto p-3 shadow-[8px_8px_0_black] hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] border-solid border-2 border-black rounded-2xl hover:bg-black hover:text-primary duration-100">Newsletter</div>
                         </Link>
                     </li>
                     <li class="w-full">
-                        <Link to="/blog" onClick={toggleMenu}>
+                        <Link to="/articles" onClick={toggleMenu}>
                             <div class="w-full md:w-auto p-3 shadow-[8px_8px_0_black] hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] border-solid border-2 border-black rounded-2xl hover:bg-black hover:text-primary duration-100">About</div>
                         </Link>
                     </li>

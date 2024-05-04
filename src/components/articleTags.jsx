@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-const BlogTags = ({ tags, isFeatured }) => {
+const ArticleTags = ({ tags, isFeatured }) => {
 
     const colors = ['red', 'green', 'yellow', 'blue', 'purple']
     const getColor = (index) => {
@@ -48,4 +48,4 @@ const BlogTags = ({ tags, isFeatured }) => {
 }
 
 
-export default BlogTags
+export default ArticleTags

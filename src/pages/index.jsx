@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Layout from '../components/layout'
-import BlogView from '../components/blogView'
+import ArticleView from '../components/articleView'
 
 const IndexPage = () => {
 
@@ -48,7 +48,7 @@ const IndexPage = () => {
           </div>
           <div class="py-20 flex-1">
             <div class="w-[80%] mx-auto">
-              <BlogView grid_config={"grid md:grid-cols-2 lg:grid-cols-2 gap-6"} filterFunc={isFeatured} />
+              <ArticleView grid_config={"grid md:grid-cols-2 lg:grid-cols-2 gap-6"} filterFunc={isFeatured} />
             </div>
           </div>
         </div>
