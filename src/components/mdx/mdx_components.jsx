@@ -9,6 +9,14 @@ export const Title = ({ children }) => {
     )
 }
 
+export const SubTitle = ({ children }) => {
+    return (
+        <h1 class="text-black text-lg lg:text-xl font-sans font-bold pt-10">
+            {children}
+        </h1>
+    )
+}
+
 export const Paragraph = ({ children }) => {
     return (
         <p class="py-3">
@@ -32,6 +40,14 @@ export const InternalLink = ({ children, endpoint }) => {
         <Link to={endpoint} class="underline">
             {children}
         </Link>
+    )
+}
+
+export const ExternalLink = ({ children, endpoint }) => {
+    return (
+        <a href={endpoint} class="underline">
+            {children}
+        </a>
     )
 }
 

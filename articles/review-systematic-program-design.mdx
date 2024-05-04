@@ -9,65 +9,65 @@ tags:
 isFeatured: false
 ---
 
-import { Title, Paragraph, BlockQuote, InternalLink, UnorderedList, ListItem } from '../src/components/mdx/mdx_components'
+import * as Components from '../src/components/mdx/mdx_components'
 
-<Title>Retrospective</Title>
+<Components.Title>Retrospective</Components.Title>
 
-<Paragraph>
+<Components.Paragraph>
     Before taking this course, I assumed that a skilled intuition for designing programs could only be developed though exposure and practice. Professor Gregor Kiczales' instruction in CPSC110 has managed to convince me otherwise. During the course, Kiczales shows how simple design techniques can be built upon one another to write functions for increasingly complex programs. He constantly expresses the importance of learning by doing and encourages students to work ahead of him to prove their growing intuition for program design. At first, I disliked the course's slow pacing. Over time however, I came to realize that this slow pace allows him to methodically step through the thought-process needed for designing functions. CPSC110 emphasizes the importance of working through the design process correctly rather than quickly.
-</Paragraph>
+</Components.Paragraph>
 
-<Paragraph>
+<Components.Paragraph>
     My only exposure to Racket before taking this course was listening to my CS- and DS-major friends complain about how terrible it is. After heavy exposure to the language myself I can't say I disagree, but did I find that Racket excels at teaching systematic program design. Racket’s simplicity compared to other programming languages forces you to start from first principles and not rely on higher-level program abstractions to solve problems. This benefits in the fact that barely more than a single lecture is spent getting comfortable with the language, which allows students to focus less on the language and more on systematic program design.
-</Paragraph>
+</Components.Paragraph>
 
-<Title>What I Learned</Title>
+<Components.Title>What I Learned</Components.Title>
 
-<Paragraph>
+<Components.Paragraph>
     This course is valuable in the fact that it teaches students to design programs in a, well, systematic manner. You are first taught the best practices to convert real world information into data definitions implemented in code. Kiczales details how these "data definitions" can be used to create templates for functions that operate on those data definitions. I will admit that at first, I was skeptical that these templates were a one-size-fits-all skeleton for any function. Despite my skepticism, it is proven through example that these templates can be adapted to any function necessary. Although it is not shown in the course, it is mentioned that the systematic program design process taught is built on top of a very solid foundation of computer science theory. This leads into the process of systematic function design, where an algorithm is taken from a type signature to a working function through a series of increasingly involved steps. CPSC110's goal is, as Kiczales says, to break program design down to a science, rather than typing code and hoping for the best.
-</Paragraph>
+</Components.Paragraph>
 
-<BlockQuote>
+<Components.BlockQuote>
     I’ve continued to apply the systematic design process to future courses, and I can say with certainty that it makes designing functional programs much easier. In addition, it has encouraged me to spend more time writing unit tests, as I have found them extremely useful for understanding how a functions should work before I invest time coding them.
-</BlockQuote>
+</Components.BlockQuote>
 
-<Title>Dislikes</Title>
+<Components.Title>Dislikes</Components.Title>
 
-<Paragraph>
+<Components.Paragraph>
     The DrRacket IDE is slow and clunky, and many keywords in the Racket language are oddly cryptic. Writing a "big bang" function for my "world program" was just one of many times when I wondered if the creators of Racket thought it more important to be unique than practical. In addition to this, every expression in Racket is enclosed in parentheses. *This came to its natural conclusion when I found myself nesting up to eight sets of parentheses for a program*. While this issue can be partially remedied by careful and consistent indentation, it makes the program design process a nightmare. I believe that the onus for designing readable code should fall on the designer(s) of a language's syntax first and foremost. Programmers should not be limited by a programming language when trying to write readable code.
-</Paragraph>
+</Components.Paragraph>
 
-<BlockQuote>
-    While I still believe that programming languages should be designed to be readable, my opinions about Racket have changed significantly after taking the University of Washington Seattle’s Programming Languages course. You can read my updated thoughts on Racket in <InternalLink endpoint="/blog/perhaps-i-was-too-hard-on-racket">Perhaps I Was Too Hard on Racket (Bonus Segment)</InternalLink>
-</BlockQuote>
+<Components.BlockQuote>
+    While I still believe that programming languages should be designed to be readable, my opinions about Racket have changed significantly after taking the University of Washington Seattle’s Programming Languages course. You can read my updated thoughts on Racket in <Components.InternalLink endpoint="/articles/perhaps-i-was-too-hard-on-racket">Perhaps I Was Too Hard on Racket (Bonus Segment)</Components.InternalLink>
+</Components.BlockQuote>
 
-<Paragraph>
+<Components.Paragraph>
     A major gripe with the course specifically is that the final project is off-limits to students that do not follow the paid track. I would have liked the opportunity to use the skills I developed through the second half of the course in a cumulative exercise. Fortunately, the practice problems and midterm project are available for free, so I don't feel that I missed out on much.
-</Paragraph>
+</Components.Paragraph>
 
-<Title>Suggestions for Students</Title>
+<Components.Title>Suggestions for Students</Components.Title>
 
-<Paragraph>
+<Components.Paragraph>
     Get comfortable using recursion. A purely functional programming language means no iteration, which means that you need to gain a deep understanding of recursive programs to succeed.
-</Paragraph>
+</Components.Paragraph>
 
-<Paragraph>
+<Components.Paragraph>
     Like Kiczales suggests, program ahead of him at times (when you are feeling confident) to prove to yourself that you aren't blindly programming along with him.
-</Paragraph>
+</Components.Paragraph>
 
-<Title>Key Takeaways</Title>
+<Components.Title>Key Takeaways</Components.Title>
 
-<UnorderedList>
-    <ListItem>
+<Components.UnorderedList>
+    <Components.ListItem>
         Systematic design uses higher-level design concepts to break down complicated problems to a point where one can solve them simply.
-    </ListItem>
-    <ListItem>
+    </Components.ListItem>
+    <Components.ListItem>
         Identifying the structure of information is a key step in program design.
-    </ListItem>
-    <ListItem>
+    </Components.ListItem>
+    <Components.ListItem>
         Unit tests should be made before writing a function, as this allows you to figure out what you really want the output of the function to be.
-    </ListItem>
-    <ListItem>
+    </Components.ListItem>
+    <Components.ListItem>
         Given a base case, trust that the natural recursion in a program will work as expected.
-    </ListItem>
-</UnorderedList>
+    </Components.ListItem>
+</Components.UnorderedList>
