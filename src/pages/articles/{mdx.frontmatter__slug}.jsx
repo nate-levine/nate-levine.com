@@ -1,10 +1,14 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../../components/layout'
 import ArticleView  from '../../components/articleView'
 import ArticleTags from '../../components/articleTags'
+import * as Components from '../../components/mdx/mdx_components'
 
 const ArticlePost = ({ data, children }) => {
+
+  const image = getImage(data.mdx.frontmatter.hero_image)
 
   const firstThree = (nodes) => {
     return nodes.slice(0, 3)
@@ -21,7 +25,23 @@ const ArticlePost = ({ data, children }) => {
           <ArticleTags tags={data.mdx.frontmatter.tags} isFeatured={data.mdx.frontmatter.isFeatured} />
           <div class="h-8 border-dashed border-black border-b-2" />
         </div>
-        <div class="text-black text-xl text-left font-serif mx-auto pb-10 leading-relaxed">
+        <div class="text-black text-xl text-left font-serif mx-auto pb-10 leading-relaxed">   
+          <div class="pt-10 text-center">    
+          {
+            image ?
+            <GatsbyImage
+              image={image}
+              alt={data.mdx.frontmatter.hero_image_alt}
+              class="rounded-md border-solid border-black border-2 shadow-[8px_8px_0_black]"
+            /> :
+            <p>NO IMAGE</p>
+          }
+            <sub>
+              <Components.ExternalLink endpoint={data.mdx.frontmatter.hero_image_credit_link}>
+                {data.mdx.frontmatter.hero_image_alt}
+              </Components.ExternalLink>
+            </sub>
+          </div>
           {children}
         </div>
       </div>
@@ -44,6 +64,14 @@ export const query = graphql`
         date(formatString: "MMMM Do, YYYY")
         tags
         isFeatured
+        hero_image_alt
+        hero_image_credit_link
+        hero_image_credit_text
+        hero_image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
       }
     }
   }
