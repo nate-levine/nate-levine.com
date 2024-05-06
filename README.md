@@ -2,9 +2,19 @@
 * Image optimization
 * Featured filter tag
 * Newest/oldest ordering
-* Blog pag ToC
+* Blog page ToC
+  * Animated
 * Recommended algorithm
 * SEO
+* ReadME
+* 404 Page
+* Main page animation
+* Main page link styling
+* Tags on blog page lead to posts with that tag
+* More articles link on main page
+* Remove errors
+* Tab titles
+* Tab icon
 
 <p align="center">
   <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">

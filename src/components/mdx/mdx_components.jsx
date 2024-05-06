@@ -1,19 +1,25 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 
-export const Title = ({ children }) => {
+export const Section = ({ title, children }) => {
     return (
-        <h1 class="text-black text-xl lg:text-2xl font-sans font-bold pt-10">
+        <div class="section">
+            <h2 class="text-black text-xl lg:text-2xl font-sans font-bold pt-10">
+                {title}
+            </h2>
             {children}
-        </h1>
+        </div>
     )
 }
 
-export const SubTitle = ({ children }) => {
+export const Subsection = ({ title, children }) => {
     return (
-        <h1 class="text-black text-lg lg:text-xl font-sans font-bold pt-10">
+        <div class="subsection">
+            <h3 class="text-black text-lg lg:text-xl font-sans font-bold pt-10">
+                {title}
+            </h3>
             {children}
-        </h1>
+        </div>
     )
 }
 
@@ -35,17 +41,17 @@ export const BlockQuote = ({ children }) => {
     )
 }
 
-export const InternalLink = ({ children, endpoint }) => {
+export const InternalLink = ({ children, to }) => {
     return (
-        <Link to={endpoint} class="underline">
+        <Link to={to} class="underline">
             {children}
         </Link>
     )
 }
 
-export const ExternalLink = ({ children, endpoint }) => {
+export const ExternalLink = ({ children, to }) => {
     return (
-        <a href={endpoint} class="underline">
+        <a href={to} class="underline">
             {children}
         </a>
     )

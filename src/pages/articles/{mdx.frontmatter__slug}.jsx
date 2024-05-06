@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { useState, useEffect } from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../../components/layout'
@@ -7,6 +8,7 @@ import ArticleTags from '../../components/articleTags'
 import * as Components from '../../components/mdx/mdx_components'
 
 const ArticlePost = ({ data, children }) => {
+  const [tableOfContents, setTableOfContents] = useState()
 
   const image = getImage(data.mdx.frontmatter.hero_image)
 
@@ -14,41 +16,85 @@ const ArticlePost = ({ data, children }) => {
     return nodes.slice(0, 3)
   }
 
+  useEffect(() => {
+    const contents = Array.from(document.querySelectorAll(".section, .subsection"))
+    setTableOfContents(
+      <div class="font-sans text-base space-y-1">
+        {
+          contents.map(content => (
+            <ul>
+              {/* Scroll behavior */}
+              <button type="button" onClick={() =>
+                window.scroll({
+                  top: content.children[0].offsetTop,
+                  behavior: 'smooth'
+                })
+              }>
+                {
+                  content.className == "section"
+                  ?
+                  <li class="text-left ml-0 py-2 underline">
+                    {content.children[0].innerText}
+                  </li>
+                  :
+                  <li class="text-left ml-8 py-2 underline">
+                    {content.children[0].innerText}
+                  </li>
+                }
+              </button>
+            </ul>
+          ))
+        }
+      </div>
+    )
+  });
+
   return (
     <Layout>
-      <div class="h-auto min-h-[100vh] max-w-[85%] sm:w-[640px] mx-auto">
-        <div class="pt-20">
-          <h1 class="text-black text-2xl lg:text-4xl font-serif font-bold">{data.mdx.frontmatter.title}</h1>
-          <div class="h-8" />
-          <h2 class="text-black max-text-2xl font-sans font-regular">{data.mdx.frontmatter.date}</h2>
-          <div class="h-8" />
-          <ArticleTags tags={data.mdx.frontmatter.tags} isFeatured={data.mdx.frontmatter.isFeatured} />
-          <div class="h-8 border-dashed border-black border-b-2" />
-        </div>
-        <div class="text-black text-xl text-left font-serif mx-auto pb-10 leading-relaxed">   
-          <div class="pt-10 text-center">    
-          {
-            image ?
-            <GatsbyImage
-              image={image}
-              alt={data.mdx.frontmatter.hero_image_alt}
-              class="rounded-md border-solid border-black border-2 shadow-[8px_8px_0_black]"
-            /> :
-            <p>NO IMAGE</p>
-          }
-            <sub>
-              <Components.ExternalLink endpoint={data.mdx.frontmatter.hero_image_credit_link}>
-                {data.mdx.frontmatter.hero_image_alt}
-              </Components.ExternalLink>
-            </sub>
+      <div class="pt-20 max-w-[85%] sm:w-[640px] mx-auto">
+        <h1 class="text-black text-4xl font-serif font-bold">{data.mdx.frontmatter.title}</h1>
+        <div class="h-8" />
+        <p class="text-black max-text-2xl font-sans font-regular">{data.mdx.frontmatter.date}</p>
+        <div class="h-8" />
+        <ArticleTags tags={data.mdx.frontmatter.tags} isFeatured={data.mdx.frontmatter.isFeatured} />
+      </div>
+      <div class="h-8 border-dashed border-black border-b-2" />
+      <div class="flex flex-col-reverse xl:flex-row pb-20">
+        <div class="w-[25%]" />
+        <div class="h-auto min-h-[100vh] max-w-[85%] sm:w-[640px] mx-auto">
+          <div class="text-black text-2xl text-left font-serif mx-auto pb-10 leading-relaxed">   
+            <div class="text-center pt-10">    
+            {
+              image
+              ?
+              <GatsbyImage
+                image={image}
+                alt={data.mdx.frontmatter.hero_image_alt}
+                class="rounded-md border-solid border-black border-2 shadow-[8px_8px_0_black]"
+              />
+              :
+              <div />
+            }
+              <sub>
+                <Components.ExternalLink endpoint={data.mdx.frontmatter.hero_image_credit_link}>
+                  {data.mdx.frontmatter.hero_image_alt}
+                </Components.ExternalLink>
+              </sub>
+            </div>
+            {children}
           </div>
-          {children}
+        </div>
+        <div class="xl:absolute xl:sticky xl:top-0 h-fit pt-10 xl:pb-14 mx-auto max-w-[85%] w-[640px] xl:w-[25%] xl:max-w-full xl:mr-auto">
+          <div class="mx-auto xl:w-[85%]">
+            <p class="font-bold text-xl pb-3">Table of Contents</p>
+            {tableOfContents}
+          </div>
         </div>
       </div>
       <div class="border-solid border-black border-b-2" />
       <div class="h-fit"> 
         <div class="py-20 max-w-[75vw] mx-auto">
-          <h1 class="font-bold text-4xl pb-10">Related Articles</h1>
+          <p class="font-bold text-4xl pb-10">Related Articles</p>
           <ArticleView grid_config={"grid md:grid-cols-1 lg:grid-cols-3 gap-6"} filter={firstThree} />
         </div>
       </div>
