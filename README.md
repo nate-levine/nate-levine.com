@@ -1,20 +1,26 @@
 # TO-DO
-* Image optimization
-* Featured filter tag
-* Newest/oldest ordering
-* Blog page ToC
-  * Animated
-* Recommended algorithm
+* Implement image optimization
+* Add a "Featured" filter tag to the article menu
+* Add an option to sort articles by oldest/newest
+* Implement highlighting current table of contents section
+* Implement an algorithm for related articles
+* Non-boilerplate README and 404 page
+* Add a snazy animation to the main page
+* Modify the main page navigation bar link style to fit theme better
+* Add an animated icon for the mobile navigation menu
+* Allow clicking on tags on article page which leads to posts with that tag
+* Add a "more articles" link on main page under featured, which leads to the article page
+* Add search engine tab icon
+* Make sure search engine tabs say the correct thing
+
+* Remove errors and warnings (housekeeping)
+* Fix typos, grammer, and generally improve the way some articles are worded (housekeeping)
+* Comments (housekeeping)
+* (Vague) SEO
+
 * SEO
-* ReadME
-* 404 Page
-* Main page animation
-* Main page link styling
-* Tags on blog page lead to posts with that tag
-* More articles link on main page
-* Remove errors
-* Tab titles
-* Tab icon
+* Search Engine Tab titles
+* Search Engine Tab icon
 
 <p align="center">
   <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
