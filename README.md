@@ -8,10 +8,9 @@ SPECIFIC TASKS:
 * Implement an algorithm for related articles
 * Non-boilerplate README and 404 page
 * Add a snazy animation to the main page
-* Modify the main page navigation bar link style to fit theme better
+* Modify the main page link on the nav bar's style to fit theme better
 * Add an animated icon for the mobile navigation menu
 * Allow clicking on tags on article page which leads to posts with that tag
-* Add a "more articles" link on main page under featured, which leads to the article page
 * Add search engine tab icon
 * Make sure search engine tabs say the correct thing
 

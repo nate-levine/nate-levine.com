@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import ArticleView from '../components/articleView'
 
@@ -74,6 +75,9 @@ const IndexPage = () => {
           <div class="py-20 flex-1">
             <div class="w-[80%] mx-auto">
               <ArticleView grid_config={"grid md:grid-cols-2 lg:grid-cols-2 gap-6"} filterFunc={isFeatured} />
+              <p class="text-xl text-center underline pt-10">
+                <Link to="/articles">Explore more articles</Link>
+              </p>
             </div>
           </div>
         </div>
