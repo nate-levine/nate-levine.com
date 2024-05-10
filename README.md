@@ -2,7 +2,6 @@
 * Implement image optimization
 * Add a "Featured" filter tag to the article menu
 * Add an option to sort articles by oldest/newest
-* Implement highlighting current table of contents section
 * Implement an algorithm for related articles
 * Non-boilerplate README and 404 page
 * Add a snazy animation to the main page
