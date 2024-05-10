@@ -14,7 +14,6 @@ const ArticleView = ({ grid_config, filterFunc }) => {
                         title
                         slug
                         tags
-                        isFeatured
                     }
                     id
                     excerpt
@@ -57,7 +56,7 @@ const ArticleView = ({ grid_config, filterFunc }) => {
                                     <div class="flex-auto">
                                         <div class="font-bold">{node.frontmatter.title}</div>
                                         <div class="h-2" />
-                                        <ArticleTags tags={node.frontmatter.tags} isFeatured={node.frontmatter.isFeatured} />
+                                        <ArticleTags tags={node.frontmatter.tags} />
                                     </div>
                                     <div class="h-2" />
                                     <div class="h-flex text-right font-bold">{node.frontmatter.date}</div>

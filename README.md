@@ -1,6 +1,9 @@
 # TO-DO
+DOING:
+* -
+
+SPECIFIC TASKS:
 * Implement image optimization
-* Add a "Featured" filter tag to the article menu
 * Add an option to sort articles by oldest/newest
 * Implement an algorithm for related articles
 * Non-boilerplate README and 404 page
@@ -12,11 +15,12 @@
 * Add search engine tab icon
 * Make sure search engine tabs say the correct thing
 
-* Remove errors and warnings (housekeeping)
-* Fix typos, grammer, and generally improve the way some articles are worded (housekeeping)
-* Comments (housekeeping)
-* (Vague) SEO
+HOUSEKEEPING:
+* Remove errors and warnings
+* Fix typos, grammer, and generally improve the way some articles are worded
+* Commented code
 
+GENERAL TASKS:
 * SEO
 * Search Engine Tab titles
 * Search Engine Tab icon

@@ -5,7 +5,7 @@ import ArticleView from '../components/articleView'
 const IndexPage = () => {
 
   const isFeatured = (nodes) => {
-    return nodes.filter((node) => node.frontmatter.isFeatured)
+    return nodes.filter((node) => node.frontmatter.tags.includes("FEATURED"))
   }
 
   return (

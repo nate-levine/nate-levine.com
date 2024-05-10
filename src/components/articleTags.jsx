@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-const ArticleTags = ({ tags, isFeatured }) => {
+const ArticleTags = ({ tags }) => {
 
     const colors = ['red', 'green', 'yellow', 'blue', 'purple']
     const getColor = (index) => {
@@ -17,7 +17,7 @@ const ArticleTags = ({ tags, isFeatured }) => {
                     The reason with works is that the and statement evaluates the first expression first.
                     If isFeatured is true, then the second expression, the JSX, will be evaluated
                 */
-                isFeatured && <div class="bg-black rounded-full px-1 py-1 rounded-full group-hover:animate-jump">
+                tags.includes("FEATURED") && <div class="bg-black rounded-full px-1 py-1 rounded-full group-hover:animate-jump">
                     {/*
                         From https://logowik.com/rounded-star-vector-icon-14817.html
                         Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)
@@ -34,7 +34,7 @@ const ArticleTags = ({ tags, isFeatured }) => {
             }
             {
                 // Enumerate over each tag
-                tags.map((tag, index) => {
+                tags.filter(tag => tag !== "FEATURED").map((tag, index) => {
                     // Get color for tag index
                     const color = getColor(index)
                     // "Bake" tailwind class string so that tailwind preprocessor doesn't remove it
