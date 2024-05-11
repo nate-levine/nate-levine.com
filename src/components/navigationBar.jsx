@@ -25,11 +25,11 @@ const NavigationBar = () => {
                             <div>Levine</div>
                         </div>
                         <span class="flex flex-row absolute w-full">
-                            <span class="static block w-[20%] h-0 group-hover:h-[17px] duration-[100ms] bg-red" />
-                            <span class="static block w-[20%] h-0 group-hover:h-[17px] duration-[200ms] bg-green" />
-                            <span class="static block w-[20%] h-0 group-hover:h-[17px] duration-[300ms] bg-yellow" />
-                            <span class="static block w-[20%] h-0 group-hover:h-[17px] duration-[400ms] bg-blue" />
-                            <span class="static block w-[20%] h-0 group-hover:h-[17px] duration-[500ms] bg-purple" />
+                            <span class="static block w-[20%] h-0 group-hover:h-[14px] rounded-full duration-[100ms] bg-red" />
+                            <span class="static block w-[20%] h-0 group-hover:h-[14px] rounded-full duration-[200ms] bg-green" />
+                            <span class="static block w-[20%] h-0 group-hover:h-[14px] rounded-full duration-[300ms] bg-yellow" />
+                            <span class="static block w-[20%] h-0 group-hover:h-[14px] rounded-full duration-[400ms] bg-blue" />
+                            <span class="static block w-[20%] h-0 group-hover:h-[14px] rounded-full duration-[500ms] bg-purple" />
                         </span>
                     </div>
                 </Link>

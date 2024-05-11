@@ -7,8 +7,6 @@ SPECIFIC TASKS:
 * Add an option to sort articles by oldest/newest
 * Implement an algorithm for related articles
 * Non-boilerplate README and 404 page
-* Add a snazy animation to the main page
-* Modify the main page link on the nav bar's style to fit theme better
 * Add an animated icon for the mobile navigation menu
 * Allow clicking on tags on article page which leads to posts with that tag
 * Add search engine tab icon

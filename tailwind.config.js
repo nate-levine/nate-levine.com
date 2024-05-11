@@ -39,6 +39,33 @@ module.exports = {
           transform: 'rotate(360deg)',
         },
       },
+      flip: {
+        '0%, 53%': {
+          transform: 'rotate(0deg)',
+          animationTimingFunction: 'steps(1, end)',
+        },
+        '3%, 50%': {
+          transform: 'rotate(180deg)',
+          animationTimingFunction: 'steps(1, end)',
+        },
+      },
+      stretch: {
+        '0%, 50%': {
+          height: '20%',
+        },
+        '3%, 53%': {
+          height: '100%',
+        },
+        '5%, 55%': {
+          height: '20%',
+        },
+        '25%, 75%': {
+          height: '50%',
+        },
+        '50%, 100%': {
+          height: '20%',
+        },
+      },
     },
     animation: {
       'jump': 'jump 1s linear infinite',
