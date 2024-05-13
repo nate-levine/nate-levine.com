@@ -14,7 +14,6 @@ module.exports = {
       'green': '#b8bb26',
       'yellow': '#fabd2f',
       'blue': '#83a598',
-      'purple': '#d3869b',
     },
     fontFamily: {
       'sans': ['Geist Sans'],
@@ -51,19 +50,19 @@ module.exports = {
       },
       stretch: {
         '0%, 50%': {
-          height: '20%',
+          height: '25%',
         },
         '3%, 53%': {
           height: '100%',
         },
         '5%, 55%': {
-          height: '20%',
+          height: '15%',
         },
-        '25%, 75%': {
+        '23%, 73%': {
           height: '50%',
         },
         '50%, 100%': {
-          height: '20%',
+          height: '25%',
         },
       },
     },

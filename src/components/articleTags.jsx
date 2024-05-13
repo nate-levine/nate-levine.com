@@ -2,7 +2,7 @@ import * as React from 'react'
 
 const ArticleTags = ({ tags }) => {
 
-    const colors = ['red', 'green', 'yellow', 'blue', 'purple']
+    const colors = ['red', 'green', 'yellow', 'blue']
     const getColor = (index) => {
         // Colors cycle through color list
         return colors[index % colors.length]
