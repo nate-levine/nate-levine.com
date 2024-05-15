@@ -15,7 +15,7 @@ const IndexPage = () => {
       <div class="h-auto min-h-[100vh]">
         <h1 class="text-right text-black text-6xl font-serif font-bold text-[25vw] leading-[19vw] pt-20">
           <MainPageAnimation />
-          <div class="z-20 mix-blend-darken">
+          <div class="mix-blend-darken">
             Nate Levine
           </div>
         </h1>

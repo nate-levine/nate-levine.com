@@ -1,11 +1,10 @@
 # TO-DO
 DOING:
-* Add an option to sort articles by oldest/newest
+* Add an animated icon for the mobile navigation menu
 
 SPECIFIC TASKS:
 * Implement an algorithm for related articles
 * Non-boilerplate README and 404 page
-* Add an animated icon for the mobile navigation menu
 * Add search engine tab icon
 * Make sure search engine tabs say the correct thing
 
