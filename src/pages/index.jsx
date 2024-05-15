@@ -31,7 +31,7 @@ const IndexPage = () => {
               <br />
               <p>
                 This site is where I share my ideas, interests, and thoughts on topics ranging from
-                software development, to productivity, to food science.
+                engineering, to software development, to food science.
               </p>
               <br />
               <p>
