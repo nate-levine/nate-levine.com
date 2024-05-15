@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import ArticleTags from './articleTags'
 
-const ArticleView = ({ grid_config, filterFunc }) => {
+const ArticleView = ({ grid_config, filterFunc, sortFunc }) => {
 
     // Because the graphQL layer is used in a component and not a page, useStaticQuery is necessary
     const data = useStaticQuery(graphql`
@@ -43,11 +43,14 @@ const ArticleView = ({ grid_config, filterFunc }) => {
     if (!filterFunc) {
         filterFunc = (nodes) => { return nodes }
     }
+    if (!sortFunc) {
+        sortFunc = (nodes) => { return nodes }
+    }
 
     return (
         <div class={grid_config}>
         {
-            filterFunc(data.allMdx.nodes).map(node => (
+            sortFunc(filterFunc(data.allMdx.nodes)).map(node => (
                 <article key={node.id}>
                     <div class="h-full">
                         <Link to={`/articles/${node.frontmatter.slug}`}>

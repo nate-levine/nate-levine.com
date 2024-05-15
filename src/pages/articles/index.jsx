@@ -6,6 +6,7 @@ import ArticleView from '../../components/articleView'
 
 const ArticlePage = ({ data }) => {
   const [selectedTags, setSelectedTags] = useState([])
+  const [articleOrder, setArticleOrder] = useState("Latest")
 
   let all_tags = []
   data.allMdx.nodes.forEach(node => (
@@ -28,11 +29,65 @@ const ArticlePage = ({ data }) => {
     }
   }
 
+  const sortOptions = ["Latest", "Oldest"]
+  let orderArticles = (nodes) => {
+    if (articleOrder === "Latest") {
+      return nodes.sort((a, b) => { return new Date(b.frontmatter.date) - new Date(a.frontmatter.date) })
+    }
+    
+    if (articleOrder === "Oldest") {
+      return nodes.sort((a, b) => { return new Date(a.frontmatter.date) - new Date(b.frontmatter.date) })
+    }
+  }
+
+  const toggleMenu = (e) => {
+    const dropDownMenu = document.querySelector('.drop-down-menu')
+    const dropDownArrow = document.querySelector('.drop-down-arrow')
+
+    dropDownMenu.classList.toggle('hidden')
+    dropDownArrow.classList.toggle('rotate-[-180deg]')
+}
+
   return (
     <Layout>
       <div class="h-auto min-h-[100vh] max-w-[75vw] mx-auto py-20">
         <h1 class="text-center text-6xl font-serif font-bold pb-10">Explore Articles</h1>
-        <div class="group flex flex-row flex-wrap gap-x-2 gap-y-2 font-sans font-regular text-sm">
+        <div class="flex flex-row space-x-5 items-center justify-center" >
+          <p class="font-serif font-bold text-xl" >Sort By:</p>
+          <div class="inline-block min-w-[7vw] text-left text-sm font-sans font-regular border-solid border-black border-2 rounded-lg">
+            <button type="button" onClick={toggleMenu} class="drop-down-button inline-flex w-full text-l justify-center gap-x-1.5 rounded-lg px-2 py-2 bg-primary">
+              {
+                articleOrder == "Latest"
+                ?
+                <svg class="drop-down-icon my-auto h-[0.9rem] w-5" id="eEy52ihAnbC1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 200" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+                  <line x1="0" y1="-49.962364" x2="0" y2="49.962364" transform="matrix(2.017858 0 0 1.578812 75 111.370907)" fill="none" stroke="#000" stroke-width="10" stroke-linecap="round"/>
+                  <line x1="15.807301" y1="-15.807301" x2="-15.807302" y2="15.807302" transform="matrix(-2.017858 0 0 2.017859 106.896889 46.575094)" fill="none" stroke="#000" stroke-width="10" stroke-linecap="round"/>
+                  <line x1="15.807301" y1="-15.807301" x2="-15.807302" y2="15.807302" transform="matrix(2.017858 0 0 2.017859 43.103111 46.575094)" fill="none" stroke="#000" stroke-width="10" stroke-linecap="round"/>
+                </svg>
+                :
+                <svg class="drop-down-icon my-auto h-[0.9rem] w-5 rotate-[-180deg]" id="eEy52ihAnbC1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 200" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+                  <line x1="0" y1="-49.962364" x2="0" y2="49.962364" transform="matrix(2.017858 0 0 1.578812 75 111.370907)" fill="none" stroke="#000" stroke-width="10" stroke-linecap="round"/>
+                  <line x1="15.807301" y1="-15.807301" x2="-15.807302" y2="15.807302" transform="matrix(-2.017858 0 0 2.017859 106.896889 46.575094)" fill="none" stroke="#000" stroke-width="10" stroke-linecap="round"/>
+                  <line x1="15.807301" y1="-15.807301" x2="-15.807302" y2="15.807302" transform="matrix(2.017858 0 0 2.017859 43.103111 46.575094)" fill="none" stroke="#000" stroke-width="10" stroke-linecap="round"/>
+                </svg>
+              }
+              {articleOrder}
+              <svg class="-mr-1 h-5 w-5" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" class="drop-down-arrow origin-center duration-100" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/>
+              </svg>
+            </button>
+            <div class="drop-down-menu left-0 z-10 w-full origin-top-right bg-primary rounded-lg hidden">
+              {
+                sortOptions.map(option => {
+                  if (option !== articleOrder)
+                    return <button class="block text-center py-2 font-sans w-full hover:font-bold hover:bg-black hover:text-primary border-solid border-black border-t-2 duration-100" onClick={() => setArticleOrder(option)}>{option}</button>
+                })
+              }
+            </div>
+          </div>
+        </div>
+        <div class="group flex flex-row flex-wrap gap-x-2 gap-y-2 font-sans font-regular text-sm pt-5 pb-10">
+        <p class="font-serif font-bold text-xl pr-2 items-center" >Tags:</p>
           {
               // Enumerate over each tag
               all_tags.map(tag => {
@@ -103,8 +158,7 @@ const ArticlePage = ({ data }) => {
               })
           }
         </div>
-        <div class="h-10" />
-        <ArticleView grid_config={"grid md:grid-cols-2 lg:grid-cols-3 gap-6"} filterFunc={tagFilter} />
+        <ArticleView grid_config={"grid md:grid-cols-2 lg:grid-cols-3 gap-6"} filterFunc={tagFilter} sortFunc={orderArticles} />
       </div>
     </Layout>
   )

@@ -1,14 +1,11 @@
 # TO-DO
 DOING:
-* -
+* Add an option to sort articles by oldest/newest
 
 SPECIFIC TASKS:
-* Implement image optimization
-* Add an option to sort articles by oldest/newest
 * Implement an algorithm for related articles
 * Non-boilerplate README and 404 page
 * Add an animated icon for the mobile navigation menu
-* Allow clicking on tags on article page which leads to posts with that tag
 * Add search engine tab icon
 * Make sure search engine tabs say the correct thing
 
