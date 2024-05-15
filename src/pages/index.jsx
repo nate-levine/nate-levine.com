@@ -19,10 +19,10 @@ const IndexPage = () => {
             Nate Levine
           </div>
         </h1>
-        <div class="font-sans flex flex-col lg:flex-row border-solid border-t-2 border-b-2 border-black">
-          <div class="py-20 flex-1 border-dashed border-b-2 lg:border-b-0 lg:border-r-2 border-black text-xl">
+        <div class="font-serif flex flex-col lg:flex-row border-solid border-t-2 border-b-2 border-black">
+          <div class="py-20 flex-1 border-dashed border-b-2 lg:border-b-0 lg:border-r-2 border-black text-2xl">
             <div class="w-[80%] mx-auto leading-8">
-              <h1 class="font-bold text-4xl">What's up?</h1>
+              <h1 class="font-sans font-bold text-4xl">What's up?</h1>
               <br />
               <p>
                 I'm Nate, a senior at Worcester Polytechnic Institute (WPI). I'm currently pursuing a 
@@ -81,7 +81,7 @@ const IndexPage = () => {
           <div class="py-20 flex-1">
             <div class="w-[80%] mx-auto">
               <ArticleView grid_config={"grid md:grid-cols-2 lg:grid-cols-2 gap-6"} filterFunc={isFeatured} />
-              <p class="text-xl text-center underline pt-10">
+              <p class="font-sans text-xl text-center underline pt-10">
                 <Link to="/articles">Explore more articles</Link>
               </p>
             </div>

@@ -51,8 +51,8 @@ const ArticlePage = ({ data }) => {
   return (
     <Layout>
       <div class="h-auto min-h-[100vh] max-w-[75vw] mx-auto py-20">
-        <h1 class="text-center text-6xl font-serif font-bold pb-10">Explore Articles</h1>
-        <div class="flex flex-row space-x-5 items-center justify-center" >
+        <h1 class="text-left text-6xl font-serif font-bold pb-10">Explore Articles</h1>
+        <div class="flex flex-row space-x-5 items-center justify-left" >
           <p class="font-serif font-bold text-xl" >Sort By:</p>
           <div class="inline-block min-w-[7vw] text-left text-sm font-sans font-regular border-solid border-black border-2 rounded-lg">
             <button type="button" onClick={toggleMenu} class="drop-down-button inline-flex w-full text-l justify-center gap-x-1.5 rounded-lg px-2 py-2 bg-primary">

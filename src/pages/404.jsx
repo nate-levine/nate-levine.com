@@ -1,49 +1,35 @@
 import * as React from "react"
-import { Link } from "gatsby"
-
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+import { Link } from 'gatsby'
+import Layout from "../components/layout"
+import ArticleView from "../components/articleView"
 
 const NotFoundPage = () => {
+  
+  const isFeatured = (nodes) => {
+    return nodes.filter((node) => node.frontmatter.tags.includes("FEATURED"))
+  }
+
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <Layout>
+      <div class="h-auto min-h-[100vh]">
+        <div class="max-w-[75vw] mx-auto py-20">
+          <h1 class="text-left text-6xl font-serif font-bold pb-10">Page Not Found</h1>
+          <div class="font-sans text-left text-xl pt-5">
+            <p>Sorry, this page does not exist or is unavailable. Try checking for typos in the URL.</p>
+            <p class="pt-10">  
+              <Link to="/" class="underline">Click here to return to the main page</Link>, or explore some of the featured articles:
+            </p>
+          </div>
+        </div>
+        <div class="border-dashed border-black border-b-2" />
+        <div class="max-w-[75vw] mx-auto py-20">
+          <ArticleView grid_config={"grid md:grid-cols-2 lg:grid-cols-3 gap-6"} filterFunc={isFeatured} />
+        </div>
+      </div>
+    </Layout>
   )
 }
 
 export default NotFoundPage
 
-export const Head = () => <title>Not found</title>
+export const Head = () => <title>Page Not Found</title>
