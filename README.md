@@ -16,17 +16,15 @@ Join me at [nate-levine.com](https://www.nate-levine.com/).
 
 # 📋 Development Plans
 ## DOING:
-* Non-boilerplate README
+* Design and implement a website icon.
 
 ## TO-DO:
 ### *Content*
-* About page
 * Port projects from old website to new website in short-form article format.
 * Assign more descriptive and concise tags to each article
 
 ### *Features:*
 * Implement an algorithm to suggest articles related to the current article page.
-* Design and implement a website icon.
 * Standardize titles to each page.
 * Search engine optimization:
   * Implement SEO component.
