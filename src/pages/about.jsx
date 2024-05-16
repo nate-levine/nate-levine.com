@@ -194,6 +194,6 @@ const AboutPage = () => {
   )
 }
 
-export const Head = () => <title>About</title>
+export const Head = () => <title>About Nate Levine</title>
 
 export default AboutPage

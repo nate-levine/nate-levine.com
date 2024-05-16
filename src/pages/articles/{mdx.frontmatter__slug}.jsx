@@ -79,6 +79,6 @@ export const query = graphql`
   }
 `
 
-export const Head = ({ data }) => <title>{data.mdx.frontmatter.title}</title>
+export const Head = ({ data }) => <title>{data.mdx.frontmatter.title} - Nate Levine</title>
 
 export default ArticlePost

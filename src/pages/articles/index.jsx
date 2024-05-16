@@ -181,6 +181,6 @@ export const query = graphql`
   }
 `
 
-export const Head = () => <title>Articles</title>
+export const Head = () => <title>Explore Articles</title>
 
 export default ArticlePage

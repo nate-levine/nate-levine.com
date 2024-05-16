@@ -16,7 +16,7 @@ Join me at [nate-levine.com](https://www.nate-levine.com/).
 
 # 📋 Development Plans
 ## DOING:
-* Design and implement a website icon.
+* Standardize titles to each page.
 
 ## TO-DO:
 ### *Content*
@@ -25,7 +25,6 @@ Join me at [nate-levine.com](https://www.nate-levine.com/).
 
 ### *Features:*
 * Implement an algorithm to suggest articles related to the current article page.
-* Standardize titles to each page.
 * Search engine optimization:
   * Implement SEO component.
   * ...
