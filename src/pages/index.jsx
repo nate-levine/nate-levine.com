@@ -21,7 +21,7 @@ const IndexPage = () => {
         </h1>
         <div class="font-serif flex flex-col lg:flex-row border-solid border-t-2 border-b-2 border-black">
           <div class="py-20 flex-1 border-dashed border-b-2 lg:border-b-0 lg:border-r-2 border-black text-2xl">
-            <div class="w-[80%] mx-auto leading-8">
+            <div class="w-[80%] mx-auto leading-relaxed">
               <h1 class="font-sans font-bold text-4xl">What's up?</h1>
               <br />
               <p>

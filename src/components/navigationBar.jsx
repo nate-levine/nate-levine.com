@@ -50,7 +50,7 @@ const NavigationBar = () => {
                         </Link>
                     </li>*/}
                     <li class="w-full">
-                        <Link to="/articles" onClick={toggleMenu}>
+                        <Link to="/about" onClick={toggleMenu}>
                             <div class="w-full md:w-auto p-3 shadow-[8px_8px_0_black] hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] border-solid border-2 border-black rounded-2xl hover:bg-black hover:text-primary duration-100">About</div>
                         </Link>
                     </li>
