@@ -84,6 +84,7 @@ export const query = graphql`
 export const Head = ({ data }) => <SEO
   title={`${data.mdx.frontmatter.title} - Nate Levine`}
   description={data.mdx.except}
+  image={data.mdx.frontmatter.hero_image}
   article={false}
 />
 

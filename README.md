@@ -15,27 +15,30 @@ Join me at [nate-levine.com](https://www.nate-levine.com/).
   * [GitHub](https://github.com/)
 
 # 📋 Development Plans
+! = To-do before website launch
+
 ## DOING:
-  * Implement SEO component.
+! Convert .webp images to .png or .jpg
 
 ## TO-DO:
 ### *Content*
-* Port projects from old website to new website in short-form article format.
-* Assign more descriptive and concise tags to each article
+! Port projects from old website to new website in short-form article format.
+  ! Add project filter to About section
 
 ### *Features:*
-* Search engine optimization:
-  * ...
+* Implement rich results (images, meaningful descriptions) for SEO
+* Clicking tags on an article should redirect to a list of articles with that tag
+* Implement a less rudimentary related articles algorithms
+  * Make tag order weighted?
 
 ### *Housekeeping*
-* Convert .webp images to .png or .jpg
-* Fix errors and warnings.
+! Fix errors and warnings.
 * Refactor especially messy code.
-* Fix typos, grammer, and generally improve the way some articles are worded.
-* Commented all code.
+! Fix typos, grammar, and generally improve the way some articles are worded.
+* Comment all code
 
 ### *Future Plans*
-* Create a newsletter
+* Create a newsletter, and add a page for that on the site
 
 # 🔄 Changelog
 | Date | Changes |
