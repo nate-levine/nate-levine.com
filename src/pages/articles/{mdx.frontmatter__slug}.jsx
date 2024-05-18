@@ -27,7 +27,7 @@ const ArticlePost = ({ data, children }) => {
         <div class="w-[25%]" />
         <div class="h-auto min-h-[100vh] max-w-[85%] sm:w-[640px] mx-auto">
           <div class="text-black text-2xl text-left font-serif mx-auto pb-10 leading-relaxed">   
-            <div class="text-center pt-10">    
+            <div class="items-center text-center pt-10">    
             {
               image
               ?
@@ -39,8 +39,9 @@ const ArticlePost = ({ data, children }) => {
               :
               <div />
             }
-              <sub>
-                <Components.ExternalLink endpoint={data.mdx.frontmatter.hero_image_credit_link}>
+              <br />
+              <sub class="py-10 h-40">
+                <Components.ExternalLink to={data.mdx.frontmatter.hero_image_credit_link}>
                   {data.mdx.frontmatter.hero_image_alt}
                 </Components.ExternalLink>
               </sub>
