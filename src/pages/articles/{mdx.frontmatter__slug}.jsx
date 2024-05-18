@@ -7,6 +7,7 @@ import ArticleTags from '../../components/articleTags'
 import * as Components from '../../components/mdx/mdx_components'
 import TableOfContents from '../../components/tableOfContents'
 import relatedArticles from '../../components/relatedArticles'
+import SEO from '../../components/seo'
 
 const ArticlePost = ({ data, children }) => {
 
@@ -76,10 +77,14 @@ export const query = graphql`
           }
         }
       }
+      excerpt
     }
   }
 `
-
-export const Head = ({ data }) => <title>{data.mdx.frontmatter.title} - Nate Levine</title>
+export const Head = ({ data }) => <SEO
+  title={`${data.mdx.frontmatter.title} - Nate Levine`}
+  description={data.mdx.except}
+  article={false}
+/>
 
 export default ArticlePost

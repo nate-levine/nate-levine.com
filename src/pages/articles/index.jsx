@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../../components/layout'
 import ArticleView from '../../components/articleView'
+import SEO from '../../components/seo'
 
 const ArticlePage = ({ data }) => {
   const [selectedTags, setSelectedTags] = useState([])
@@ -181,6 +182,10 @@ export const query = graphql`
   }
 `
 
-export const Head = () => <title>Explore Articles</title>
-
 export default ArticlePage
+
+export const Head = () => <SEO
+  title={"Explore articles on engineering, software development, food science, sports, and more."}
+  description={"A place to share my ideas, interests, and thoughts on topics ranging from engineering, to software development, to food science."}
+  article={false}
+/>

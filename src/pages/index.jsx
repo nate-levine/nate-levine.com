@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import ArticleView from '../components/articleView'
 import MainPageAnimation from '../components/mainPageAnimation'
+import SEO from '../components/seo'
 
 const IndexPage = () => {
 
@@ -92,6 +93,10 @@ const IndexPage = () => {
   )
 }
 
-export const Head = () => <title>Nate Levine</title>
+export const Head = () => <SEO
+  title={"Nate Levine"}
+  description={"A place to share my ideas, interests, and thoughts on topics ranging from engineering, to software development, to food science."}
+  article={false}
+/>
 
 export default IndexPage

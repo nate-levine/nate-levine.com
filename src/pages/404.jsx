@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from 'gatsby'
 import Layout from "../components/layout"
 import ArticleView from "../components/articleView"
+import SEO from '../components/seo'
 
 const NotFoundPage = () => {
   
@@ -32,4 +33,8 @@ const NotFoundPage = () => {
 
 export default NotFoundPage
 
-export const Head = () => <title>Page Not Found</title>
+export const Head = () => <SEO
+  title={"Page Not Found"}
+  description={"A place to share my ideas, interests, and thoughts on topics ranging from engineering, to software development, to food science."}
+  article={false}
+/>

@@ -4,7 +4,8 @@
 module.exports = {
   siteMetadata: {
     title: "Nate Levine",
-    siteUrl: `https://nate-levine.com`,
+    description: "A place to share my ideas, interests, and thoughts on topics ranging from engineering, to software development, to food science.",
+    url: `https://www.nate-levine.com`,
   },
   plugins: [
     {

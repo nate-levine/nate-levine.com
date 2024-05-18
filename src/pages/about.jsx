@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Layout from '../components/layout'
 import ArticleView from '../components/articleView'
+import SEO from '../components/seo'
 
 const AboutPage = () => {
 
@@ -194,6 +195,10 @@ const AboutPage = () => {
   )
 }
 
-export const Head = () => <title>About Nate Levine</title>
+export const Head = () => <SEO
+  title={"About Nate Levine"}
+  description={"A place to share my ideas, interests, and thoughts on topics ranging from engineering, to software development, to food science."}
+  article={false}
+/>
 
 export default AboutPage

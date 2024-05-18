@@ -16,7 +16,7 @@ Join me at [nate-levine.com](https://www.nate-levine.com/).
 
 # 📋 Development Plans
 ## DOING:
-* Implement an algorithm to suggest articles related to the current article page.
+  * Implement SEO component.
 
 ## TO-DO:
 ### *Content*
@@ -25,7 +25,6 @@ Join me at [nate-levine.com](https://www.nate-levine.com/).
 
 ### *Features:*
 * Search engine optimization:
-  * Implement SEO component.
   * ...
 
 ### *Housekeeping*
