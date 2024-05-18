@@ -6,6 +6,7 @@ import ArticleView  from '../../components/articleView'
 import ArticleTags from '../../components/articleTags'
 import * as Components from '../../components/mdx/mdx_components'
 import TableOfContents from '../../components/tableOfContents'
+import relatedArticles from '../../components/relatedArticles'
 
 const ArticlePost = ({ data, children }) => {
 
@@ -52,7 +53,7 @@ const ArticlePost = ({ data, children }) => {
       <div class="h-fit"> 
         <div class="py-20 max-w-[75vw] mx-auto">
           <p class="font-bold text-4xl pb-10">Related Articles</p>
-          <ArticleView grid_config={"grid md:grid-cols-1 lg:grid-cols-3 gap-6"} />
+          <ArticleView grid_config={"grid md:grid-cols-1 lg:grid-cols-3 gap-6"} filterFunc={relatedArticles(data.mdx, 3)} />
         </div>
       </div>
     </Layout>

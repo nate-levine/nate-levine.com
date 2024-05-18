@@ -16,7 +16,7 @@ Join me at [nate-levine.com](https://www.nate-levine.com/).
 
 # 📋 Development Plans
 ## DOING:
-* Standardize titles to each page.
+* Implement an algorithm to suggest articles related to the current article page.
 
 ## TO-DO:
 ### *Content*
@@ -24,7 +24,6 @@ Join me at [nate-levine.com](https://www.nate-levine.com/).
 * Assign more descriptive and concise tags to each article
 
 ### *Features:*
-* Implement an algorithm to suggest articles related to the current article page.
 * Search engine optimization:
   * Implement SEO component.
   * ...

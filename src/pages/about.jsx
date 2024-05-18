@@ -73,7 +73,7 @@ const AboutPage = () => {
                             </p>
                             <br />
                             <p>
-                                I don't believe in one-rep maxes, but because I know you're curious, here are the current
+                                I don't believe in one-rep maxes, so here are the current
                                 weights for my weekly sets:
                             </p>
                             <ul class="py-3 list-disc list-outside ms-8 text-left">
