@@ -16,9 +16,9 @@ const NotFoundPage = () => {
         <div className="max-w-[75vw] mx-auto py-20">
           <h1 className="text-left text-6xl font-serif font-bold pb-10">Page Not Found</h1>
           <div className="font-sans text-left text-xl pt-5">
-            <p>Sorry, this page doesn't exist or is unavailable. Try checking for typos in the URL.</p>
+            <p>Sorry, this page doesn't exist or is unavailable. Try checking the URL for typos.</p>
             <p className="pt-10">  
-              <Link to="/" className="underline">Click here to return to the main page</Link>, or explore these featured articles:
+              <Link to="/" className="underline">Click here to return to the main page</Link>, or check out one of the featured articles:
             </p>
           </div>
         </div>

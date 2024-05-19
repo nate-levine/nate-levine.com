@@ -18,7 +18,7 @@ Join me at [nate-levine.com](https://www.nate-levine.com/).
 ! = To-do before website launch
 
 ## DOING:
-! Fix errors and warnings.
+! Add internal/external links where necessary
 
 ## TO-DO:
 ### *Content*
@@ -33,7 +33,6 @@ Join me at [nate-levine.com](https://www.nate-levine.com/).
 
 ### *Housekeeping*
 * Refactor especially messy code.
-! Fix typos, grammar, and generally improve the way some articles are worded.
 * Comment all code
 
 ### *Future Plans*

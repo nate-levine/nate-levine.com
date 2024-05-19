@@ -16,9 +16,9 @@ const TableOfContents = () => {
                     let header = section.children[0]
                     
                     return (
-                        <li key={id} className={classString}>
+                        <li key={id}>
                         {/* Scroll behavior */}
-                            <button type="button" onClick={() =>
+                            <button type="button" className={classString} onClick={() =>
                                 window.scroll({
                                 top: header.offsetTop + 5,
                                 behavior: 'smooth'

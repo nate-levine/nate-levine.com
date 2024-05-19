@@ -26,7 +26,7 @@ const IndexPage = () => {
               <h1 className="font-sans font-bold text-4xl">What's up?</h1>
               <br />
               <p>
-                I'm Nate, a senior at Worcester Polytechnic Institute (WPI). I'm currently pursuing a 
+                I'm Nate, a student at Worcester Polytechnic Institute (WPI). I'm currently pursuing a 
                 Bachelors in mechanical engineering and a minor in computer science.
               </p>
               <br />

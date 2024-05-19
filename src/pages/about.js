@@ -52,7 +52,7 @@ const AboutPage = () => {
                                 </ul>
                                 <br />
                                 <p>
-                                    Here are a couple of my favorites to pique your interest:
+                                    Here are a couple of my favorite projects to pique your interest:
                                 </p>
                             </div>
                         </div>
@@ -69,13 +69,13 @@ const AboutPage = () => {
                             <h2 className="font-sans font-bold text-2xl">Working Out</h2>
                             <br />
                             <p>
-                                In my opinion, hitting the gym in the morning is better than coffee. The endorphins from working out 
+                                In my opinion, hitting the gym is more energizing than coffee. Endorphins from working out 
                                 keep me relaxed and focused daily.
                             </p>
                             <br />
                             <p>
-                                I don't believe in one-rep maxes, so here are the current
-                                weights for my weekly sets:
+                                I don't track my one-rep maxes, so here are the current
+                                weights for my weekly sets instead:
                             </p>
                             <ul className="py-3 list-disc list-outside ms-8 text-left">
                                 <li>
@@ -92,34 +92,28 @@ const AboutPage = () => {
                             <h2 className="font-sans font-bold text-2xl">Food Science</h2>
                             <br />
                             <p>
-                                Food has always fascinated me, and not just because it tastes good. For as long as I can remember, I've been interested in the
+                                I've always had an affinity for food, and not just because it tastes good. For as long as I can remember, I've been interested in the
                                 physical, chemical, and biological processes that transform food.
                             </p>
                             <br />
                             <p>
-                                My earliest cooking memory is making cranberry juice in 4th grade with my dad. I remember
+                                My earliest cooking memory is making cranberry juice in 4th grade. I remember
                                 enjoying the process (the how), but my real focus was on the why. What's different about cranberries from other fruits that requires you to boil them down into a syrup
-                                to make juice? Why after boiling, is it necessary to strain the syrup? While the answers to these questions are obvious to me now as an
+                                to make juice? Why, after boiling, is it necessary to strain the syrup? While the answers to these questions are obvious to me now as an
                                 adult, it's this curiousity that persists.
                             </p>
                             <br />
                             <p>
-                                How does one achieve proper leavening and gluten structure in a sourdough loaf? How does one lacto-ferment hot sauce to achieve
+                                How does one achieve maximum leavening and proper gluten development in a sourdough loaf? In what ways can one lacto-ferment hot sauce to achieve
                                 the desired balance of spice and tang? Questions like these keep me interested in food science.
                             </p>
                             <br />
                             <h2 className="font-sans font-bold text-2xl">Basketball</h2>
                             <br />
                             <p>
-                                Basketball is the sport I never knew I needed. I've been a runner all my life. I ran cross country and track three seasons from middle
-                                school up until high school. When burnout from running started to hit me at the start of college, 
-                                pick-up basketball filled that sports-shaped hole in my heart.
-                            </p>
-                            <br />
-                            <p>
-                                I genuinely wish I had been introduced myself to basketball sooner. It's not like I didn't have ample opportunities in the past.
-                                Nowadays instead of finding me on runs, you can find me at the nearest basketball hoop instead. I'm also a self-proclaimed Celtics
-                                nut. It's easy to root for a team when they're one of the best.
+                                I've been a runner all my life. I ran cross country and track from middle
+                                school up until the end of high school. When burnout for running hit me in college, 
+                                pick-up basketball what I needed to reinvigorate my love for sport. Nowadays instead of finding me on runs, you can find me at the nearest basketball hoop instead.
                             </p>
                             <br />
                             <h2 className="font-sans font-bold text-2xl">Programming</h2>
@@ -130,18 +124,18 @@ const AboutPage = () => {
                             </p>
                             <br />
                             <p>
-                                Computer science is one of the only fields that is widely accesible, applicable to almost everything, and is free in most regards.
-                                The millions of online resources makes learning it easy and satisfying.
+                                Computer science is one of the only disciplines that is widely accesible, applicable to almost everything, and is free in most regards.
+                                The multitude of available online resources for computer science makes learning it easy and satisfying.
                             </p>
                             <br />
                             <p>
-                                I was introduced to computer science in high school and have been hooked ever since. I've delved into web development, graphics 
-                                programming, game design, task automation, etc. I even thought about studying it instead of engineering, but decided against that. 
-                                Some things are better left as hobbies. Instead I opted to pursue a computer science minor and take online courses in my free time.
+                                I was introduced to computer science in high school and have been hooked ever since. I've tried my hand at web development, graphics 
+                                programming, game design, task automation, etc. At one point in high school I wanted to study computer science instead of engineering, but decided against that. 
+                                Some things are better left as hobbies. I opted to pursue a CS minor instead, and to take online courses in my free time.
                             </p>
                             <br />
                             <p>
-                                Software skills are becoming ever more important, and I believe that to succeed in the future being able to program will be highly
+                                Software skills are becoming ever more important. I believe that to succeed in the future as an engineer, being able to program will be highly
                                 important, if not necessary.
                             </p>
                             <br />
