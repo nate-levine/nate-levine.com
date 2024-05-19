@@ -12,18 +12,18 @@ const NotFoundPage = () => {
 
   return (
     <Layout>
-      <div class="h-auto min-h-[100vh]">
-        <div class="max-w-[75vw] mx-auto py-20">
-          <h1 class="text-left text-6xl font-serif font-bold pb-10">Page Not Found</h1>
-          <div class="font-sans text-left text-xl pt-5">
+      <div className="h-auto min-h-[100vh]">
+        <div className="max-w-[75vw] mx-auto py-20">
+          <h1 className="text-left text-6xl font-serif font-bold pb-10">Page Not Found</h1>
+          <div className="font-sans text-left text-xl pt-5">
             <p>Sorry, this page doesn't exist or is unavailable. Try checking for typos in the URL.</p>
-            <p class="pt-10">  
-              <Link to="/" class="underline">Click here to return to the main page</Link>, or explore these featured articles:
+            <p className="pt-10">  
+              <Link to="/" className="underline">Click here to return to the main page</Link>, or explore these featured articles:
             </p>
           </div>
         </div>
-        <div class="border-dashed border-black border-b-2" />
-        <div class="max-w-[75vw] mx-auto py-20">
+        <div className="border-dashed border-black border-b-2" />
+        <div className="max-w-[75vw] mx-auto py-20">
           <ArticleView grid_config={"grid md:grid-cols-2 lg:grid-cols-3 gap-6"} filterFunc={isFeatured} />
         </div>
       </div>

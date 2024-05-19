@@ -6,7 +6,7 @@ const Credits = () => {
     const date = new Date();
 
     return (
-        <div class="bg-black text-primary py-5 font-regular text-center text-md">
+        <div className="bg-black text-primary py-5 font-regular text-center text-md">
             <p>© {date.getFullYear()} Nate Levine</p>
         </div>
     )

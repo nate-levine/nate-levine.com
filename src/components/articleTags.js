@@ -9,7 +9,7 @@ const ArticleTags = ({ tags }) => {
     }
 
     return (
-        <div class="group flex flex-row flex-wrap gap-x-2 gap-y-2 font-sans font-regular text-sm">
+        <div className="group flex flex-row flex-wrap gap-x-2 gap-y-2 font-sans font-regular text-sm">
             {
                 /* 
                     Add featured tag if tag has isFeatured prop
@@ -17,13 +17,13 @@ const ArticleTags = ({ tags }) => {
                     The reason with works is that the and statement evaluates the first expression first.
                     If isFeatured is true, then the second expression, the JSX, will be evaluated
                 */
-                tags.includes("FEATURED") && <div class="bg-black rounded-full px-1 py-1 rounded-full group-hover:animate-jump">
+                tags.includes("FEATURED") && <div className="bg-black rounded-full px-1 py-1 rounded-full group-hover:animate-jump">
                     {/*
                         From https://logowik.com/rounded-star-vector-icon-14817.html
                         Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)
                     */}
                     <svg version="1.0" id="katman_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                    viewBox="60 0 480 480" class="h-5 fill-primary group-hover:animate-rotate">
+                    viewBox="60 0 480 480" className="h-5 fill-primary group-hover:animate-rotate">
                         <path d="M331.9,56.7l32.6,79.8c2.5,6.2,8,10.1,14.6,10.6l86,6.4c14.2,1,25.7,10.1,30.1,23.6
                             c4.4,13.5,0.4,27.6-10.5,36.8l-65.9,55.7c-5.1,4.3-7.2,10.7-5.6,17.2l20.5,83.8c3.4,13.8-1.6,27.6-13.2,35.9
                             c-11.5,8.4-26.1,8.9-38.2,1.4l-82.4-51l-82.4,51c-12.1,7.5-26.7,7-38.2-1.4c-11.5-8.4-16.5-22.1-13.2-35.9l20.5-83.8
@@ -40,7 +40,7 @@ const ArticleTags = ({ tags }) => {
                     // "Bake" tailwind class string so that tailwind preprocessor doesn't remove it
                     let classString = `bg-${color} rounded-full px-3 py-1`
                     // Add class string to tag style
-                    return <div class={classString}>{tag}</div>
+                    return <div key={index} className={classString}>{tag}</div>
                 })
             }
         </div>

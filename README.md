@@ -18,7 +18,7 @@ Join me at [nate-levine.com](https://www.nate-levine.com/).
 ! = To-do before website launch
 
 ## DOING:
-! Convert .webp images to .png or .jpg
+! Fix errors and warnings.
 
 ## TO-DO:
 ### *Content*
@@ -32,7 +32,6 @@ Join me at [nate-levine.com](https://www.nate-levine.com/).
   * Make tag order weighted?
 
 ### *Housekeeping*
-! Fix errors and warnings.
 * Refactor especially messy code.
 ! Fix typos, grammar, and generally improve the way some articles are worded.
 * Comment all code

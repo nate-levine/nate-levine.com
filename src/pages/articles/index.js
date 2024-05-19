@@ -51,47 +51,47 @@ const ArticlePage = ({ data }) => {
 
   return (
     <Layout>
-      <div class="h-auto min-h-[100vh] max-w-[75vw] mx-auto py-20">
-        <h1 class="text-left text-6xl font-serif font-bold pb-10">Explore Articles</h1>
-        <div class="flex flex-row space-x-5 items-center justify-left" >
-          <p class="font-serif font-bold text-xl" >Sort By:</p>
-          <div class="inline-block min-w-[7vw] text-left text-sm font-sans font-regular border-solid border-black border-2 rounded-lg">
-            <button type="button" onClick={toggleMenu} class="drop-down-button inline-flex w-full text-l justify-center gap-x-1.5 rounded-lg px-2 py-2 bg-primary">
+      <div className="h-auto min-h-[100vh] max-w-[75vw] mx-auto py-20">
+        <h1 className="text-left text-6xl font-serif font-bold pb-10">Explore Articles</h1>
+        <div className="flex flex-row space-x-5 items-center justify-left" >
+          <p className="font-serif font-bold text-xl" >Sort By:</p>
+          <div className="inline-block min-w-[7vw] text-left text-sm font-sans font-regular border-solid border-black border-2 rounded-lg">
+            <button type="button" onClick={toggleMenu} className="drop-down-button inline-flex w-full text-l justify-center gap-x-1.5 rounded-lg px-2 py-2 bg-primary">
               {
                 articleOrder == "Latest"
                 ?
-                <svg class="drop-down-icon my-auto h-[0.9rem] w-5" id="eEy52ihAnbC1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 200" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
-                  <line x1="0" y1="-49.962364" x2="0" y2="49.962364" transform="matrix(2.017858 0 0 1.578812 75 111.370907)" fill="none" stroke="#000" stroke-width="10" stroke-linecap="round"/>
-                  <line x1="15.807301" y1="-15.807301" x2="-15.807302" y2="15.807302" transform="matrix(-2.017858 0 0 2.017859 106.896889 46.575094)" fill="none" stroke="#000" stroke-width="10" stroke-linecap="round"/>
-                  <line x1="15.807301" y1="-15.807301" x2="-15.807302" y2="15.807302" transform="matrix(2.017858 0 0 2.017859 43.103111 46.575094)" fill="none" stroke="#000" stroke-width="10" stroke-linecap="round"/>
+                <svg className="drop-down-icon my-auto h-[0.9rem] w-5" id="eEy52ihAnbC1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 200" shapeRendering="geometricPrecision" textRendering="geometricPrecision">
+                  <line x1="0" y1="-49.962364" x2="0" y2="49.962364" transform="matrix(2.017858 0 0 1.578812 75 111.370907)" fill="none" stroke="#000" strokeWidth="10" strokeLinecap="round"/>
+                  <line x1="15.807301" y1="-15.807301" x2="-15.807302" y2="15.807302" transform="matrix(-2.017858 0 0 2.017859 106.896889 46.575094)" fill="none" stroke="#000" strokeWidth="10" strokeLinecap="round"/>
+                  <line x1="15.807301" y1="-15.807301" x2="-15.807302" y2="15.807302" transform="matrix(2.017858 0 0 2.017859 43.103111 46.575094)" fill="none" stroke="#000" strokeWidth="10" strokeLinecap="round"/>
                 </svg>
                 :
-                <svg class="drop-down-icon my-auto h-[0.9rem] w-5 rotate-[-180deg]" id="eEy52ihAnbC1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 200" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
-                  <line x1="0" y1="-49.962364" x2="0" y2="49.962364" transform="matrix(2.017858 0 0 1.578812 75 111.370907)" fill="none" stroke="#000" stroke-width="10" stroke-linecap="round"/>
-                  <line x1="15.807301" y1="-15.807301" x2="-15.807302" y2="15.807302" transform="matrix(-2.017858 0 0 2.017859 106.896889 46.575094)" fill="none" stroke="#000" stroke-width="10" stroke-linecap="round"/>
-                  <line x1="15.807301" y1="-15.807301" x2="-15.807302" y2="15.807302" transform="matrix(2.017858 0 0 2.017859 43.103111 46.575094)" fill="none" stroke="#000" stroke-width="10" stroke-linecap="round"/>
+                <svg className="drop-down-icon my-auto h-[0.9rem] w-5 rotate-[-180deg]" id="eEy52ihAnbC1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 200" shapeRendering="geometricPrecision" textRendering="geometricPrecision">
+                  <line x1="0" y1="-49.962364" x2="0" y2="49.962364" transform="matrix(2.017858 0 0 1.578812 75 111.370907)" fill="none" stroke="#000" strokeWidth="10" strokeLinecap="round"/>
+                  <line x1="15.807301" y1="-15.807301" x2="-15.807302" y2="15.807302" transform="matrix(-2.017858 0 0 2.017859 106.896889 46.575094)" fill="none" stroke="#000" strokeWidth="10" strokeLinecap="round"/>
+                  <line x1="15.807301" y1="-15.807301" x2="-15.807302" y2="15.807302" transform="matrix(2.017858 0 0 2.017859 43.103111 46.575094)" fill="none" stroke="#000" strokeWidth="10" strokeLinecap="round"/>
                 </svg>
               }
               {articleOrder}
-              <svg class="-mr-1 h-5 w-5" viewBox="0 0 20 20" aria-hidden="true">
-                <path fill-rule="evenodd" class="drop-down-arrow origin-center duration-100" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/>
+              <svg className="-mr-1 h-5 w-5" viewBox="0 0 20 20" aria-hidden="true">
+                <path fillRule="evenodd" className="drop-down-arrow origin-center duration-100" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/>
               </svg>
             </button>
-            <div class="drop-down-menu left-0 z-10 w-full origin-top-right bg-primary rounded-lg hidden">
+            <div className="drop-down-menu left-0 z-10 w-full origin-top-right bg-primary rounded-lg hidden">
               {
-                sortOptions.map(option => {
+                sortOptions.map((option, id) => {
                   if (option !== articleOrder)
-                    return <button class="block text-center py-2 font-sans w-full hover:font-bold hover:bg-black hover:text-primary border-solid border-black border-t-2 duration-100" onClick={() => setArticleOrder(option)}>{option}</button>
+                    return <button key={id} className="block text-center py-2 font-sans w-full hover:font-bold hover:bg-black hover:text-primary border-solid border-black border-t-2 duration-100" onClick={() => setArticleOrder(option)}>{option}</button>
                 })
               }
             </div>
           </div>
         </div>
-        <div class="group flex flex-row flex-wrap gap-x-2 gap-y-2 font-sans font-regular text-sm pt-5 pb-10">
-        <p class="font-serif font-bold text-xl pr-2 items-center" >Tags:</p>
+        <div className="group flex flex-row flex-wrap gap-x-2 gap-y-2 font-sans font-regular text-sm pt-5 pb-10">
+        <p className="font-serif font-bold text-xl pr-2 items-center" >Tags:</p>
           {
               // Enumerate over each tag
-              all_tags.map(tag => {
+              all_tags.map((tag, id) => {
                   let classString = ""
                   if (selectedTags.includes(tag)) {
                     classString = "flex flex-row border-solid border-black border-2 bg-black focus:bg-black text-primary focus:text-primary rounded-full px-3 py-1 duration-100"
@@ -109,7 +109,7 @@ const ArticlePage = ({ data }) => {
                   }
 
                   return (
-                    <button class={classString} onClick={() => {
+                    <button key={id} className={classString} onClick={() => {
                       // Add or remove filter tags from state
                       if (selectedTags.includes(tag)) {
                         setSelectedTags(selectedTags.filter(selectedTag => { return selectedTag !== tag }))
@@ -117,18 +117,18 @@ const ArticlePage = ({ data }) => {
                         setSelectedTags([...selectedTags, tag])
                       }
                     }}>
-                        <div class="left-1 pr-2">
+                        <div className="left-1 pr-2">
                           {/*
                             From: https://www.svgrepo.com/svg/521794/plus
                           */}
                           {selectedTags.includes(tag) ?
-                            <svg x="0px" y="0px" viewBox="2 2 20 20" class="my-[0.2rem] h-3 rotate-[45deg] duration-100">
-                              <path class="fill-primary" d="M13 3C13 2.44772 12.5523 2 12 2C11.4477 2 11 2.44772 11 3V11H3C2.44772 11 2 11.4477 2 12C2 12.5523 
+                            <svg x="0px" y="0px" viewBox="2 2 20 20" className="my-[0.2rem] h-3 rotate-[45deg] duration-100">
+                              <path className="fill-primary" d="M13 3C13 2.44772 12.5523 2 12 2C11.4477 2 11 2.44772 11 3V11H3C2.44772 11 2 11.4477 2 12C2 12.5523 
                               2.44772 13 3 13H11V21C11 21.5523 11.4477 22 12 22C12.5523 22 13 21.5523 13 21V13H21C21.5523 13 22 12.5523 22 
                               12C22 11.4477 21.5523 11 21 11H13V3Z" fill="#0F0F0F"/>
                             </svg> :
-                            <svg x="0px" y="0px" viewBox="2 2 20 20" class="my-[0.2rem] h-3 rotate-0 duration-100">
-                              <path class="fill-black" d="M13 3C13 2.44772 12.5523 2 12 2C11.4477 2 11 2.44772 11 3V11H3C2.44772 11 2 11.4477 2 12C2 12.5523 
+                            <svg x="0px" y="0px" viewBox="2 2 20 20" className="my-[0.2rem] h-3 rotate-0 duration-100">
+                              <path className="fill-black" d="M13 3C13 2.44772 12.5523 2 12 2C11.4477 2 11 2.44772 11 3V11H3C2.44772 11 2 11.4477 2 12C2 12.5523 
                               2.44772 13 3 13H11V21C11 21.5523 11.4477 22 12 22C12.5523 22 13 21.5523 13 21V13H21C21.5523 13 22 12.5523 22 
                               12C22 11.4477 21.5523 11 21 11H13V3Z" fill="#0F0F0F"/>
                             </svg>
@@ -137,13 +137,13 @@ const ArticlePage = ({ data }) => {
                         {
                           tag == "FEATURED"
                           ?
-                          <div class="rounded-full rounded-full">
+                          <div className="rounded-full rounded-full">
                             {/*
                                 From https://logowik.com/rounded-star-vector-icon-14817.html
                                 Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)
                             */}
                             <svg version="1.0" id="katman_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                            viewBox="60 0 480 480" class={starClassString}>
+                            viewBox="60 0 480 480" className={starClassString}>
                                 <path d="M331.9,56.7l32.6,79.8c2.5,6.2,8,10.1,14.6,10.6l86,6.4c14.2,1,25.7,10.1,30.1,23.6
                                     c4.4,13.5,0.4,27.6-10.5,36.8l-65.9,55.7c-5.1,4.3-7.2,10.7-5.6,17.2l20.5,83.8c3.4,13.8-1.6,27.6-13.2,35.9
                                     c-11.5,8.4-26.1,8.9-38.2,1.4l-82.4-51l-82.4,51c-12.1,7.5-26.7,7-38.2-1.4c-11.5-8.4-16.5-22.1-13.2-35.9l20.5-83.8

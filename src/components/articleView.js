@@ -48,21 +48,21 @@ const ArticleView = ({ grid_config, filterFunc, sortFunc }) => {
     }
 
     return (
-        <div class={grid_config}>
+        <div className={grid_config}>
         {
             sortFunc(filterFunc(data.allMdx.nodes)).map(node => (
                 <article key={node.id}>
-                    <div class="h-full">
+                    <div className="h-full">
                         <Link to={`/articles/${node.frontmatter.slug}`}>
-                            <div class="h-full group font-sans text-xl p-3 shadow-[8px_8px_0_black] border-solid border-2 border-black hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] rounded-2xl hover:bg-black duration-100">
-                                <div class="flex flex-col h-full group-hover:text-[#fbf1c7]">
-                                    <div class="flex-auto">
-                                        <div class="font-bold">{node.frontmatter.title}</div>
-                                        <div class="h-2" />
+                            <div className="h-full group font-sans text-xl p-3 shadow-[8px_8px_0_black] border-solid border-2 border-black hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] rounded-2xl hover:bg-black duration-100">
+                                <div className="flex flex-col h-full group-hover:text-[#fbf1c7]">
+                                    <div className="flex-auto">
+                                        <div className="font-bold">{node.frontmatter.title}</div>
+                                        <div className="h-2" />
                                         <ArticleTags tags={node.frontmatter.tags} />
                                     </div>
-                                    <div class="h-2" />
-                                    <div class="h-flex text-right font-bold">{node.frontmatter.date}</div>
+                                    <div className="h-2" />
+                                    <div className="h-flex text-right font-bold">{node.frontmatter.date}</div>
                                 </div>
                             </div>
                         </Link>

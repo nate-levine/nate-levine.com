@@ -15,32 +15,32 @@ const ArticlePost = ({ data, children }) => {
 
   return (
     <Layout>
-      <div class="pt-20 max-w-[85%] sm:w-[640px] mx-auto">
-        <h1 class="text-black text-4xl font-serif font-bold">{data.mdx.frontmatter.title}</h1>
-        <div class="h-8" />
-        <p class="text-black max-text-2xl font-sans font-regular">{data.mdx.frontmatter.date}</p>
-        <div class="h-8" />
+      <div className="pt-20 max-w-[85%] sm:w-[640px] mx-auto">
+        <h1 className="text-black text-4xl font-serif font-bold">{data.mdx.frontmatter.title}</h1>
+        <div className="h-8" />
+        <p className="text-black max-text-2xl font-sans font-regular">{data.mdx.frontmatter.date}</p>
+        <div className="h-8" />
         <ArticleTags tags={data.mdx.frontmatter.tags} isFeatured={data.mdx.frontmatter.isFeatured} />
       </div>
-      <div class="h-8 border-dashed border-black border-b-2" />
-      <div class="flex flex-col-reverse xl:flex-row pb-20">
-        <div class="w-[25%]" />
-        <div class="h-auto min-h-[100vh] max-w-[85%] sm:w-[640px] mx-auto">
-          <div class="text-black text-2xl text-left font-serif mx-auto pb-10 leading-relaxed">   
-            <div class="items-center text-center pt-10">    
+      <div className="h-8 border-dashed border-black border-b-2" />
+      <div className="flex flex-col-reverse xl:flex-row pb-20">
+        <div className="w-[25%]" />
+        <div className="h-auto min-h-[100vh] max-w-[85%] sm:w-[640px] mx-auto">
+          <div className="text-black text-2xl text-left font-serif mx-auto pb-10 leading-relaxed">   
+            <div className="items-center text-center pt-10">    
             {
               image
               ?
               <GatsbyImage
                 image={image}
                 alt={data.mdx.frontmatter.hero_image_alt}
-                class="rounded-md border-solid border-black border-2 shadow-[8px_8px_0_black]"
+                className="rounded-md border-solid border-black border-2 shadow-[8px_8px_0_black]"
               />
               :
               <div />
             }
               <br />
-              <sub class="py-10 h-40">
+              <sub className="py-10 h-40">
                 <Components.ExternalLink to={data.mdx.frontmatter.hero_image_credit_link}>
                   {data.mdx.frontmatter.hero_image_alt}
                 </Components.ExternalLink>
@@ -51,10 +51,10 @@ const ArticlePost = ({ data, children }) => {
         </div>
         <TableOfContents />
       </div>
-      <div class="border-solid border-black border-b-2" />
-      <div class="h-fit"> 
-        <div class="py-20 max-w-[75vw] mx-auto">
-          <p class="font-bold text-4xl pb-10">Related Articles</p>
+      <div className="border-solid border-black border-b-2" />
+      <div className="h-fit"> 
+        <div className="py-20 max-w-[75vw] mx-auto">
+          <p className="font-bold text-4xl pb-10">Related Articles</p>
           <ArticleView grid_config={"grid md:grid-cols-1 lg:grid-cols-3 gap-6"} filterFunc={relatedArticles(data.mdx, 3)} />
         </div>
       </div>
@@ -85,7 +85,7 @@ export const query = graphql`
 export const Head = ({ data }) => <SEO
   title={`${data.mdx.frontmatter.title} - Nate Levine`}
   description={data.mdx.except}
-  image={data.mdx.frontmatter.hero_image}
+  image={data.mdx.frontmatter.hero_image_credit_link}
   article={false}
 />
 
