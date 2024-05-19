@@ -17,7 +17,7 @@ hero_image_credit_link: "https://www.reddit.com/r/ProgrammerHumor/comments/10pyv
 import * as Components from '../../src/components/mdx/mdx_components'
 
 <Components.Section title="What I Won't Talk About">
-    <Components.Paragraph>I'll begin saying that my intention isn't to cover each design pattern present in this book, along with their implementations. That's what the book does. If you want to learn each design pattern in detail, read the book. Instead, I'll be focussing on the general ideas that span the entire book. I'm going to share what key design principles I learned, what I found interesting, and how well I think this book holds up after nearly 30 years since its publication.</Components.Paragraph>
+    <Components.Paragraph>I'll begin saying that my intention isn't to cover each design pattern present in <Components.ExternalLink to="https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612">Design Patterns</Components.ExternalLink>, along with their implementations. That's what the book does. If you want to learn each design pattern in detail, read the book. Instead, I'll be focussing on the general ideas that span the entire book. I'm going to share what key design principles I learned, what I found interesting, and how well I think this book holds up after nearly 30 years since its publication.</Components.Paragraph>
 </Components.Section>
 
 <Components.Section title="A Time Before Java">
@@ -49,11 +49,11 @@ import * as Components from '../../src/components/mdx/mdx_components'
 
     <Components.Paragraph>This book warns the reader to keep the balance between complexity and indirection in mind when adding design patterns to a software system. Design patterns achieve reduced system complexity primarily through code indirection. Although indirection can makes code more reusable, it can also make a program difficult to understand. Therefore if a design pattern's use does not create more flexibility, maintainability, or reusablility in a software system, its addition is counterproductive.</Components.Paragraph>
 
-    <sub>*Any common noun written as proper noun means it is a pattern from the Design Elements catalog.</sub>
+    <sub>*Any common noun capitalized as proper noun means it is a pattern from the Design Patterns catalog.</sub>
 </Components.Subsection>
 
 <Components.Section title="Things to Think About">
-    <Components.Paragraph>After reading this book I'm more skilled in spotting design patterns in programs I interact with. For example, I now recognize that the React library relies on the Composite pattern to structure components, and uses the Template pattern for its hooks. To anyone reading this article in 2054, I apologize for using such an a outdated framework as an example.</Components.Paragraph>
+    <Components.Paragraph>After reading this book I'm more skilled in spotting design patterns in programs I interact with. For example, I now recognize that the <Components.ExternalLink to="https://react.dev/">React library</Components.ExternalLink> relies on the Composite pattern to structure components, and uses the Template pattern for its hooks. To anyone reading this article in 2054, I apologize for using such an a outdated framework as an example.</Components.Paragraph>
 
     <Components.Paragraph>Similarly, there were many times when concepts that I'm familiar with were presented in a new, object-oriented way. Before reading this book, I was familiar with interpreters and how they operate on abstract syntax trees in the context of functional programming. But in the object-oriented world, an Interpreter pattern operates on an abstract syntax tree which, in the context of object-oriented programming, is a Composite pattern. I find it really neat how design patterns can intuitively recreate the structure and behavior of familiar ideas within the limits of the object-oriented design space.</Components.Paragraph>
 
