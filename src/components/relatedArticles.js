@@ -25,9 +25,9 @@ const relatedArticles = (current, numArticles) => {
         */
         let relatedNodes = []
         for (var i = 0; i < numArticles; i++) {
-            const maxNode = matchingTagsMap.entries().reduce((a, b) => a[1] > b[1] ? a : b)     // Find the node with the highest matching tags
-            relatedNodes.push(maxNode[0])                                                       // Add that node to the related nodes
-            matchingTagsMap.delete(maxNode[0])                                                  // Delete that node from the map
+            const maxNode = [...matchingTagsMap.entries()].reduce((a, b) => a[1] > b[1] ? a : b)      // Find the node with the highest matching tags
+            relatedNodes.push(maxNode[0])                                                                       // Add that node to the related nodes
+            matchingTagsMap.delete(maxNode[0])                                                                  // Delete that node from the map
         }
         return relatedNodes
     }
