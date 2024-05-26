@@ -18,12 +18,11 @@ Join me at [nate-levine.com](https://www.nate-levine.com/).
 ! = To-do before website launch
 
 ## DOING:
-! Add internal/external links where necessary
+! Port projects from old website to new website in short-form article format.
 
 ## TO-DO:
 ### *Content*
-! Port projects from old website to new website in short-form article format.
-  ! Add project filter to About section
+! Add project filter to About section
 
 ### *Features:*
 * Implement rich results (images, meaningful descriptions) for SEO

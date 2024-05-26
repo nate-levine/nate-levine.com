@@ -1,0 +1,72 @@
+---
+title: "Ditch Your Doorstop: Adventures in Rapid Prototyping and Entrepreneurship"
+date: ""
+slug: "ditch-your-doorstop-adventures-in-rapid-prototyping-and-guerilla-marketing"
+tags:
+    - FEATURED
+    - Project
+    - Prototyping
+    - Marketing
+hero_image: "./door-stop-promotional-poster.png"
+hero_image_alt: "Door Stop Promotional Poster"
+hero_image_credit_text: "Nate Levine"
+hero_image_credit_link: null
+---
+
+import * as Components from '../../src/components/mdx/mdx_components'
+import compliantMechanisms from "./compliant-mechanism.gif"
+import worthlessTreasureTwist from "./worthless-treasure-twist.jpg"
+
+<Components.Section title="Every Good Idea Starts With a Problem">
+    <Components.Paragraph>My freshman year of college, I lived in a dorm hall with heavy doors. This created a problem: door stops didn't work. You could wedge a door stop under the door, but the door didn't care. The door would slowly push the doorstop out of the way until the door was nearly closed. The best solution to this problem was to find a heavy object like a brick instead.</Components.Paragraph>
+
+    <Components.Paragraph>This wouldn't be a problem for less sociable people. However, my roommates and I prefered to keep our room door open when we were in there. Our idea was simple: rather than wedging a doorstop between the door and the floor, create a doorstop that mounts to the floor and hold the door in place through friction forces caused by the load from a spring.</Components.Paragraph>
+ 
+    <Components.Paragraph>This solution did more than solve the immediate problem. It also had the added benefit of keeping the door open automatic. No more bending down to wedge a door stop in place. Just open the door all the way, and it's held in place. To close the door, just pull it closed.</Components.Paragraph>
+</Components.Section>
+
+<Components.Section title="The Idea">
+    <Components.Paragraph>We set straight to work and openned up SolidWorks. Our goal was to keep the design as simple, adaptable, and cheap as possible. Simplicity would allow for quick iteration and fewer points of failure. Adaptability would allow the design to work for any door in our dorm hall. Reducing the cost of the design would allow us to make as many as we needed without any financial pressure.</Components.Paragraph>
+
+    <Components.Paragraph>We decided that 3D printing would be the best manufacturing technique to meet these three criteria. 3D printing enables most shapes to be printed without any fancy manufacturing techniques, and the cost of ABS (a type of plastic) coming in at $0.03 a gram, each doorstop would cost less than $2.00 to produce.</Components.Paragraph>
+
+    <Components.Paragraph>To simplify our design even further, we decided to print the entire thing as one part. Our largest hurdle to achieve this goal was the spring force needed to keep the door in place. What was our solution? Compliant mechaisms.</Components.Paragraph>
+</Components.Section>
+
+<Components.Section title="Compliant Mechanisms">
+    <Components.Paragraph>Compliant mechanisms are mechanisms that transfer forces through elastic deformation. In simple terms, they are single-body mechanisms that use bending and flexing rather than motion between bodies to transfer forces.</Components.Paragraph>
+    
+    <Components.Image src={compliantMechanisms} alt="BYU - Compliant Mechanisms Explained" to="https://compliantmechanisms.byu.edu/about-compliant-mechanisms">BYU - Compliant Mechanisms Explained</Components.Image>
+
+    <Components.Paragraph>Our idea was to implement the spring force as a flat plane connected to the main body of the door stop by a "C" shaped curve. The top surface of this place would be textured in a way to maximize friction forces with the door. When the door came into contact with the door stop, the door would push down on the plane, compressing the "C" shaped curve. The elastic forces in the curve would try to push back up on the bottom of the door, and hold it in place through friction caused by that normal force.</Components.Paragraph>
+
+    <Components.Paragraph>All we had to do now was take some measurements, model the thing, and ship it off to print. Our hard work was done. I'm joking of course.</Components.Paragraph>
+</Components.Section>
+
+<Components.Section title="Rapid Prototyping">
+    <Components.Paragraph>Most ideas don't work on their first try. Lucky for us, we designed and manufactured out door stop in such a way where iteration and manufacturing was quick and cheap. This process was perhaps my first foray into rapid prototyping. For a whole week, I was going back and forth between our dorm room and our campus' 3D printing lab. When classes were over for the day, my schedule was often design, print, test, repeat.</Components.Paragraph>
+
+    <Components.Paragraph>If I recall correctly, we went throug six iterations, and eventually settled on that sixth design. Unfortunately I've lost the picture that shows all of the door stops side-by-side. Most of the redesign process involved finding the correct thickness to achieve the right balance between flexture and fragility. In addition to this, the base because shorter over time when we realized we could save on cost by reducing the use of excess material.</Components.Paragraph>
+
+    <Components.Paragraph>After a while, we were satified. We showed it off to a couple of our friends down the hall. Most of them asked if they could get one for their own room. That's when we realized that we weren't the only one with this problem. We might be able to meet people's needs, make back the $20 or so we spent on this project, and maybe even turn a profit.</Components.Paragraph>
+
+    <Components.ExternalLink to="https://www.youtube.com/watch?v=kev0uBcHKio">This video shows how the door stop works.</Components.ExternalLink>
+</Components.Section>
+
+<Components.Section title="Door-to-Door Sales">
+    <Components.Paragraph>The good thing about our target market is that it was self-evident. People who keep their doors closed are hard to talk to, but probably don't want a product that keeps their open. People who keep their doors open are easy to talk too, and probably do.</Components.Paragraph>
+
+    <Components.Paragraph>Our dorm hall was divided into three floors with 30 rooms each. Even with a conservative estimate that only one-third of students keep their room doors open, that's still around 30 potential customers. Each door stop cost around $1.50 to produce. If we could sell even 6 door stops at $5 a pop, we could break even. If we could sell to even half of our potential 30 customers, we would make a respectable $30 in profit.</Components.Paragraph>
+
+    <Components.Paragraph>We decided the best way to sell doorstops was to go door-to-door. This had the added benefit of giving any easy way to meet new people, which is always a positive, especially as a freshman student. We also made advertisment posters which we plastered areas of the dorm hall with high foot traffic like main hallways and stairwells.</Components.Paragraph>
+</Components.Section>
+
+<Components.Section title="Conclusion">
+    <Components.Paragraph>So how many did we sell? Two. In all fairness, we did give away 3 others, however those were to close friends which we didn't charge. The two we sold for a profit of $7 ended up paying for those additional 3, and our capitalist dreams ended with us around $18 in the red.</Components.Paragraph>
+    
+    <Components.Image src={worthlessTreasureTwist} alt="TV Tropes - Worthless Treasure Twist" to="https://tvtropes.org/pmwiki/pmwiki.php/Main/WorthlessTreasureTwist">TV Tropes - Worthless Treasure Twist</Components.Image>
+
+    <Components.Paragraph>Fortunately, unlike most entrepreneurial undertakings, our business had extremely low stakes. What was more important was the lessons we learned. It was a lesson in generating solutions to ideas, rapid prototyping, entrepreneurship and marketing.</Components.Paragraph>
+
+    We ended up using our doorstop right until the end of the year when we moved out. Besides the <Components.Paragraph>great practical use that it provided us that year, it was also a constant reminder of...</Components.Paragraph>
+</Components.Section>

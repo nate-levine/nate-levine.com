@@ -38,5 +38,22 @@ module.exports = {
     },
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
+    // Inline images
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              withWebp: true,
+              showCaptions: true,
+              quality: 100,
+            },
+          },
+        ],
+      },
+    },
   ],
 }

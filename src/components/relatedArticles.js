@@ -8,15 +8,14 @@ const relatedArticles = (current, numArticles) => {
         nodes.forEach(node => {
 
             if (node.frontmatter.title === current.frontmatter.title) {     // If the node is the current node, set its key (matching tags) to -1
+                matchingTagsMap.set(node, -1)
             } else {
+                matchingTagsMap.set(node, 0)
+
                 node.frontmatter.tags.forEach(tag => {
 
                     if (tag !== "FEATURED" && current.frontmatter.tags.includes(tag))   // Ignore the FEATURED tag
-                        if (!matchingTagsMap.has(node)) {
-                            matchingTagsMap.set(node, 0)
-                        } else {
-                            matchingTagsMap.set(node, matchingTagsMap.get(node) + 1)
-                        }
+                        matchingTagsMap.set(node, matchingTagsMap.get(node) + 1)
                 })
             }
         })

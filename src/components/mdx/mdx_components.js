@@ -72,3 +72,16 @@ export const ListItem = ({ children }) => {
         </li>
     )
 }
+
+export const Image = ({ children, src, alt, to }) => {
+    return (
+        <div className="text-center py-5">
+            <img src={src} alt={alt} className="w-full mx-auto rounded-md border-solid border-black border-2 shadow-[8px_8px_0_black]" />
+            <div className="pt-10 text-base">
+                <a href={to} className="underline">
+                    {children}
+                </a>
+            </div>
+        </div>
+    )
+}

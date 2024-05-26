@@ -40,7 +40,7 @@ const ArticlePost = ({ data, children }) => {
               <div />
             }
               <br />
-              <sub className="py-10 h-40">
+              <sub className="py-10 h-40 text-base">
                 <Components.ExternalLink to={data.mdx.frontmatter.hero_image_credit_link}>
                   {data.mdx.frontmatter.hero_image_alt}
                 </Components.ExternalLink>
