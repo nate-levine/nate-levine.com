@@ -5,8 +5,8 @@ import SEO from '../components/seo'
 
 const AboutPage = () => {
 
-  const firstFour = (nodes) => {
-    return nodes.slice(0, 4)
+  const filterProjects = (nodes) => {
+    return nodes.filter(node => node.frontmatter.tags.includes("Project"))
   }
 
   return (
@@ -58,7 +58,7 @@ const AboutPage = () => {
                         </div>
                         <div className="py-20 flex-1">
                             <div className="w-[80%] mx-auto ">
-                                <ArticleView grid_config={"grid md:grid-cols-2 lg:grid-cols-2 gap-6"} filterFunc={firstFour} />
+                                <ArticleView grid_config={"grid md:grid-cols-2 lg:grid-cols-2 gap-6"} filterFunc={filterProjects} />
                             </div>
                         </div>
                     </div>
