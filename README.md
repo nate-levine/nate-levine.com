@@ -30,6 +30,7 @@ Join me at [nate-levine.com](https://www.nate-levine.com/).
 * Clicking tags on an article should redirect to a list of articles with that tag.
 * Implement a less rudimentary related articles algorithms.
   * Make tag order weighted?
+* Add a footnotes mdx component for articles
 
 ### *Housekeeping*
 * Refactor especially messy code.

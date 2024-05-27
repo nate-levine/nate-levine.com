@@ -1,70 +1,71 @@
 ---
-title: "(WORK IN PROGESS. BASICALLY WORD VOMIT AT THIS POINT) Ditch Your Doorstop: Adventures in Rapid Prototyping and Entrepreneurship"
-date: ""
+title: "Ditch Your Doorstop: Adventures in Rapid Prototyping and Entrepreneurship"
+date: "2024-05-27"
 slug: "ditch-your-doorstop-adventures-in-rapid-prototyping-and-entrepreneurship"
 tags:
     - FEATURED
     - Project
     - Prototyping
     - Marketing
-hero_image: "./door-stop-promotional-poster.png"
-hero_image_alt: "Door Stop Promotional Poster"
+hero_image: "./door-jam-promotional-poster.png"
+hero_image_alt: "Door Jam Promotional Poster"
 hero_image_credit_text: "Nate Levine"
 hero_image_credit_link: null
 ---
 
 import * as Components from '../../src/components/mdx/mdx_components'
+
 import compliantMechanisms from "./compliant-mechanism.gif"
 import worthlessTreasureTwist from "./worthless-treasure-twist.jpg"
+import doorJamVideo from "./door-jam-video.gif"
 
-<Components.Section title="Every Good Idea Starts With a Problem">
-    <Components.Paragraph>My freshman year of college, I lived in a dorm hall with heavy doors. My best guess for why they were so heavy is probably due to the high concentration of people and electronics in one building necessitated neccesitated by some fire code. These door also swung in to close automatically if there was nothing holding them open. This trade-off of ease-of-use for safety created a problem: wedge door stops didn't work. Despite our best efforts, the friction created by door stops was no match for the weight of our door. Our temporary solution to this problem was to use another heavy object to prevent the door from closing, that being a brick.</Components.Paragraph>
+<Components.Section title="All Good Ideas Start With a Problem">
+    <Components.Paragraph>All good ideas start with a problem. In my freshman year dorm hall, the problem was that room doors wouldn’t stay open. Our dorm hall was equipped with those heavy fire-proof doors that swing close if nothing is propping them open. You really only had two options to keep one of these doors open. You could (1) wedge a door stop in the door, or (2) place a heavy object like a brick in front of the door. However, both of these solutions pose problems. Considering the weight of the door, doorstops would need to be precisely wedged into the door to actually make the door stand still. Often times kicking the stop in with your foot wouldn’t be sufficient, and you would need to physically reach down to get enough leverage to wedge the doorstop into the door. The heavy object poses a more obvious problem, that being that it’s a pain in the a** to move.</Components.Paragraph>
 
-    <Components.Paragraph>Our idea was simple: rather than wedging a doorstop between the door and the floor, we should create a doorstop that mounts to the floor and hold the door in place through load forces from a spring.</Components.Paragraph>
- 
-    <Components.Paragraph>This solution had an added benefit as well. The door could be pushed and pulled into the stop without having to bend down. No more wasted effort bending down to wedge a door stop into the door.</Components.Paragraph>
+    <Components.Paragraph>My roommate and I thought there had to be a better solution. We wanted something that was convenient, failure-proof, and (us being college students) cheap to produce. Our need for convenience drove how our idea functioned. The general solution was a mechanism that could catch the door and hold it open, but also release the door when an opposing force was applied to it. All this needed to be able to be done without the person operating the door having to bend over or squat down. Our first thought was to use <u>[magnets](https://www.youtube.com/watch?v=_-agl0pOQfs&t=109)</u>. But alas, magnets are quite expensive, especially in the quantity or quality we would need for these doors. Our next best idea was to use springs. One or more springs could apply pressure to the underside of the door. If sufficient force was applied to the door, and the surface in contact with the door was large enough, the door could be held in place via friction. You could move the door in and out of the mechanism laterally without much effort since the force was being applied from underneath rather than from the side of the door. Finally, this mechanism needed to minimize how many points of failure it had. To achieve this, we decided that the entire mechanism should be a single piece. This created a conflict with our spring solution, because we couldn’t keep the mechanism as one component without removing the necessary springs and possible fasteners. Our solution was to make the mechanism compliant.</Components.Paragraph>
 </Components.Section>
 
-<Components.Section title="The Idea">
-    <Components.Paragraph>The goal was to keep the design as simple and cheap as possible. Simplicity enables quick iteration and fewer possible points of failure. Reducing the cost of the design would allow us to make many prototypes cheaply. To satisfy our need for simplicity, we decided to design the door stop as a single part. We chose 3D printing as our manufacturing technique because plastic is cheap, allowing us to print a single door stop for less than $1.50. 3D printing also simplifies manufacturing because it enables complex geometry to be printed without the need for complex manufacturing techniques.</Components.Paragraph>
-</Components.Section>
-
-<Components.Section title="Compliant Mechanisms">
-    <Components.Paragraph>Compliant mechanisms are mechanisms that transfer forces through elastic deformation. In simple terms, they are single-body mechanisms that use bending and flexing rather than motion between bodies to transfer forces.</Components.Paragraph>
-    
+<Components.Section title="Compliant Mechanisms and 3D Printing">
     <Components.Image src={compliantMechanisms} alt="BYU - Compliant Mechanisms Explained" to="https://compliantmechanisms.byu.edu/about-compliant-mechanisms">BYU - Compliant Mechanisms Explained</Components.Image>
 
-    For our design to function properly, we needed a sprint force to be applied to the bottom side of any door. Our idea was to create a "C" shaped bend, in which the bottom half lies parallel to the floor and the top half in angled down in the direction of the incoming door. When the door makes contact with the door stop, it starts to traverse the angled surface. Because the door stop is oriented in such a way that the highest point is farthest from the door, the door needs to exert more force on the door stop as it is pushed in more. There will be a point along the door stop where the normal force on the door stop is just right, so that the door will be held in place by fricitonal forces. Pushing the door in more will be prevented by the door stop's inability to compress more, and pulling the door out will decrease the compressive force holding the door in place, allowing it to swing back into a closed position.
+    <Components.Paragraph>Compliant mechanisms are flexible, often single component mechanisms, which transfer forces through elastic movement rather than through the movement of rigid linkages like in a standard mechanism. We reasoned that if our door jam<sup>1</sup> mechanism was made of a flexible material, it could be compressed by the door to store elastic energy. This elastic energy would exert a force back on the bottom of the door. If enough of this force was applied normal to the door bottom across a large enough area, friction would hold the door in place.</Components.Paragraph>
 
-    <Components.Paragraph>All we had to do now was take some measurements, model the thing, and ship it off to print. Our hard work was done. I'm joking of course.</Components.Paragraph>
+    <Components.Paragraph>We chose to 3D print our door jam for three reasons. The first reason was that we needed the material to have the right balance between elasticity and rigidity. 3D printing the part with ABS plastic would create a part with just the right amount of flexure for our needs. The second reason is that we needed to produce a part with complex geometry quickly, while being able to make changes to that geometry if needed. 3D printing treats most geometries equally in the sense that one shape is no harder to print than another<sup>2</sup>. This would allow for rapid iteration of our design. Finally, given that one has ready access to a 3D printer, 3D plastic printing is cheap. Luckily, we already had access to our campus’ 3D printing lab.</Components.Paragraph>
 </Components.Section>
 
-<Components.Section title="Rapid Prototyping">
-    Our main challenge was finding the correct length and angle for the spring, and the right surface to optimize friciton.
+<Components.Section title="The Design">
+    <Components.Image src={doorJamVideo} alt="Door Jam - Promotional Video" to="https://www.youtube.com/watch?v=kev0uBcHKio">Door Jam - Promotional Video</Components.Image>
+    <Components.Paragraph>The whole door jam is simply two flat rectangular surfaces connected by a c-shaped spine. The bottom surface finishes with a circular cut out which hooks onto one of the door dampeners present in any of the dorm hall’s rooms, thereby securing the door jam in place. The top surface is angled upward away from the door. As you push the door into the door jam, the door pushes the top surface downward, compressing the c-shaped spine. At a certain point, the elastic potential from the spine causes the top surface to press on the bottom of the door with enough force to lock the door in place from friction alone. Unlocking the mechanism is just as simple. Pulling the door away from the door jam decreases the friction, allowing the door to swing closed.</Components.Paragraph>
 
-    <Components.Paragraph>Most ideas don't work on their first try. Lucky for us, we designed and manufactured out door stop in such a way where iteration and manufacturing was quick and cheap. This process was perhaps my first foray into rapid prototyping. For a whole week, I was going back and forth between our dorm room and our campus' 3D printing lab. When classes were over for the day, my schedule was often design, print, test, repeat.</Components.Paragraph>
-
-    <Components.Paragraph>If I recall correctly, we went throug six iterations, and eventually settled on that sixth design. Unfortunately I've lost the picture that shows all of the door stops side-by-side. Most of the redesign process involved finding the correct thickness to achieve the right balance between flexture and fragility. In addition to this, the base because shorter over time when we realized we could save on cost by reducing the use of excess material.</Components.Paragraph>
-
-    <Components.Paragraph>After a while, we were satified. We showed it off to a couple of our friends down the hall. Most of them asked if they could get one for their own room. That's when we realized that we weren't the only one with this problem. We might be able to meet people's needs, make back the $20 or so we spent on this project, and maybe even turn a profit.</Components.Paragraph>
-
-    <Components.ExternalLink to="https://www.youtube.com/watch?v=kev0uBcHKio">This video shows how the door stop works.</Components.ExternalLink>
+    <Components.Paragraph>The three main variables to consider in the design were the thickness of the spine, the length of the door jam, and the gradient of the top surface. These were important to consider, as the door jam needed to be able to handle the force applied by the door without permanently deforming, while also exerting enough force back to hold the door in place. To ensure the frictional forces on the door would reach their full potential, we increased the friction coefficient on the top surface by roughing it up with a coarse grit sandpaper.</Components.Paragraph>
 </Components.Section>
 
-<Components.Section title="Door-to-Door Sales">
-    <Components.Paragraph>The good thing about our target market is that it was self-evident. People who keep their doors closed are hard to talk to, but probably don't want a product that keeps their open. People who keep their doors open are easy to talk too, and probably do.</Components.Paragraph>
+<Components.Section title="The Development Cycle">
+    <Components.Paragraph>Our development cycle could be broken down into three steps: prototyping, testing, and refining. In the prototyping stage we started out with a proof of concept, that being a design in our CAD software of choice. Next, we would slice that design into G-Code and 3D print it. We would test the design ourselves to see if it satisfied our requirements. In later testing stages, we printed extra door jams and gave them to our friends in different rooms to test. If we or anyone we gave a prototype to found something that could be improved, we refined the design based on that feedback and cycled back to the prototyping stage. The development cycle only concluded when all the requirements for our design were met.</Components.Paragraph>
 
-    <Components.Paragraph>Our dorm hall was divided into three floors with 30 rooms each. Even with a conservative estimate that only one-third of students keep their room doors open, that's still around 30 potential customers. Each door stop cost around $1.50 to produce. If we could sell even 6 door stops at $5 a pop, we could break even. If we could sell to even half of our potential 30 customers, we would make a respectable $30 in profit.</Components.Paragraph>
+    <Components.Paragraph>The design went through six iterations. Unfortunately, I’ve lost a photo I took that shows all versions of the door jam side by side. To summarize what changes were made, the mechanism generally became thinner and shorter, yet steeper over time. Making the c-shaped spine less thick allowed it to bend more without deforming plastically. Making the top surface more angled over a shorter distance had the same effect as a less angled surface over a longer distance, yet with the advantage of saving space and material. These changes therefore cut down the amount of plastic needed to produce the door jam, cutting its production costs by around 40%. Some purely aesthetic changes were also made to make the door jam more visually appealing.</Components.Paragraph>
+</Components.Section>
 
-    <Components.Paragraph>We decided the best way to sell doorstops was to go door-to-door. This had the added benefit of giving any easy way to meet new people, which is always a positive, especially as a freshman student. We also made advertisment posters which we plastered areas of the dorm hall with high foot traffic like main hallways and stairwells.</Components.Paragraph>
+<Components.Section title="Door-to-Door Marketing">
+    <Components.Paragraph>One side effect of sharing our prototypes with friends was that they all seemed to want a finalized version of one. This made us realize that our need wasn’t isolated to just us and that other people would be willing to use, and possibly even buy, our door jam. We had the opportunity to not just solve a problem but make back the money we spent developing the door jam and then some.</Components.Paragraph>
+    
+    <Components.Paragraph>One of the first things any business or entrepreneur learns is that it doesn’t matter how well a product fills a gap in the market if there’s no marketing to push that product to your target audience. Technically we were marketing the door jam already through word-of-mouth. Our friends had already informed some people they knew of our door jam. Unfortunately, this passive marketing wasn’t effective enough to secure a larger audience. Instead, we decided to talk to anyone in our hall with an open door to see if they wanted a door jam. Our rationale for why this marketing strategy would be highly effective is thus: any room with an open door is not only probably more sociable and therefore easier to talk to too, but also may have a need for a better door stop to keep their door open. Any room with a closed door is not worth pitching too because they are harder to reach and probably don’t need a tool to keep their door open anyway.</Components.Paragraph>
+    
+    <Components.Paragraph>We also created a promotional poster and posted copies of it in high foot traffic areas of the dorm hall like common rooms and stairwells.<sup>3</sup></Components.Paragraph>
 </Components.Section>
 
 <Components.Section title="Conclusion">
-    <Components.Paragraph>So how many did we sell? Two. In all fairness, we did give away 3 others, however those were to close friends which we didn't charge. The two we sold for a profit of $7 ended up paying for those additional 3, and our capitalist dreams ended with us around $18 in the red.</Components.Paragraph>
-    
     <Components.Image src={worthlessTreasureTwist} alt="TV Tropes - Worthless Treasure Twist" to="https://tvtropes.org/pmwiki/pmwiki.php/Main/WorthlessTreasureTwist">TV Tropes - Worthless Treasure Twist</Components.Image>
-
-    <Components.Paragraph>Fortunately, unlike most entrepreneurial undertakings, our business had extremely low stakes. What was more important was the lessons we learned. It was a lesson in generating solutions to ideas, rapid prototyping, entrepreneurship and marketing.</Components.Paragraph>
-
-    We ended up using our doorstop right until the end of the year when we moved out. Besides the <Components.Paragraph>great practical use that it provided us that year, it was also a constant reminder of...</Components.Paragraph>
+    
+    <Components.Paragraph>So how many door jams did we sell? Two. However, we did give three away to some of our friends. Because our academic and social lives did take priority over this experiment, and we never realized our full potential to make a profit. Fortunately, our losses were only around twenty dollars between the two of us. It did pay (well, not exactly) to keep the design cheap.</Components.Paragraph>
+    
+    <Components.Paragraph>Of course, the goal was never strictly about turning a profit. This door jam excelled at solving our problem right up until we moved out of that room in May. We gained skills in rapid prototyping and transforming an idea into a marketable product. Most importantly this project taught us that your ability to solve a problem is limited only by your initiative to do so, because idea is only valuable if you make it a reality.</Components.Paragraph>
 </Components.Section>
+
+<i><ol className="text-lg pt-20">
+    <li className="py-3">1. We used the word “door jam” to distinguish it from a regular door stop.</li>
+
+    <li className="py-3">2. There are exceptions to this rule of course, such as how FDM printers are usually unable to print steep or nearly flat overhangs in mid-air.</li>
+
+    <li className="py-3">3. You may notice on this poster an advertisement for a chair and door de-squeaking service. Many of the chairs and doors in our dorm hall were squeaky to the point of annoyance. We thought that by advertising this alongside the door jam, we may be able to sell more door jams.</li>
+</ol></i>
