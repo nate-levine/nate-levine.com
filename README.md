@@ -18,7 +18,6 @@ Join me at [nate-levine.com](https://www.nate-levine.com/).
 ! = To-do before website launch
 
 ## DOING:
-! Port projects from old website to new website in short-form article format.
 ! Remove gatsby-plugin-netlify?
 
 ## TO-DO:
@@ -42,4 +41,4 @@ Join me at [nate-levine.com](https://www.nate-levine.com/).
 # 🔄 Changelog
 | Date | Changes |
 | --- | --- |
-| Coming Soon 😎 | Website Launch |
+| June 01, 2024 | Website Launch |
