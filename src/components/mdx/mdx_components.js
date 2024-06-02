@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 
 export const Section = ({ title, children }) => {
@@ -70,6 +71,57 @@ export const ListItem = ({ children }) => {
         <li className="py-2">
             {children}
         </li>
+    )
+}
+
+export const Footnotes = ({ children }) => {
+    return (
+        <div className="footnotes">
+            <p className="font-sans font-bold text-2xl pt-20 pb-3">Footnotes</p>
+            <ol className="ms-4 list-decimal text-lg italic">
+                {children}
+            </ol>
+        </div>
+    )
+}
+
+export const FootnotesItem = ({ children, index }) => {
+    const [footnotesLinks, setFootnotesLinks] = useState([])
+
+    useEffect(() => {
+        setFootnotesLinks(Array.from(document.querySelectorAll(".footnotes-link")))
+    }, [])
+
+    return (
+        <li className="footnotes-item py-2 hover:cursor-pointer" onClick={() => 
+            window.scroll({
+                top: footnotesLinks[index].offsetTop - (screen.height / 3),
+                behavior: 'smooth'
+            })
+        }>
+            {children}
+        </li>
+    )
+}
+
+export const FootnotesLink = ({ children }) => {
+    const [footnotes, setFootnotes] = useState([])
+
+    useEffect(() => {
+        setFootnotes(document.querySelector(".footnotes"))
+    }, [])
+
+    return (
+        <button type="button" className="footnotes-link" onClick={() => 
+            window.scroll({
+                top: footnotes.offsetTop,
+                behavior: 'smooth'
+            })
+        }>
+            <sup><div className="italic underline">
+                {children}
+            </div></sup>
+        </button>
     )
 }
 

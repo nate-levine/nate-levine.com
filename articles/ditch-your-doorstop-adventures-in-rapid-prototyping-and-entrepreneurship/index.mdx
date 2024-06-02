@@ -28,9 +28,9 @@ import doorJamVideo from "./door-jam-video.gif"
 <Components.Section title="Compliant Mechanisms and 3D Printing">
     <Components.Image src={compliantMechanisms} alt="BYU - Compliant Mechanisms Explained" to="https://compliantmechanisms.byu.edu/about-compliant-mechanisms">BYU - Compliant Mechanisms Explained</Components.Image>
 
-    <Components.Paragraph>Compliant mechanisms are flexible, often single component mechanisms, which transfer forces through elastic movement rather than through the movement of rigid linkages like in a standard mechanism. We reasoned that if our door jam<sup>1</sup> mechanism was made of a flexible material, it could be compressed by the door to store elastic energy. This elastic energy would exert a force back on the bottom of the door. If enough of this force was applied normal to the door bottom across a large enough area, friction would hold the door in place.</Components.Paragraph>
+    <Components.Paragraph>Compliant mechanisms are flexible, often single component mechanisms, which transfer forces through elastic movement rather than through the movement of rigid linkages like in a standard mechanism. We reasoned that if our door jam<Components.FootnotesLink>1</Components.FootnotesLink> mechanism was made of a flexible material, it could be compressed by the door to store elastic energy. This elastic energy would exert a force back on the bottom of the door. If enough of this force was applied normal to the door bottom across a large enough area, friction would hold the door in place.</Components.Paragraph>
 
-    <Components.Paragraph>We chose to 3D print our door jam for three reasons. The first reason was that we needed the material to have the right balance between elasticity and rigidity. 3D printing the part with ABS plastic would create a part with just the right amount of flexure for our needs. The second reason is that we needed to produce a part with complex geometry quickly, while being able to make changes to that geometry if needed. 3D printing treats most geometries equally in the sense that one shape is no harder to print than another<sup>2</sup>. This would allow for rapid iteration of our design. Finally, given that one has ready access to a 3D printer, 3D plastic printing is cheap. Luckily, we already had access to our campus’ 3D printing lab.</Components.Paragraph>
+    <Components.Paragraph>We chose to 3D print our door jam for three reasons. The first reason was that we needed the material to have the right balance between elasticity and rigidity. 3D printing the part with ABS plastic would create a part with just the right amount of flexure for our needs. The second reason is that we needed to produce a part with complex geometry quickly, while being able to make changes to that geometry if needed. 3D printing treats most geometries equally in the sense that one shape is no harder to print than another<Components.FootnotesLink>2</Components.FootnotesLink>. This would allow for rapid iteration of our design. Finally, given that one has ready access to a 3D printer, 3D plastic printing is cheap. Luckily, we already had access to our campus’ 3D printing lab.</Components.Paragraph>
 </Components.Section>
 
 <Components.Section title="The Design">
@@ -51,7 +51,7 @@ import doorJamVideo from "./door-jam-video.gif"
     
     <Components.Paragraph>One of the first things any business or entrepreneur learns is that it doesn’t matter how well a product fills a gap in the market if there’s no marketing to push that product to your target audience. Technically we were marketing the door jam already through word-of-mouth. Our friends had already informed some people they knew of our door jam. Unfortunately, this passive marketing wasn’t effective enough to secure a larger audience. Instead, we decided to talk to anyone in our hall with an open door to see if they wanted a door jam. Our rationale for why this marketing strategy would be highly effective is thus: any room with an open door is not only probably more sociable and therefore easier to talk to too, but also may have a need for a better door stop to keep their door open. Any room with a closed door is not worth pitching too because they are harder to reach and probably don’t need a tool to keep their door open anyway.</Components.Paragraph>
     
-    <Components.Paragraph>We also created a promotional poster and posted copies of it in high foot traffic areas of the dorm hall like common rooms and stairwells.<sup>3</sup></Components.Paragraph>
+    <Components.Paragraph>We also created a promotional poster and posted copies of it in high foot traffic areas of the dorm hall like common rooms and stairwells.<Components.FootnotesLink>3</Components.FootnotesLink></Components.Paragraph>
 </Components.Section>
 
 <Components.Section title="Conclusion">
@@ -62,10 +62,10 @@ import doorJamVideo from "./door-jam-video.gif"
     <Components.Paragraph>Of course, the goal was never strictly about turning a profit. This door jam excelled at solving our problem right up until we moved out of that room in May. We gained skills in rapid prototyping and transforming an idea into a marketable product. Most importantly this project taught us that your ability to solve a problem is limited only by your initiative to do so, because idea is only valuable if you make it a reality.</Components.Paragraph>
 </Components.Section>
 
-<i><ol className="text-lg pt-20">
-    <li className="py-3">1. We used the word “door jam” to distinguish it from a regular door stop.</li>
+<Components.Footnotes>
+    <Components.FootnotesItem index="0">We used the word “door jam” to distinguish it from a regular door stop.</Components.FootnotesItem>
 
-    <li className="py-3">2. There are exceptions to this rule of course, such as how FDM printers are usually unable to print steep or nearly flat overhangs in mid-air.</li>
+    <Components.FootnotesItem index="1">There are exceptions to this rule of course, such as how FDM printers are usually unable to print steep or nearly flat overhangs in mid-air.</Components.FootnotesItem>
 
-    <li className="py-3">3. You may notice on this poster an advertisement for a chair and door de-squeaking service. Many of the chairs and doors in our dorm hall were squeaky to the point of annoyance. We thought that by advertising this alongside the door jam, we may be able to sell more door jams.</li>
-</ol></i>
+    <Components.FootnotesItem index="2">You may notice on this poster an advertisement for a chair and door de-squeaking service. Many of the chairs and doors in our dorm hall were squeaky to the point of annoyance. We thought that by advertising this alongside the door jam, we may be able to sell more door jams.</Components.FootnotesItem>
+</Components.Footnotes>

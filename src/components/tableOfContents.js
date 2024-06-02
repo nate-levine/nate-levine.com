@@ -20,8 +20,8 @@ const TableOfContents = () => {
                         {/* Scroll behavior */}
                             <button type="button" className={classString} onClick={() =>
                                 window.scroll({
-                                top: header.offsetTop + 5,
-                                behavior: 'smooth'
+                                    top: header.offsetTop + 5,
+                                    behavior: 'smooth'
                                 })
                             }>
                                 {
