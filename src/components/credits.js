@@ -7,6 +7,7 @@ const Credits = () => {
 
     return (
         <div className="bg-black text-primary py-5 font-regular text-center text-md">
+            {/* Render current year dynamically */}
             <p>© {date.getFullYear()} Nate Levine</p>
         </div>
     )

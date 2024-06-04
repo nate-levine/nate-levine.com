@@ -6,6 +6,7 @@ import SEO from '../components/seo'
 
 const NotFoundPage = () => {
   
+  // Filter all articles except those that are featured
   const isFeatured = (nodes) => {
     return nodes.filter((node) => node.frontmatter.tags.includes("FEATURED"))
   }

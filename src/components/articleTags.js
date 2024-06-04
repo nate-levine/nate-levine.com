@@ -4,7 +4,7 @@ const ArticleTags = ({ tags }) => {
 
     const colors = ['red', 'green', 'yellow', 'blue']
     const getColor = (index) => {
-        // Colors cycle through color list
+        // Colors indices cycle through color list
         return colors[index % colors.length]
     }
 
@@ -12,12 +12,13 @@ const ArticleTags = ({ tags }) => {
         <div className="group flex flex-row flex-wrap gap-x-2 gap-y-2 font-sans font-regular text-sm">
             {
                 /* 
-                    Add featured tag if tag has isFeatured prop
+                    Add featured tag icon if the tag list includes a hidden "FEATURED" tag
 
                     The reason with works is that the and statement evaluates the first expression first.
-                    If isFeatured is true, then the second expression, the JSX, will be evaluated
+                    If tags.includes("FEATURED") is true, then the second expression, the JSX, will be evaluated
                 */
-                tags.includes("FEATURED") && <div className="bg-black rounded-full px-1 py-1 rounded-full group-hover:animate-jump">
+                tags.includes("FEATURED") &&
+                <div className="bg-black rounded-full px-1 py-1 rounded-full group-hover:animate-jump">
                     {/*
                         From https://logowik.com/rounded-star-vector-icon-14817.html
                         Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)
@@ -33,7 +34,7 @@ const ArticleTags = ({ tags }) => {
                 </div>
             }
             {
-                // Enumerate over each tag
+                // Enumerate over each tag, not including the "FEATURED" tag
                 tags.filter(tag => tag !== "FEATURED").map((tag, index) => {
                     // Get color for tag index
                     const color = getColor(index)

@@ -7,6 +7,7 @@ import SEO from '../components/seo'
 
 const IndexPage = () => {
 
+  // Filter all articles except those that are featured
   const isFeatured = (nodes) => {
     return nodes.filter((node) => node.frontmatter.tags.includes("FEATURED"))
   }
@@ -15,6 +16,7 @@ const IndexPage = () => {
     <Layout>
       <div className="h-auto min-h-[100vh]">
         <h1 className="text-right text-black text-6xl font-serif font-bold text-[25vw] leading-[19vw] pt-20">
+          {/* Page animation */}
           <MainPageAnimation />
           <div className="mix-blend-darken">
             Nate Levine
@@ -47,6 +49,8 @@ const IndexPage = () => {
               <br />
               <div className="flex flex-row space-x-5">
                 {/*
+                  LinkedIn Logo
+
                   From: https://www.svgrepo.com/svg/108614/linkedin
                   Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools
                 */}
@@ -67,6 +71,8 @@ const IndexPage = () => {
                   </div>
                 </a>
                 {/*
+                  GitHub Logo
+
                   From: https://github.com/logos
                 */}
                 <a href="https://github.com/nate-levine">
@@ -79,6 +85,7 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
+          {/* Articles */}
           <div className="py-20 flex-1">
             <div className="w-[80%] mx-auto">
               <ArticleView grid_config={"grid md:grid-cols-2 lg:grid-cols-2 gap-6"} filterFunc={isFeatured} />

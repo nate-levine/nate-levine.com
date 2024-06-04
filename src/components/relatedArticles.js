@@ -1,3 +1,6 @@
+/*
+    Rudimentary algorithm for finding related articles to a particular article
+*/
 const relatedArticles = (current, numArticles) => {
     // Return a function that takes the list of nodes
     return (nodes) => {

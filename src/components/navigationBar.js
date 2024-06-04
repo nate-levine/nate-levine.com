@@ -3,19 +3,24 @@ import { useState } from 'react'
 import { Link } from 'gatsby'
 
 const NavigationBar = () => {
+    // Store menu icon state
     const [menuIcon, setMenuIcon] = useState("Closed")
 
+    // When the menu is toggled
     const toggleMenu = (e) => {
         const navigationLinks = document.querySelector('.navigation-links')
         const menuButton = document.querySelector('.menu-button')
 
+        // Toggle navigation links styles
         navigationLinks.classList.toggle('left-[-100%]')
         navigationLinks.classList.toggle('border-b-2')
 
+        // Toggle menu button links styles
         menuButton.classList.toggle('shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black]')
         menuButton.classList.toggle('shadow-[8px_8px_0_black]')
         menuButton.classList.toggle('bg-black')
 
+        // Change menu icon
         menuIcon === "Closed" ? setMenuIcon("Open") : setMenuIcon("Closed")
     }
 
@@ -57,17 +62,18 @@ const NavigationBar = () => {
                 </ul>
             </div>
             <div className="flex items-center gap-[6%]">
-                {/* Clicking the button toggles the left property of the navigation-links class to make it toggle*/}
                 <button className="menu-button shadow-[8px_8px_0_black] border-solid border-2 border-black p-2 rounded-lg md:invisible duration-100" onClick={toggleMenu}>
                     {
                     menuIcon === "Closed"
                     ?
+                    // Closed menu icon
                     <svg className="h-7 w-7" id="eEy52ihAnbC1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100" shapeRendering="geometricPrecision" textRendering="geometricPrecision">
                         <line x1="15" y1="0" x2="135" y2="0" fill="none" stroke="#000" strokeWidth="20" strokeLinecap="round"/>
                         <line x1="15" y1="50" x2="135" y2="50" fill="none" stroke="#000" strokeWidth="20" strokeLinecap="round"/>
                         <line x1="15" y1="100" x2="135" y2="100" fill="none" stroke="#000" strokeWidth="20" strokeLinecap="round"/>
                     </svg>
                     :
+                    // Open "X" icon
                     <svg className="h-7 w-7 stroke-primary" id="eEy52ihAnbC1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100" shapeRendering="geometricPrecision" textRendering="geometricPrecision">
                         <line x1="20" y1="-5" x2="75" y2="50" fill="none" strokeWidth="20" strokeLinecap="round"/>
                         <line x1="20" y1="105" x2="130" y2="-5" fill="none" strokeWidth="20" strokeLinecap="round"/>

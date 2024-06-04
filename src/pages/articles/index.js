@@ -6,18 +6,27 @@ import ArticleView from '../../components/articleView'
 import SEO from '../../components/seo'
 
 const ArticlePage = ({ data }) => {
+  // The currently selected filter tags are stored in a state variable
   const [selectedTags, setSelectedTags] = useState([])
+  // Sort order is stored in a state variable
   const [articleOrder, setArticleOrder] = useState("Latest")
 
+  // Add all unique tags to the filter list
   let all_tags = []
   data.allMdx.nodes.forEach(node => (
       node.frontmatter.tags.forEach(tag => {
           if (!all_tags.includes(tag) && tag !== "FEATURED") { all_tags.push(tag) }
       })
   ))
-  all_tags.sort()
-  all_tags.unshift("FEATURED")
+  all_tags.sort()                     // Sort the tags alphabetically
+  all_tags.unshift("FEATURED")        // Remove the "FEATURED" tag
   
+  /*
+    Update filter function every time the tags selected changes
+
+    The entire "ArticlePage" component updates, including this function,
+    because the state of "selectedTags" is updated when a tag is selected or deselected
+  */
   let tagFilter = (nodes) => {
     // If any filters are applied
     if (selectedTags.length > 0) {
@@ -25,29 +34,32 @@ const ArticlePage = ({ data }) => {
       return nodes.filter((node) => {
         return selectedTags.every(tag => node.frontmatter.tags.includes(tag))
       })
+    // If not return the default filter (no filter)
     } else {
       return nodes
     }
   }
 
+  // Sort options to populate dropdown with
   const sortOptions = ["Latest", "Oldest"]
+  // Update sort function based on sort option selected
   let orderArticles = (nodes) => {
     if (articleOrder === "Latest") {
       return nodes.sort((a, b) => { return new Date(b.frontmatter.date) - new Date(a.frontmatter.date) })
     }
-    
     if (articleOrder === "Oldest") {
       return nodes.sort((a, b) => { return new Date(a.frontmatter.date) - new Date(b.frontmatter.date) })
     }
   }
 
+  // Toggle drop down menu style when clicked
   const toggleMenu = (e) => {
     const dropDownMenu = document.querySelector('.drop-down-menu')
     const dropDownArrow = document.querySelector('.drop-down-arrow')
 
     dropDownMenu.classList.toggle('hidden')
     dropDownArrow.classList.toggle('rotate-[-180deg]')
-}
+  }
 
   return (
     <Layout>
@@ -58,14 +70,19 @@ const ArticlePage = ({ data }) => {
           <div className="inline-block min-w-[7vw] text-left text-sm font-sans font-regular border-solid border-black border-2 rounded-lg">
             <button type="button" onClick={toggleMenu} className="drop-down-button inline-flex w-full text-l justify-center gap-x-1.5 rounded-lg px-2 py-2 bg-primary">
               {
+                /*
+                  Change article order dropdown icon based on selected sort option
+                */
                 articleOrder == "Latest"
                 ?
+                // Up arrow
                 <svg className="drop-down-icon my-auto h-[0.9rem] w-5" id="eEy52ihAnbC1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 200" shapeRendering="geometricPrecision" textRendering="geometricPrecision">
                   <line x1="0" y1="-49.962364" x2="0" y2="49.962364" transform="matrix(2.017858 0 0 1.578812 75 111.370907)" fill="none" stroke="#000" strokeWidth="10" strokeLinecap="round"/>
                   <line x1="15.807301" y1="-15.807301" x2="-15.807302" y2="15.807302" transform="matrix(-2.017858 0 0 2.017859 106.896889 46.575094)" fill="none" stroke="#000" strokeWidth="10" strokeLinecap="round"/>
                   <line x1="15.807301" y1="-15.807301" x2="-15.807302" y2="15.807302" transform="matrix(2.017858 0 0 2.017859 43.103111 46.575094)" fill="none" stroke="#000" strokeWidth="10" strokeLinecap="round"/>
                 </svg>
                 :
+                // Down arrow
                 <svg className="drop-down-icon my-auto h-[0.9rem] w-5 rotate-[-180deg]" id="eEy52ihAnbC1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 200" shapeRendering="geometricPrecision" textRendering="geometricPrecision">
                   <line x1="0" y1="-49.962364" x2="0" y2="49.962364" transform="matrix(2.017858 0 0 1.578812 75 111.370907)" fill="none" stroke="#000" strokeWidth="10" strokeLinecap="round"/>
                   <line x1="15.807301" y1="-15.807301" x2="-15.807302" y2="15.807302" transform="matrix(-2.017858 0 0 2.017859 106.896889 46.575094)" fill="none" stroke="#000" strokeWidth="10" strokeLinecap="round"/>
@@ -77,10 +94,11 @@ const ArticlePage = ({ data }) => {
                 <path fillRule="evenodd" className="drop-down-arrow origin-center duration-100" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/>
               </svg>
             </button>
+            {/* Sort dropdown */}
             <div className="drop-down-menu left-0 z-10 w-full origin-top-right bg-primary rounded-lg hidden">
               {
                 sortOptions.map((option, id) => {
-                  if (option !== articleOrder)
+                  if (option !== articleOrder)  // Don't include currently selected sort option in the dropdown
                     return <button key={id} className="block text-center py-2 font-sans w-full hover:font-bold hover:bg-black hover:text-primary border-solid border-black border-t-2 duration-100" onClick={() => setArticleOrder(option)}>{option}</button>
                 })
               }
@@ -92,6 +110,7 @@ const ArticlePage = ({ data }) => {
           {
               // Enumerate over each tag
               all_tags.map((tag, id) => {
+                  // Style tag conditionally based on if it is selected or not
                   let classString = ""
                   if (selectedTags.includes(tag)) {
                     classString = "flex flex-row border-solid border-black border-2 bg-black focus:bg-black text-primary focus:text-primary rounded-full px-3 py-1 duration-100"
@@ -99,6 +118,7 @@ const ArticlePage = ({ data }) => {
                     classString = "flex flex-row border-solid border-black border-2 bg-primary focus:bg-primary text-black focus:text-black rounded-full px-3 py-1 duration-100"
                   }
 
+                  // Style featured tag conditionally based on if it is selected or not
                   let starClassString = ""
                   if (tag == "FEATURED") {
                     if (selectedTags.includes(tag)) {
@@ -108,6 +128,7 @@ const ArticlePage = ({ data }) => {
                     }
                   }
 
+                  // Tag filter button
                   return (
                     <button key={id} className={classString} onClick={() => {
                       // Add or remove filter tags from state
@@ -121,20 +142,25 @@ const ArticlePage = ({ data }) => {
                           {/*
                             From: https://www.svgrepo.com/svg/521794/plus
                           */}
-                          {selectedTags.includes(tag) ?
-                            <svg x="0px" y="0px" viewBox="2 2 20 20" className="my-[0.2rem] h-3 rotate-[45deg] duration-100">
-                              <path className="fill-primary" d="M13 3C13 2.44772 12.5523 2 12 2C11.4477 2 11 2.44772 11 3V11H3C2.44772 11 2 11.4477 2 12C2 12.5523 
-                              2.44772 13 3 13H11V21C11 21.5523 11.4477 22 12 22C12.5523 22 13 21.5523 13 21V13H21C21.5523 13 22 12.5523 22 
-                              12C22 11.4477 21.5523 11 21 11H13V3Z" fill="#0F0F0F"/>
-                            </svg> :
-                            <svg x="0px" y="0px" viewBox="2 2 20 20" className="my-[0.2rem] h-3 rotate-0 duration-100">
-                              <path className="fill-black" d="M13 3C13 2.44772 12.5523 2 12 2C11.4477 2 11 2.44772 11 3V11H3C2.44772 11 2 11.4477 2 12C2 12.5523 
-                              2.44772 13 3 13H11V21C11 21.5523 11.4477 22 12 22C12.5523 22 13 21.5523 13 21V13H21C21.5523 13 22 12.5523 22 
-                              12C22 11.4477 21.5523 11 21 11H13V3Z" fill="#0F0F0F"/>
-                            </svg>
+                          {selectedTags.includes(tag)
+                          ?
+                          // "x" icon
+                          <svg x="0px" y="0px" viewBox="2 2 20 20" className="my-[0.2rem] h-3 rotate-[45deg] duration-100">
+                            <path className="fill-primary" d="M13 3C13 2.44772 12.5523 2 12 2C11.4477 2 11 2.44772 11 3V11H3C2.44772 11 2 11.4477 2 12C2 12.5523 
+                            2.44772 13 3 13H11V21C11 21.5523 11.4477 22 12 22C12.5523 22 13 21.5523 13 21V13H21C21.5523 13 22 12.5523 22 
+                            12C22 11.4477 21.5523 11 21 11H13V3Z" fill="#0F0F0F"/>
+                          </svg>
+                          :
+                          // "+" icon
+                          <svg x="0px" y="0px" viewBox="2 2 20 20" className="my-[0.2rem] h-3 rotate-0 duration-100">
+                            <path className="fill-black" d="M13 3C13 2.44772 12.5523 2 12 2C11.4477 2 11 2.44772 11 3V11H3C2.44772 11 2 11.4477 2 12C2 12.5523 
+                            2.44772 13 3 13H11V21C11 21.5523 11.4477 22 12 22C12.5523 22 13 21.5523 13 21V13H21C21.5523 13 22 12.5523 22 
+                            12C22 11.4477 21.5523 11 21 11H13V3Z" fill="#0F0F0F"/>
+                          </svg>
                           }
                         </div>
                         {
+                          // Featured star icon
                           tag == "FEATURED"
                           ?
                           <div className="rounded-full rounded-full">
