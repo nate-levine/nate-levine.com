@@ -26,9 +26,9 @@ const ArticlePost = ({ data, children }) => {
       <div className="flex flex-col-reverse xl:flex-row pb-20">
         <div className="w-[25%]" />
         <div className="h-auto min-h-[100vh] max-w-[85%] sm:w-[640px] mx-auto">
-          <div className="text-black text-2xl text-left font-serif mx-auto py-10 leading-relaxed">   
+          <div className="text-black text-2xl text-left font-serif mx-auto pb-10 leading-relaxed">   
             {/* Hero image */}
-            { image && <Components.Image src={image} alt={data.mdx.frontmatter.hero_image_alt} to={data.mdx.frontmatter.hero_image_credit_link}>{data.mdx.frontmatter.hero_image_alt}</Components.Image> }
+            {image && <Components.Image src={image} alt={data.mdx.frontmatter.hero_image_alt} to={data.mdx.frontmatter.hero_image_credit_link}>{data.mdx.frontmatter.hero_image_alt}</Components.Image>}
             {/* Article contents */}
             {children}
           </div>
