@@ -1,10 +1,9 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import { getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../../components/layout'
 import ArticleView  from '../../components/articleView'
 import ArticleTags from '../../components/articleTags'
-import * as Components from '../../components/mdx/mdx_components'
 import TableOfContents from '../../components/tableOfContents'
 import relatedArticles from '../../components/relatedArticles'
 import SEO from '../../components/seo'
@@ -27,8 +26,22 @@ const ArticlePost = ({ data, children }) => {
         <div className="w-[25%]" />
         <div className="h-auto min-h-[100vh] max-w-[85%] sm:w-[640px] mx-auto">
           <div className="text-black text-2xl text-left font-serif mx-auto pb-10 leading-relaxed">   
-            {/* Hero image */}
-            {image && <Components.Image src={image} alt={data.mdx.frontmatter.hero_image_alt} to={data.mdx.frontmatter.hero_image_credit_link}>{data.mdx.frontmatter.hero_image_alt}</Components.Image>}
+            {/* Hero image */}    
+            <div className="text-center py-5">
+                <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} className="mx-auto rounded-md border-solid border-black border-2 shadow-[8px_8px_0_black]" />
+                <div className="pt-10 text-base underline">
+                    {  
+                        // Link to image if credited from an external link
+                        data.mdx.frontmatter.hero_image_credit_link
+                        ?
+                        <a href={data.mdx.frontmatter.hero_image_credit_link}>
+                            {data.mdx.frontmatter.hero_image_alt}
+                        </a>
+                        :
+                        <div>{data.mdx.frontmatter.hero_image_alt}</div>
+                    }
+                </div>
+            </div>
             {/* Article contents */}
             {children}
           </div>
