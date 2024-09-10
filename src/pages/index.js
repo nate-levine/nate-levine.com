@@ -15,13 +15,11 @@ const IndexPage = () => {
   return (
     <Layout>
       <div className="h-auto min-h-[100vh]">
-        <h1 className="text-right text-black text-6xl font-serif font-bold text-[25vw] leading-[19vw] pt-20">
           {/* Page animation */}
-          <MainPageAnimation />
-          <div className="mix-blend-darken">
+          <div className="absolute mix-blend-darken text-black right-0 font-serif font-bold text-[13.5vw]">
             Nate Levine
           </div>
-        </h1>
+          <MainPageAnimation />
         <div className="font-serif flex flex-col lg:flex-row border-solid border-t-2 border-b-2 border-black">
           <div className="py-20 flex-1 border-dashed border-b-2 lg:border-b-0 lg:border-r-2 border-black text-2xl">
             <div className="w-[80%] mx-auto leading-relaxed">
