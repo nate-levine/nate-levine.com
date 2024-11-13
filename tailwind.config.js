@@ -38,37 +38,28 @@ module.exports = {
           transform: 'rotate(360deg)',
         },
       },
-      flip: {
-        '0%, 53%': {
-          transform: 'rotate(0deg)',
-          animationTimingFunction: 'steps(1, end)',
+      scroll: {
+        '0%': {
+          transform: 'translateX(0)'
         },
-        '3%, 50%': {
-          transform: 'rotate(180deg)',
-          animationTimingFunction: 'steps(1, end)',
+        '100%': {
+          transform: 'translateX(41vw)'
         },
       },
-      stretch: {
-        '0%, 50%': {
-          height: '49%',
+      scrollBack: {
+        '0%': {
+          transform: 'translateX(41vw) rotate(180deg)'
         },
-        '3%, 53%': {
-          height: '100%',
-        },
-        '4%, 54%': {
-          height: '25%',
-        },
-        '23%, 73%': {
-          height: '49%',
-        },
-        '50%, 100%': {
-          height: '25%',
+        '100%': {
+          transform: 'translateX(0) rotate(180deg)'
         },
       },
     },
     animation: {
       'jump': 'jump 1s linear infinite',
       'rotate': 'rotate 5s linear infinite',
+      'scroll': 'scroll 10s linear infinite',
+      'scrollBack': 'scrollBack 10s linear infinite',
     },
   },
   plugins: [],
