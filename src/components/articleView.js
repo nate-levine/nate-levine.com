@@ -68,7 +68,7 @@ const ArticleView = ({ grid_config, filterFunc, sortFunc }) => {
                                         <div className="font-bold pb-2">{node.frontmatter.title}</div>
                                         {
                                             getImage(node.frontmatter.hero_image) ?
-                                            <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt={node.frontmatter.hero_image_alt} className="w-[95%] flex m-auto h-auto mb-4 rounded-lg border-solid border-black border-2" /> : <div />
+                                            <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt={node.frontmatter.hero_image_alt} className="w-[100%] flex m-auto h-auto mb-4 rounded-lg border-solid border-black border-2" /> : <div />
                                         }
                                         <ArticleTags tags={node.frontmatter.tags} />
                                     </div>
