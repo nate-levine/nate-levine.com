@@ -59,7 +59,7 @@ const AboutPage = () => {
                             </div>
                             <div className="py-20 flex-1">
                                 <div className="w-[80%] mx-auto ">
-                                    <ArticleView grid_config={"grid md:grid-cols-2 lg:grid-cols-2 gap-6"} filterFunc={filterProjects} />
+                                    <ArticleView grid_config={"md:columns-2 lg:columns-2 gap-6"} filterFunc={filterProjects} />
                                 </div>
                             </div>
                         </div>
@@ -80,10 +80,10 @@ const AboutPage = () => {
                                 </p>
                                 <ul className="py-3 list-disc list-outside ms-8 text-left">
                                     <li>
-                                        Squat - 265 lbs
+                                        Squat - 275 lbs
                                     </li>
                                     <li>
-                                        Bench Press - 165 lbs
+                                        Bench Press - 185 lbs
                                     </li>
                                     <li>
                                         Deadlift - 215 lbs

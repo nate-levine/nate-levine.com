@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import ArticleTags from './articleTags'
 
 const ArticleView = ({ grid_config, filterFunc, sortFunc }) => {
@@ -14,6 +15,11 @@ const ArticleView = ({ grid_config, filterFunc, sortFunc }) => {
                         title
                         slug
                         tags
+                        hero_image {
+                            childImageSharp {
+                                gatsbyImageData
+                            }
+                        }
                     }
                     id
                     excerpt
@@ -54,12 +60,16 @@ const ArticleView = ({ grid_config, filterFunc, sortFunc }) => {
         {
             sortFunc(filterFunc(data.allMdx.nodes)).map(node => (
                 <article key={node.id}>
-                    <div className="h-full">
+                    <div className="py-3 break-inside-avoid">
                         <Link to={`/articles/${node.frontmatter.slug}`}>
-                            <div className="h-full group font-sans text-xl p-3 shadow-[8px_8px_0_black] border-solid border-2 border-black hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] rounded-2xl hover:bg-black duration-100">
-                                <div className="flex flex-col h-full group-hover:text-[#fbf1c7]">
+                            <div className="group font-sans text-xl p-3 shadow-[8px_8px_0_black] border-solid border-2 border-black hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] rounded-2xl hover:bg-black duration-100">
+                                <div className="flex flex-col group-hover:text-[#fbf1c7]">
                                     <div className="flex-auto pb-2">
                                         <div className="font-bold pb-2">{node.frontmatter.title}</div>
+                                        {
+                                            getImage(node.frontmatter.hero_image) ?
+                                            <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt={node.frontmatter.hero_image_alt} className="w-[95%] flex m-auto h-auto mb-4 rounded-lg border-solid border-black border-2" /> : <div />
+                                        }
                                         <ArticleTags tags={node.frontmatter.tags} />
                                     </div>
                                     <div className="h-flex text-right font-bold">{node.frontmatter.date}</div>
