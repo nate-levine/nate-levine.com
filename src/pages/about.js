@@ -63,20 +63,14 @@ const AboutPage = () => {
                             <div className="py-20 w-[85%] sm:w-[640px] mx-auto leading-relaxed">
                                 <h1 className="font-sans font-bold text-4xl">Interests</h1>
                                 <br />
-                                <h2 className="font-sans font-bold text-2xl">Working Out</h2>
+                                <h2 className="font-sans font-bold text-2xl">Gym</h2>
                                 <br />
                                 <p>
-                                    In my opinion, hitting the gym is more energizing than coffee. Endorphins from working out 
-                                    keep me relaxed and focused daily.
-                                </p>
-                                <br />
-                                <p>
-                                    I don't track my one-rep maxes, so here are the current
-                                    weights for my weekly sets instead:
+                                    My current weekly sets are:
                                 </p>
                                 <ul className="py-3 list-disc list-outside ms-8 text-left">
                                     <li>
-                                        Squat - 275 lbs
+                                        Squat - 225 lbs
                                     </li>
                                     <li>
                                         Bench Press - 185 lbs
@@ -93,47 +87,15 @@ const AboutPage = () => {
                                     physical, chemical, and biological processes that transform food.
                                 </p>
                                 <br />
-                                <p>
-                                    My earliest cooking memory is making cranberry juice in 4th grade. I remember
-                                    enjoying the process (the how), but my real focus was on the why. What's different about cranberries from other fruits that requires you to boil them down into a syrup
-                                    to make juice? Why, after boiling, is it necessary to strain the syrup? While the answers to these questions are obvious to me now as an
-                                    adult, it's this curiousity that persists.
-                                </p>
-                                <br />
-                                <p>
-                                    How does one achieve maximum leavening and proper gluten development in a sourdough loaf? In what ways can one lacto-ferment hot sauce to achieve
-                                    the desired balance of spice and tang? Questions like these keep me interested in food science.
-                                </p>
-                                <br />
-                                <h2 className="font-sans font-bold text-2xl">Basketball</h2>
-                                <br />
-                                <p>
-                                    I've been a runner all my life. I ran cross country and track from middle
-                                    school up until the end of high school. When burnout for running hit me in college, 
-                                    pick-up basketball what I needed to reinvigorate my love for sport. Nowadays instead of finding me on runs, you can find me at the nearest basketball hoop instead.
-                                </p>
-                                <br />
                                 <h2 className="font-sans font-bold text-2xl">Programming</h2>
                                 <br />
                                 <p>
-                                    Software is amazing. Software runs the world. In fact, software is how I built this website. I could say a million
-                                    good things about software.
+                                    Software is amazing. Software runs the world. In fact, software is how I built this website.
                                 </p>
                                 <br />
                                 <p>
                                     Computer science is one of the only disciplines that is widely accesible, applicable to almost everything, and is free in most regards.
                                     The multitude of available online resources for computer science makes learning it easy and satisfying.
-                                </p>
-                                <br />
-                                <p>
-                                    I was introduced to computer science in high school and have been hooked ever since. I've tried my hand at web development, graphics 
-                                    programming, game design, task automation, etc. At one point in high school I wanted to study computer science instead of engineering, but decided against that. 
-                                    Some things are better left as hobbies. I opted to pursue a CS minor instead, and to take online courses in my free time.
-                                </p>
-                                <br />
-                                <p>
-                                    Software skills are becoming ever more important. I believe that to succeed in the future as an engineer, being able to program will be highly
-                                    important, if not necessary.
                                 </p>
                                 <br />
                             </div>
