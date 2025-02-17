@@ -51,10 +51,6 @@ const AboutPage = () => {
                                             a think tank for projects I'd like to start creating.
                                         </li>
                                     </ul>
-                                    <br />
-                                    <p>
-                                        Here are a couple of my favorite projects to pique your interest:
-                                    </p>
                                 </div>
                             </div>
                             <div className="py-20 flex-1">

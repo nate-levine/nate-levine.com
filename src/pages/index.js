@@ -15,18 +15,6 @@ const IndexPage = () => {
   return (
     <Layout>
       <div className="h-auto min-h-[100vh]">
-          <div className="absolute w-[calc(100%+(50vw))] left-[-50vw] truncate text-clip overflow-hidden mix-blend-darken text-black font-serif font-bold text-[6vw]">
-            <div className="animate-scroll">
-              NATE LEVINE NATE LEVINE NATE LEVINE NATE LEVINE NATE LEVINE NATE LEVINE
-            </div>
-          </div>
-          <div className="h-[5vw]" />
-          <div className="absolute w-[calc(100%+(50vw))] left-[-50vw] truncate text-clip overflow-hidden mix-blend-darken text-black font-serif font-bold text-[6vw]">
-            <div className="animate-scrollBack">
-              NATE LEVINE NATE LEVINE NATE LEVINE NATE LEVINE NATE LEVINE NATE LEVINE
-            </div>
-          </div>
-          <div className="h-[7vw]" />
         <div className="font-serif flex flex-col lg:flex-row border-solid border-t-2 border-b-2 border-black">
           <div className="py-20 flex-1 border-dashed border-b-2 lg:border-b-0 lg:border-r-2 border-black text-2xl">
             <div className="w-[80%] mx-auto leading-relaxed">
