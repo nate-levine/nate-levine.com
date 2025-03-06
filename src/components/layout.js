@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
 
     return (
         <div>
-            <header className="bg-[url('../images/input.png')] bg-[position:0%_56%] bg-cover py-8 border-solid border-b-2 border-black">
+            <header className="bg-[url('../images/output.png')] bg-[position:0%_56%] bg-cover py-8 border-solid border-b-2 border-black">
                 <NavigationBar/>
             </header>
             <main className="bg-primary">
