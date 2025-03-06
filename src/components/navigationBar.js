@@ -42,11 +42,11 @@ const NavigationBar = () => {
                     </div>
                 </Link>
             </div>
-            <div className="navigation-links z-20 md:static absolute md:min-h-fit min-h-[10vh] top-[11%] md:w-auto w-[100%] flex items-center justify-center bg-primary left-0 left-[-100%] border-solid border-black md:border-b-0">
+            <div className="navigation-links z-20 md:static absolute md:min-h-fit min-h-[10vh] top-[11%] md:w-auto w-[100%] flex items-center justify-center left-0 left-[-100%] border-solid border-black md:border-b-0">
                 <ul className="flex flex-col md:flex-row items-center pt-6 pb-10 md:py-0 gap-6 md:gap-[4vw] w-[85%]">
                     <li className="w-full">
                         <Link to="/articles" onClick={toggleMenu}>
-                            <div className="w-full md:w-auto p-3 shadow-[8px_8px_0_black] hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] border-solid border-2 border-black rounded-2xl hover:bg-black hover:text-primary duration-100">Articles</div>
+                            <div className="w-full md:w-auto p-3 shadow-[8px_8px_0_black] hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] border-solid border-2 border-black rounded-2xl bg-primary hover:bg-black hover:text-primary duration-100">Articles</div>
                         </Link>
                     </li>
                     {/*<li className="w-full">
@@ -56,13 +56,13 @@ const NavigationBar = () => {
                     </li>*/}
                     <li className="w-full">
                         <Link to="/about" onClick={toggleMenu}>
-                            <div className="w-full md:w-auto p-3 shadow-[8px_8px_0_black] hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] border-solid border-2 border-black rounded-2xl hover:bg-black hover:text-primary duration-100">About</div>
+                            <div className="w-full md:w-auto p-3 shadow-[8px_8px_0_black] hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] border-solid border-2 border-black rounded-2xl bg-primary hover:bg-black hover:text-primary duration-100">About</div>
                         </Link>
                     </li>
                 </ul>
             </div>
             <div className="flex items-center gap-[6%]">
-                <button className="menu-button shadow-[8px_8px_0_black] border-solid border-2 border-black p-2 rounded-lg md:invisible duration-100" onClick={toggleMenu}>
+                <button className="menu-button shadow-[8px_8px_0_black] border-solid border-2 border-black p-2 rounded-lg bg-primary md:invisible duration-100 " onClick={toggleMenu}>
                     {
                     menuIcon === "Closed"
                     ?

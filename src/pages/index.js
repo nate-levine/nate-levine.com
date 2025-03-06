@@ -15,7 +15,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <div className="h-auto min-h-[100vh]">
-        <div className="font-serif flex flex-col lg:flex-row border-solid border-t-2 border-b-2 border-black">
+        <div className="font-serif flex flex-col lg:flex-row">
           <div className="py-20 flex-1 border-dashed border-b-2 lg:border-b-0 lg:border-r-2 border-black text-2xl">
             <div className="w-[80%] mx-auto leading-relaxed">
               <h1 className="font-sans font-bold text-4xl">What's up?</h1>
