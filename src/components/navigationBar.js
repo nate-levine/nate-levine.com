@@ -28,8 +28,8 @@ const NavigationBar = () => {
         <nav className="flex justify-between items-center w-[85%] mx-auto font-sans font-bold text-xl">
             <div className="font-bold">
                 <Link to="/">
-                    <div className="nate-levine group relative text-2xl font-serif">
-                        <div className="flex flex-col -space-y-3 justify-left text-right">
+                    <div className="nate-levine group relative text-4xl font-serif">
+                        <div className="flex flex-col -space-y-3 justify-left text-right text-black drop-shadow-[2px_2px_0px_#fbf1c7]">
                             <div>Nate</div>
                             <div>Levine</div>
                         </div>
@@ -62,25 +62,27 @@ const NavigationBar = () => {
                 </ul>
             </div>
             <div className="flex items-center gap-[6%]">
-                <button className="menu-button shadow-[8px_8px_0_black] border-solid border-2 border-black p-2 rounded-lg bg-primary md:invisible duration-100 " onClick={toggleMenu}>
-                    {
-                    menuIcon === "Closed"
-                    ?
-                    // Closed menu icon
+                {
+                menuIcon === "Closed"
+                ?
+                // Closed menu icon
+                <button className="menu-button shadow-[8px_8px_0_-2px_black] border-solid border-2 border-black p-2 rounded-lg bg-primary md:invisible duration-100" onClick={toggleMenu}>
                     <svg className="h-7 w-7" id="eEy52ihAnbC1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100" shapeRendering="geometricPrecision" textRendering="geometricPrecision">
                         <line x1="15" y1="0" x2="135" y2="0" fill="none" stroke="#000" strokeWidth="20" strokeLinecap="round"/>
                         <line x1="15" y1="50" x2="135" y2="50" fill="none" stroke="#000" strokeWidth="20" strokeLinecap="round"/>
                         <line x1="15" y1="100" x2="135" y2="100" fill="none" stroke="#000" strokeWidth="20" strokeLinecap="round"/>
                     </svg>
-                    :
-                    // Open "X" icon
+                </button>
+                :
+                // Open "X" icon
+                <button className="menu-button shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] border-solid border-2 border-black p-2 rounded-lg bg-black md:invisible duration-100" onClick={toggleMenu}>
                     <svg className="h-7 w-7 stroke-primary" id="eEy52ihAnbC1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100" shapeRendering="geometricPrecision" textRendering="geometricPrecision">
                         <line x1="20" y1="-5" x2="75" y2="50" fill="none" strokeWidth="20" strokeLinecap="round"/>
                         <line x1="20" y1="105" x2="130" y2="-5" fill="none" strokeWidth="20" strokeLinecap="round"/>
                         <line x1="75" y1="50" x2="130" y2="105" fill="none" strokeWidth="20" strokeLinecap="round"/>
                     </svg>
-                    }
                 </button>
+                }
             </div>
         </nav>
     )
