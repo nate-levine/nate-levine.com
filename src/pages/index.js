@@ -82,9 +82,9 @@ const IndexPage = () => {
           <div className="py-20 flex-1">
             <div className="w-[80%] mx-auto">
               <ArticleView grid_config={"md:columns-2 lg:columns-2 gap-6"} filterFunc={isFeatured} />
-              <p className="font-sans text-xl text-center underline pt-10">
-                <Link to="/articles">Explore more articles</Link>
-              </p>
+              <Link to="/articles">
+                <div className="font-sans text-xl m-auto text-center w-[240px] mt-10 p-3 shadow-[8px_8px_0_black] hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] border-solid border-2 border-black rounded-2xl bg-primary hover:bg-black hover:text-primary duration-100">Explore more articles</div>
+              </Link>
             </div>
           </div>
         </div>
