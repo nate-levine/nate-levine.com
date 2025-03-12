@@ -9,7 +9,7 @@ const ArticleTags = ({ tags }) => {
     }
 
     return (
-        <div className="group flex flex-row flex-wrap gap-x-2 gap-y-2 font-sans font-regular text-sm">
+        <div className="group flex flex-row flex-wrap gap-x-2 gap-y-2 font-sans font-regular text-sm text-black">
             {
                 /* 
                     Add featured tag icon if the tag list includes a hidden "FEATURED" tag
@@ -18,7 +18,7 @@ const ArticleTags = ({ tags }) => {
                     If tags.includes("FEATURED") is true, then the second expression, the JSX, will be evaluated
                 */
                 tags.includes("FEATURED") &&
-                <div className="bg-black rounded-full px-1 py-1 rounded-full group-hover:animate-jump">
+                <div className="bg-black px-1 py-1 rounded-full group-hover:animate-jump">
                     {/*
                         From https://logowik.com/rounded-star-vector-icon-14817.html
                         Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)
@@ -39,7 +39,7 @@ const ArticleTags = ({ tags }) => {
                     // Get color for tag index
                     const color = getColor(index)
                     // "Bake" tailwind class string so that tailwind preprocessor doesn't remove it
-                    let classString = `bg-${color} rounded-full px-3 py-1`
+                    let classString = `bg-${color} rounded-md px-3 py-1`
                     // Add class string to tag style
                     return <div key={index} className={classString}>{tag}</div>
                 })

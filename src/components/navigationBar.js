@@ -25,7 +25,7 @@ const NavigationBar = () => {
     }
 
     return (
-        <nav className="flex justify-between items-center w-[85%] mx-auto font-sans font-bold text-xl">
+        <nav className="flex justify-between items-center w-[85%] mx-auto font-sans font-bold text-xl text-black">
             <div className="font-bold">
                 <Link to="/">
                     <div className="nate-levine group relative text-4xl font-serif">
@@ -46,7 +46,7 @@ const NavigationBar = () => {
                 <ul className="flex flex-col md:flex-row items-center pt-6 pb-10 md:py-0 gap-6 md:gap-[4vw] w-[85%]">
                     <li className="w-full">
                         <Link to="/articles" onClick={toggleMenu}>
-                            <div className="w-full md:w-auto p-3 shadow-[8px_8px_0_black] hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] border-solid border-2 border-black rounded-2xl bg-primary hover:bg-black hover:text-primary duration-100">Articles</div>
+                            <div className="w-full md:w-auto p-3 shadow-[8px_8px_0_#22190e] hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_#22190e] border-solid border-2 border-black rounded-md bg-primary hover:bg-black hover:text-primary duration-100">Articles</div>
                         </Link>
                     </li>
                     {/*<li className="w-full">
@@ -56,7 +56,7 @@ const NavigationBar = () => {
                     </li>*/}
                     <li className="w-full">
                         <Link to="/about" onClick={toggleMenu}>
-                            <div className="w-full md:w-auto p-3 shadow-[8px_8px_0_black] hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] border-solid border-2 border-black rounded-2xl bg-primary hover:bg-black hover:text-primary duration-100">About</div>
+                            <div className="w-full md:w-auto p-3 shadow-[8px_8px_0_#22190e] hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_#22190e] border-solid border-2 border-black rounded-md bg-primary hover:bg-black hover:text-primary duration-100">About</div>
                         </Link>
                     </li>
                 </ul>
@@ -66,7 +66,7 @@ const NavigationBar = () => {
                 menuIcon === "Closed"
                 ?
                 // Closed menu icon
-                <button className="menu-button shadow-[8px_8px_0_-2px_black] border-solid border-2 border-black p-2 rounded-lg bg-primary md:invisible duration-100" onClick={toggleMenu}>
+                <button className="menu-button shadow-[8px_8px_0_-2px_#22190e] border-solid border-2 border-black p-2 rounded-md bg-primary md:invisible duration-100" onClick={toggleMenu}>
                     <svg className="h-7 w-7" id="eEy52ihAnbC1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100" shapeRendering="geometricPrecision" textRendering="geometricPrecision">
                         <line x1="15" y1="0" x2="135" y2="0" fill="none" stroke="#000" strokeWidth="20" strokeLinecap="round"/>
                         <line x1="15" y1="50" x2="135" y2="50" fill="none" stroke="#000" strokeWidth="20" strokeLinecap="round"/>
@@ -75,7 +75,7 @@ const NavigationBar = () => {
                 </button>
                 :
                 // Open "X" icon
-                <button className="menu-button shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] border-solid border-2 border-black p-2 rounded-lg bg-black md:invisible duration-100" onClick={toggleMenu}>
+                <button className="menu-button shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_#22190e] border-solid border-2 border-black p-2 rounded-md bg-black md:invisible duration-100" onClick={toggleMenu}>
                     <svg className="h-7 w-7 stroke-primary" id="eEy52ihAnbC1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100" shapeRendering="geometricPrecision" textRendering="geometricPrecision">
                         <line x1="20" y1="-5" x2="75" y2="50" fill="none" strokeWidth="20" strokeLinecap="round"/>
                         <line x1="20" y1="105" x2="130" y2="-5" fill="none" strokeWidth="20" strokeLinecap="round"/>

@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
 
     return (
         <div>
-            <header className="bg-[url('../images/sangre_de_cristo.png')] bg-[position:0%_56%] bg-cover py-8 border-solid border-b-2 border-black">
+            <header className="bg-[url('../images/sangre_de_cristo.png')] bg-[position:0%_56%] bg-cover py-8 border-solid border-b-2 border-black text-black">
                 <NavigationBar/>
             </header>
             <main className="bg-primary">

@@ -63,13 +63,13 @@ const ArticlePage = ({ data }) => {
 
   return (
     <Layout>
-      <div className="border-dashed border-b-2 border-black">
+      <div className="border-dashed border-b-2 border-black text-black">
         <div className="h-auto max-w-[75vw] mx-auto pt-10 pb-5">
-          <h1 className="text-left text-6xl font-serif font-bold pb-10">Explore Articles</h1>
+          <h1 className="text-left text-6xl font-serif font-bold pb-10 text-black">Explore Articles</h1>
           <div className="flex flex-row space-x-5 items-center justify-left" >
             <p className="font-serif font-bold text-xl" >Sort By:</p>
-            <div className="inline-block min-w-[7vw] text-left text-sm font-sans font-regular border-solid border-black border-2 rounded-lg">
-              <button type="button" onClick={toggleMenu} className="drop-down-button inline-flex w-full text-l justify-center gap-x-1.5 rounded-lg px-2 py-2 bg-primary">
+            <div className="inline-block min-w-[7vw] text-left text-sm font-sans font-regular border-solid border-black border-2 rounded-md">
+              <button type="button" onClick={toggleMenu} className="drop-down-button inline-flex w-full text-l justify-center gap-x-1.5 rounded-md px-2 py-2 bg-primary">
                 {
                   /*
                     Change article order dropdown icon based on selected sort option
@@ -96,7 +96,7 @@ const ArticlePage = ({ data }) => {
                 </svg>
               </button>
               {/* Sort dropdown */}
-              <div className="drop-down-menu left-0 z-10 w-full origin-top-right bg-primary rounded-lg hidden">
+              <div className="drop-down-menu left-0 z-10 w-full origin-top-right bg-primary rounded-md hidden">
                 {
                   sortOptions.map((option, id) => {
                     if (option !== articleOrder)  // Don't include currently selected sort option in the dropdown
@@ -114,9 +114,9 @@ const ArticlePage = ({ data }) => {
                     // Style tag conditionally based on if it is selected or not
                     let classString = ""
                     if (selectedTags.includes(tag)) {
-                      classString = "flex flex-row border-solid border-black border-2 bg-black focus:bg-black text-primary focus:text-primary rounded-full px-3 py-1 duration-100"
+                      classString = "flex flex-row border-solid border-black border-2 bg-black focus:bg-black text-primary focus:text-primary rounded-md px-3 py-1 duration-100"
                     } else {
-                      classString = "flex flex-row border-solid border-black border-2 bg-primary focus:bg-primary text-black focus:text-black rounded-full px-3 py-1 duration-100"
+                      classString = "flex flex-row border-solid border-black border-2 bg-primary focus:bg-primary text-black focus:text-black rounded-md px-3 py-1 duration-100"
                     }
 
                     // Style featured tag conditionally based on if it is selected or not
