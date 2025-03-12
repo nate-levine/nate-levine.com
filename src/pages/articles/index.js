@@ -188,10 +188,12 @@ const ArticlePage = ({ data }) => {
           </div>
         </div>
       </div>
-      <div className="bg-primary">
+      <div className="bg-[url('../images/IMG_7456.png')] bg-bottom bg-bottom md:bg-[position:0%_-25vw] bg-contain md:bg-cover bg-no-repeat">
+      <div className="bg-[url('../images/IMG_7455.png')] bg-bottom bg-bottom md:bg-[position:0vw_0vw] bg-contain md:bg-cover bg-no-repeat">
         <div className="h-auto max-w-[75vw] mx-auto py-10">
           <ArticleView grid_config={"md:columns-2 lg:columns-3xs gap-6"} filterFunc={tagFilter} sortFunc={orderArticles} />
         </div>
+      </div>
       </div>
     </Layout>
   )
