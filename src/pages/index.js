@@ -16,16 +16,16 @@ const IndexPage = () => {
     <Layout>
       <div className="h-auto min-h-[100vh] text-black">
         <div className="font-serif flex flex-col lg:flex-row">
-          <div className="py-20 flex-1 border-dashed border-b-2 lg:border-b-0 lg:border-r-2 border-black text-2xl bg-[url('../images/IMG_7455.png')] bg-bottom bg-[position:0%_166vw] md:bg-[position:0%_22.5vw] bg-contain md:bg-cover bg-no-repeat">
+          <div className="py-20 flex-1 border-dashed border-b-2 lg:border-b-0 lg:border-r-2 border-black text-2xl bg-[url('../images/IMG_7455.png')] bg-[center_bottom_-12rem] md:bg-[position:0%_22.5vw] bg-contain md:bg-cover bg-no-repeat">
             <div className="w-[80%] mx-auto leading-relaxed">
               <h1 className="font-sans font-bold text-4xl ">What's up?</h1>
               <br />
               <p>
-                I'm Nate, a student at Worcester Polytechnic Institute (WPI). I'm currently pursuing a 
+                I'm Nate, a student at Worcester Polytechnic Institute (WPI) graduating in 2025. I'm currently pursuing a 
                 Bachelors in mechanical engineering and a minor in computer science.
               </p>
               <br />
-              <p>y
+              <p>
                 This site is where I share my ideas, interests, and thoughts on topics ranging from
                 engineering, to software development, to food science.
               </p>
@@ -79,7 +79,7 @@ const IndexPage = () => {
             </div>
           </div>
           {/* Articles */}
-          <div className="py-20 flex-1 bg-[url('../images/IMG_7456.png')] bg-bottom bg-[position:0%_300vw] md:bg-[position:0%_21vw]  bg-contain md:bg-cover bg-no-repeat">
+          <div className="py-20 flex-1 bg-[url('../images/IMG_7456.png')]  bg-[center_bottom_-5rem] md:bg-[position:0%_21vw]  bg-contain md:bg-cover bg-no-repeat">
             <div className="w-[80%] mx-auto">
               <ArticleView grid_config={"md:columns-2 lg:columns-2 gap-6"} filterFunc={isFeatured} />
               <Link to="/articles">
