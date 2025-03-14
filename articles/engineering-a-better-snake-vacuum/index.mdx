@@ -1,0 +1,95 @@
+---
+title: "Engineering a Better (Snake) Vacuum"
+date: "2025-03-14"
+slug: "engineering-a-better-snake-vacuum"
+tags:
+    - FEATURED
+    - Project
+    - Prototyping
+    - Engineering
+    - Design
+hero_image: "./snake-vacuum.png"
+hero_image_alt: "Final Prototype of Snake Vacuum"
+hero_image_credit_text: "Nate Levine"
+hero_image_credit_link: ""
+---
+
+import * as Components from '../../src/components/mdx/mdx_components'
+
+import continuumRobots from "./continuum-robots.jpg"
+import electronics from "./electronics.jpg"
+import iterationOne from "./iteration-one.jpg"
+import iterationThreeDrawing from "./iteration-three-drawing.jpg"
+import iterationThreeExploded from "./iteration-three-exploded.jpg"
+import iterationTwo from "./iteration-two.jpg"
+import mindMap from "./mind-map.jpg"
+import morePower from "./more-power.gif"
+import pulleyMechanism from "./pulley-mechanism.jpg"
+import roombaTryhard from "./roomba-tryhard.jpg"
+import snakeMoving from "./snake-moving.gif"
+
+<Components.Section title="The Problem with Roombas">
+    <Components.Paragraph>Much like a fat man’s hand trying to reach the bottom of a Pringles can, a robot vacuum cleaner’s mobility is limited by their large volume. A robot vacuum has difficulty cleaning tight gaps between furniture and are often unable to move under furniture with low clearance. These are the problems that our professor was facing with his home Roomba. He tasked the class with designing a robot vacuum that could overcome these obstacles.</Components.Paragraph>
+
+    <Components.Image src={roombaTryhard} alt="This Roomba is trying so hard to clean under this stool but can't because it's too fat" to="">This Roomba is trying so hard to clean under this stool but can't because it's too fat</Components.Image>
+</Components.Section>
+
+<Components.Section title="Snakes, Why Did it Have to Be Snakes?">
+    <Components.Paragraph>Our professor proposed the idea to design a flexible robot vacuum similar to the vacuum tubes found on Shop-Vac’s. Essentially, he wanted to combine the automatic driving and sweeping capabilities of traditional vacuum cleaners with the flexibility of a vacuum hose. This is what gave rise to the idea of a snake-robot vacuum. Our team was assigned the snake module of the vacuum, while other teams were tasked with designing either the vacuum or drive modules.</Components.Paragraph>
+
+    <Components.Paragraph>The big advantage that snake robots provide is that they (1) can wrap themselves into tight spaces and (2) are low profile enough to reach under furniture with low clearance. It turns out that snake robots fall under the much broader scope of continuum robots. Continuum robots are robots characterized by their flexible structure, effectively giving the robot an infinite number of joints<Components.FootnotesLink>1</Components.FootnotesLink>. The joints aren’t discrete but rather continuous, thus making these types of robots “continuum” robots.</Components.Paragraph>
+
+    <Components.Image src={continuumRobots} alt="Biomimetic Intelligence and Robotics - Manipulator for Transluminal Endoscopic Surgery" to="https://doi.org/10.1016/j.birob.2024.100191 ">Biomimetic Intelligence and Robotics - Manipulator for Transluminal Endoscopic Surgery</Components.Image>
+</Components.Section>
+
+<Components.Section title="Ideation">
+    <Components.Paragraph>When one reaches the common milestone in life that is designing a robot snake-vacuum, the first most common question that crosses their mind is “How do I control this thing?”. At least, that’s the question that my team and I asked ourselves in the ideation phase of our project. We brainstormed different control methods like strings, pneumatics, motors, actuators, and so on. Our team eventually decided to pursue a primarily string-controlled mechanism.</Components.Paragraph>
+
+    <Components.Image src={mindMap} alt="Mind map to brainstorm methods to control snake vacuum" to="">Mind map to brainstorm methods to control snake vacuum</Components.Image>
+
+    <Components.Paragraph>Specifically, we would have a compression string attached to multiple points of the vacuum hose. The base of the string would be wound around a pulley driven by a motor. This would be mirrored with another string-pulley-motor system on the other side of the vacuum hose. Rotating one of these pulleys would tension the string, forcing the vacuum hose to bend in that direction. A low force spring would wrap the vacuum hose to return the hose straight when tension from the string is unapplied.</Components.Paragraph>
+
+    <Components.Image src={pulleyMechanism} alt="Snake vacuum string control mechanism" to="">Snake vacuum string control mechanism</Components.Image>
+</Components.Section>
+
+<Components.Section title="Prototyping">
+    <Components.Paragraph>Our professor repeating throughout the course that “If you aren’t iterating, you’re doing something wrong”. I always found this odd since our team was forced to iterate our design because of what kept going wrong. Jokes aside, our team went through many iterations before we had a prototype that met all of our design criteria. Rather than covering every single iteration made, I’m going to cover three iterations that highlight our design process.</Components.Paragraph>
+</Components.Section>
+
+<Components.Subsection title="#1 - Keep it Simple, Stupid">
+    <Components.Paragraph>This first design is our idea at its most basic. The goal for this design was to keep the design as simple as possible and avoid unnecessary complexity that could lead to failure. A base houses the motors, gears (1:3 ratio), and pulleys. It also anchors the base of the vacuum hose and spring. A nozzle at the end of the hose keeps the vacuuming force parallel to the ground.</Components.Paragraph>
+
+    <Components.Image src={iterationOne} alt="First major snake vacuum iteration" to="">First major snake vacuum iteration</Components.Image>
+</Components.Subsection>
+
+<Components.Subsection title="#2 - MORE POWER!">
+    <Components.Image src={morePower} alt="GIPHY - Spongebob Squarepants More Power" to="https://giphy.com/gifs/spongebob-spongebob-squarepants-season-5-xT3i108YUO3Gm1zmms">GIPHY - Spongebob Squarepants More Power</Components.Image>
+
+    <Components.Paragraph>This second design is the result of changes we made after testing our first hardware prototype. We found through testing that the previous gear ratio didn’t provide enough torque to the motors to bend the spring more than ~20 degrees in either direction. This new design increases the gear ratio to 1:5. We also removed material from the base to decrease its profile and cut down on manufacturing time. Because the gears were 3D printed plastic, the tolerances of the gear teeth were not great. This caused the gears to slip often.</Components.Paragraph>
+
+    <Components.Image src={iterationTwo} alt="Second major snake vacuum iteration" to="">Second major snake vacuum iteration</Components.Image>
+</Components.Subsection>
+
+<Components.Subsection title="#3 - Springs Are So Out, Linkages Are So In">
+    <Components.Paragraph>Even after increasing the gear ratio to the point of tooth slippage, the motors still didn’t carry enough torque to bend the spring a significant amount. Our team decided to ditch the spring and utilize a linkage system to guide the vacuum hose. Removing the spring would remove most of the resistance against the motors and cut the needed torque to almost negligible. Because high torque was no longer needed, we returned the gear ratio to its original 1:3 ratio, removing the tooth slippage that our second prototype experienced. The GIF below shows this design working as intended with 180 degrees of motion.</Components.Paragraph>
+
+    <Components.Image src={snakeMoving} alt="Snake vacuum - Successful movement test" to="">Snake vacuum - Successful movement test</Components.Image>
+
+    <Components.Image src={iterationThreeDrawing} alt="Snake vacuum - Drawing and dimensions" to="">Snake vacuum - Drawing and dimensions</Components.Image>
+
+    <Components.Image src={iterationThreeExploded} alt="Snake vacuum - Exploded view of components" to="">Snake vacuum - Exploded view of components</Components.Image>
+</Components.Subsection>
+
+<Components.Section title="Electronics">
+    <Components.Paragraph>The electronics are really simple. An Arduino Uno controls two stepper motor driver boards, which drive each motor. Not pictured in the image is a 12V power supply which sends power to the Arduino (converted to 5V internally) and stepper motors.</Components.Paragraph>
+
+    <Components.Image src={electronics} alt="Snake vacuum - Electronics" to="">Snake vacuum - Electronics</Components.Image>
+</Components.Section>
+
+<Components.Section title="Concluding Thoughts">
+    <Components.Paragraph>Our final hardware design successfully met our team’s design requirements. The flexible hose effectively extended the robot’s reach and allowed the vacuum to sweep in crowded places or under low furniture. Although this snake-vacuum was good proof of concept, it still needed work. Firstly, our team used 3D printing to manufacture all of our custom parts with PLA. Components like gears may benefit from being machined out of metal to help with tolerancing. Components like the base or linkages would benefit from being molded injection to decrease wear and tear. The base of the snake-vacuum would also need to be adapted to fit with the vacuum and drive modules. Our team was unable to make these changes due to time constraints. I’d like to see this idea taken further with more iterations and testing.</Components.Paragraph>
+</Components.Section>
+
+<Components.Footnotes>
+    <Components.FootnotesItem index="0">Often these robots don’t have an infinite backbone joint but have a number of joints packed closely together so that they effectively control like they have infinite joints.</Components.FootnotesItem>
+</Components.Footnotes>
