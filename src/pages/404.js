@@ -23,7 +23,7 @@ const NotFoundPage = () => {
             </p>
           </div>
         </div>
-        <div className="border-dashed border-black border-b-2" />
+        <div className="border-dashed border-black border-b-[1px]" />
         <div className="max-w-[75vw] mx-auto py-20">
           <ArticleView grid_config={"grid md:grid-cols-2 lg:grid-cols-3 gap-6"} filterFunc={isFeatured} />
         </div>

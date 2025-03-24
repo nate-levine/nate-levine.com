@@ -6,7 +6,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 export const BlockQuote = ({ children }) => {
     return (
         <div className="my-3">
-            <p className="p-6 border-solid border-black border-2 rounded-2xl shadow-[8px_8px_0_black]">
+            <p className="p-6 border-solid border-black border-[1px] rounded-2xl shadow-[8px_8px_0_black]">
                 {children}
             </p>
         </div>
@@ -86,7 +86,7 @@ export const InternalLink = ({ children, to }) => {
 export const Image = ({ children, src, alt, to }) => {
     return (
         <div className="text-center py-5">
-            <img src={src} alt={alt} className="mx-auto rounded-md border-solid border-black border-2 shadow-[8px_8px_0_black]" />
+            <img src={src} alt={alt} className="mx-auto rounded-md border-solid border-black border-[1px] shadow-[8px_8px_0_black]" />
             <div className="pt-10 text-base underline">
                 {  
                     // Link to image if credited from an external link

@@ -21,14 +21,14 @@ const ArticlePost = ({ data, children }) => {
         <div className="h-8" />
         <ArticleTags tags={data.mdx.frontmatter.tags} isFeatured={data.mdx.frontmatter.isFeatured} />
       </div>
-      <div className="h-8 border-dashed border-black border-b-2" />
+      <div className="h-8 border-dotted border-black border-b-[1px]" />
       <div className="flex flex-col-reverse xl:flex-row pb-20">
         <div className="w-[25%]" />
         <div className="h-auto min-h-[100vh] max-w-[85%] sm:w-[640px] mx-auto">
           <div className="text-black text-2xl text-left font-serif mx-auto pb-10 leading-relaxed">   
             {/* Hero image */}    
             <div className="text-center py-5">
-                <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} className="mx-auto rounded-md border-solid border-black border-2 shadow-[8px_8px_0_black]" />
+                <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} className="mx-auto rounded-md border-solid border-black border-[1px] shadow-[8px_8px_0_black]" />
                 <div className="pt-10 text-base underline">
                     {  
                         // Link to image if credited from an external link
@@ -48,7 +48,7 @@ const ArticlePost = ({ data, children }) => {
         </div>
         <TableOfContents />
       </div>
-      <div className="border-solid border-black border-b-2" />
+      <div className="border-solid border-black border-b-[1px]" />
       <div className="h-fit"> 
         <div className="py-20 max-w-[75vw] mx-auto">
           <p className="font-bold text-4xl pb-10">Related Articles</p>

@@ -62,13 +62,13 @@ const ArticleView = ({ grid_config, filterFunc, sortFunc }) => {
                 <article key={node.id}>
                     <div className="py-3 break-inside-avoid text-black">
                         <Link to={`/articles/${node.frontmatter.slug}`}>
-                            <div className="group font-sans text-xl p-3 shadow-[8px_8px_0_#22190e] border-solid border-2 border-black hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_#22190e] rounded-md bg-primary hover:bg-black duration-100">
+                            <div className="group font-sans text-xl p-3 shadow-[8px_8px_0_#22190e] border-solid border-[1px] border-black hover:shadow-[8px_8px_0_-1px_#fbf1c7,8px_8px_0_#22190e] rounded-md bg-primary hover:bg-black duration-100">
                                 <div className="flex flex-col group-hover:text-[#fbf1c7]">
                                     <div className="flex-auto pb-2">
                                         <div className="font-bold pb-2">{node.frontmatter.title}</div>
                                         {
                                             getImage(node.frontmatter.hero_image) ?
-                                            <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt={node.frontmatter.hero_image_alt} className="w-[100%] flex m-auto h-auto mb-4 border-solid border-black border-2" /> : <div />
+                                            <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt={node.frontmatter.hero_image_alt} className="w-[100%] flex m-auto h-auto mb-4 border-solid border-black border-[1px]" /> : <div />
                                         }
                                         <ArticleTags tags={node.frontmatter.tags} />
                                     </div>

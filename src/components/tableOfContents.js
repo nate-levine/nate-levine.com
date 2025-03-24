@@ -36,7 +36,7 @@ const TableOfContents = () => {
                             }>
                                 {
                                     // If the section is currently active, style it accordingly in the table of contents
-                                    header == activeSection ? <div className="font-bold duration-100">{header.innerText}</div> : <div className="underline p-1 duration-100">{header.innerText}</div>
+                                    header == activeSection ? <div className="font-bold duration-100">{header.innerText}</div> : <div className="p-1 duration-100">{header.innerText}</div>
                                 }
                             </button>
                         </li>
@@ -82,7 +82,7 @@ const TableOfContents = () => {
 
     return (
         <div className="xl:absolute xl:sticky xl:top-0 h-fit pt-10 xl:pb-14 mx-auto max-w-[85%] w-[640px] xl:w-[25%] xl:max-w-full xl:mr-auto">
-            <div className="mx-auto xl:w-[85%] border-dashed border-black border-l-2 p-6">
+            <div className="mx-auto xl:w-[85%] border-dotted border-black border-l-[1px] p-6">
                 <p className="font-sans font-bold text-2xl pb-3">Table of Contents</p>
                 {tableOfContents}
             </div>
