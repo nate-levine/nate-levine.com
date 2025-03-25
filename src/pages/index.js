@@ -16,7 +16,7 @@ const IndexPage = () => {
     <Layout>
       <div className="h-auto min-h-[100vh] text-black">
         <div className="font-serif flex flex-col lg:flex-row">
-          <div className="py-20 flex-1 border-dotted border-b-[1px] lg:border-b-0 lg:border-r-[1px] border-black text-2xl bg-[url('../images/IMG_7455.png')] bg-[center_bottom_-12rem] md:bg-[position:0%_25.5vw] bg-contain md:bg-cover bg-no-repeat">
+          <div className="py-20 flex-1 border-dotted border-b-[1px] lg:border-b-0 lg:border-r-[1px] border-black text-2xl">
             <div className="w-[85%] mx-auto leading-relaxed">
               <h1 className="font-sans font-bold text-4xl ">What's up?</h1>
               <br />
@@ -79,7 +79,7 @@ const IndexPage = () => {
             </div>
           </div>
           {/* Articles */}
-          <div className="py-20 flex-1 bg-[url('../images/IMG_7456.png')]  bg-[center_bottom_-5rem] md:bg-[position:0%_21vw]  bg-contain md:bg-cover bg-no-repeat">
+          <div className="py-20 flex-1">
             <div className="w-[85%] mx-auto">
               <ArticleView grid_config={"md:columns-2 lg:columns-2 gap-6"} filterFunc={isFeatured} />
               <Link to="/articles">
