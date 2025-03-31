@@ -18,7 +18,7 @@ Join me at [nate-levine.com](https://www.nate-levine.com/).
 * Clicking tags on an article should redirect to a list of articles with that tag.
 
 ## TO-DO:
-* Fix background image placement
+* Add "X minute read" based on article word count
 
 ### *Features:*
 * Implement rich results (images, meaningful descriptions) for SEO. Use: https://search.google.com/test/rich-results/result?id=vA6nh_OSh08QvwpOHJzEmg to check.

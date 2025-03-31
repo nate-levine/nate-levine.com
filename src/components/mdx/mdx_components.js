@@ -111,6 +111,14 @@ export const ListItem = ({ children }) => {
     )
 }
 
+export const OrderedList = ({ children }) => {
+    return (
+        <ul className="py-3 list-decimal list-outside ms-8 text-left">
+            {children}
+        </ul>
+    )
+}
+
 export const Paragraph = ({ children }) => {
     return (
         <p className="py-3">
