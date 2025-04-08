@@ -10,25 +10,25 @@ const Layout = ({ children }) => {
                 <NavigationBar/>
             </header>
             <main className="relative bg-primary">
-                <div className="absolute top-0 w-full h-10">
-                    <svg viewBox="1 0 102 4" preserveAspectRatio="none" className="w-full h-[2.5vw]">
-                    <defs>
-                        <pattern id="triangle-banner" patternUnits="userSpaceOnUse" width="4" height="4">
-                            <polygon points="0,0 2,4 4,0" fill="#ddc8ad" />
-                        </pattern>
-                    </defs>
-                    <rect width="101%" height="4" fill="url(#triangle-banner)" />
+                <div className="absolute top-0 w-full h-10 overflow-hidden">
+                    <svg viewBox="2 0 600 4" preserveAspectRatio="none" className="w-[10000px] h-full">
+                        <defs>
+                            <pattern id="triangle-banner" patternUnits="userSpaceOnUse" width="4" height="4">
+                                <polygon points="0,0 2,4 4,0" fill="#ddc8ad" />
+                            </pattern>
+                        </defs>
+                        <rect width="600" height="4" fill="url(#triangle-banner)" />
                     </svg>
                 </div>
                 {children}
-                <div className="absolute bottom-0 w-full h-10">
-                    <svg viewBox="1 0 102 4" preserveAspectRatio="none" className="w-full h-[2.5vw]">
+                <div className="absolute bottom-0 w-full h-10 overflow-hidden">
+                    <svg viewBox="2 0 600 4" preserveAspectRatio="none" className="w-[10000px] h-full">
                         <defs>
                             <pattern id="triangle-banner-flipped" patternUnits="userSpaceOnUse" width="4" height="4">
                                 <polygon points="0,4 2,0 4,4" fill="#ddc8ad" />
                             </pattern>
                         </defs>
-                        <rect width="101%" height="4" fill="url(#triangle-banner-flipped)" />
+                        <rect width="600" height="4" fill="url(#triangle-banner-flipped)" />
                     </svg>
                 </div>
             </main>
