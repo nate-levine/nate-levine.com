@@ -18,7 +18,7 @@ const IndexPage = () => {
         <div className="font-serif flex flex-col lg:flex-row">
           <div className="py-20 flex-1 border-dotted border-b-[1px] lg:border-b-0 lg:border-r-[1px] border-black text-2xl">
             <div className="w-[85%] mx-auto leading-relaxed">
-              <h1 className="font-sans font-bold text-4xl ">What's up?</h1>
+              <h1 className="text-left text-6xl font-serif font-bold text-black ">What's up?</h1>
               <br />
               <p>
                 I'm Nate, a student at Worcester Polytechnic Institute (WPI) graduating in 2025. I'm currently pursuing a 
@@ -26,8 +26,8 @@ const IndexPage = () => {
               </p>
               <br />
               <p>
-                This site is where I share my ideas, interests, and thoughts on topics ranging from
-                engineering, to software development, to food science.
+                This site is where I share my ideas, interests, and thoughts relating to topics ranging from
+                engineering, to software, to marketing.
               </p>
               <br />
               <p>
@@ -37,7 +37,7 @@ const IndexPage = () => {
               </p>
               <br />
               <p>
-                For any inquiries please contact me at <a href="mailto:n8levine11@gmail.com" className="underline">n8levine11@gmail.com</a>
+                For any inquiries please email me at <a href="mailto:n8levine11@gmail.com" className="underline">n8levine11@gmail.com</a>
               </p>
               <br />
               <div className="flex flex-row space-x-5">

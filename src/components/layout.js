@@ -6,11 +6,31 @@ const Layout = ({ children }) => {
 
     return (
         <div>
-            <header className="bg-[url('../images/sangre_de_cristo.png')] bg-[position:0%_56%] bg-cover py-8 border-solid border-b-[1px] border-black text-black">
+            <header className="bg-[url('../images/sangre_de_cristo.png')] bg-[position:0%_56%] bg-cover py-10 border-solid border-b-[1px] border-black text-black">
                 <NavigationBar/>
             </header>
-            <main className="bg-primary">
+            <main className="relative bg-primary">
+                <div className="absolute top-0 w-full h-10">
+                    <svg viewBox="1 0 102 4" preserveAspectRatio="none" className="w-full h-[2.5vw]">
+                    <defs>
+                        <pattern id="triangle-banner" patternUnits="userSpaceOnUse" width="4" height="4">
+                            <polygon points="0,0 2,4 4,0" fill="#ddc8ad" />
+                        </pattern>
+                    </defs>
+                    <rect width="101%" height="4" fill="url(#triangle-banner)" />
+                    </svg>
+                </div>
                 {children}
+                <div className="absolute bottom-0 w-full h-10">
+                    <svg viewBox="1 0 102 4" preserveAspectRatio="none" className="w-full h-[2.5vw]">
+                        <defs>
+                            <pattern id="triangle-banner-flipped" patternUnits="userSpaceOnUse" width="4" height="4">
+                                <polygon points="0,4 2,0 4,4" fill="#ddc8ad" />
+                            </pattern>
+                        </defs>
+                        <rect width="101%" height="4" fill="url(#triangle-banner-flipped)" />
+                    </svg>
+                </div>
             </main>
             <footer>
                 <Credits />

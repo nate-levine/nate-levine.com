@@ -16,16 +16,16 @@ const AboutPage = () => {
                 <div className="font-serif font-regular flex flex-col lg:flex-row">
                     <div className="flex-1 text-2xl">
                         <div className="py-20 w-[85%] sm:w-[640px] mx-auto leading-relaxed">
-                            <h1 className="font-sans font-bold text-4xl">What's up?</h1>
+                            <h1 className="text-left text-6xl font-serif font-bold text-black">What's up?</h1>
                             <br />
                             <p>
-                                I'm Nate, a student at Worcester Polytechnic Institute (WPI). I'm currently pursuing a 
+                                I'm Nate, a student at Worcester Polytechnic Institute (WPI) graduating in 2025. I'm currently pursuing a 
                                 Bachelors in mechanical engineering and a minor in computer science.
                             </p>
                             <br />
                             <p>
-                                This site is where I share my ideas, interests, and thoughts on topics ranging from
-                                engineering, to software development, to food science.
+                                This site is where I share my ideas, interests, and thoughts relating to topics ranging from
+                                engineering, to software, to marketing.
                             </p>
                         </div>
                         <div className="font-serif flex flex-col lg:flex-row border-solid border-t-[1px] border-b-[1px] border-black">
@@ -48,7 +48,7 @@ const AboutPage = () => {
                                             an archive for projects I've finished or have set aside.
                                         </li>
                                         <li>
-                                            a think tank for projects I'd like to start creating.
+                                            a place to reflect on projects I've finished.
                                         </li>
                                     </ul>
                                 </div>
@@ -73,7 +73,7 @@ const AboutPage = () => {
                                         Squat - 225 lbs
                                     </li>
                                     <li>
-                                        Bench Press - 185 lbs
+                                        Bench Press - 195 lbs
                                     </li>
                                     <li>
                                         Deadlift - 215 lbs
@@ -104,7 +104,7 @@ const AboutPage = () => {
                             <div className="py-20 w-[85%] sm:w-[640px] mx-auto leading-relaxed">
                                 <h1 className="font-sans font-bold text-4xl pb-10">Contact Me</h1>
                                 <p>
-                                    For any inquiries please contact me at <a href="mailto:n8levine11@gmail.com" className="underline">n8levine11@gmail.com</a>
+                                    For any inquiries please email me at <a href="mailto:n8levine11@gmail.com" className="underline">n8levine11@gmail.com</a>
                                 </p>
                                 <br />
                                 <div className="flex flex-row space-x-5">

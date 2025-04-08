@@ -25,7 +25,7 @@ const NavigationBar = () => {
     }
 
     return (
-        <nav className="flex justify-between items-center w-[85%] mx-auto font-sans font-bold text-xl text-black">
+        <nav className="flex justify-between items-center w-[85%] mx-auto font-sans font-bold text-xl text-black pt-0 pb-20 md:pb-0">
             <div className="font-bold">
                 <Link to="/">
                     <div className="nate-levine group relative text-4xl font-serif">

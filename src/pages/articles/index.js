@@ -65,7 +65,7 @@ const ArticlePage = ({ data }) => {
     <Layout>
       <div className="border-dotted border-b-[1px] border-black text-black">
         <div className="h-auto max-w-[75vw] mx-auto pt-10 pb-5">
-          <h1 className="text-left text-6xl font-serif font-bold pb-10 text-black">Explore Articles</h1>
+          <h1 className="text-left text-6xl font-serif font-bold pt-10 pb-10 text-black">Explore Articles</h1>
           <div className="flex flex-row space-x-5 items-center justify-left" >
             <p className="font-serif font-bold text-xl" >Sort By:</p>
             <div className="inline-block min-w-[7vw] text-left text-sm font-sans font-regular border-solid border-black border-[1px] rounded-md">
