@@ -46,7 +46,7 @@ const NavigationBar = () => {
                 <ul className="flex flex-col md:flex-row pt-6 pb-10 md:py-0 gap-6 md:gap-[4vw] w-[100%]">
                     <li className="w-full">
                         <Link to="/articles" onClick={toggleMenu}>
-                            <div className="w-full md:w-auto p-3 shadow-[8px_8px_0_#22190e] hover:shadow-[8px_8px_0_-1px_#fbf1c7,8px_8px_0_#22190e] border-solid border-[1px] border-black rounded-md bg-primary hover:bg-black hover:text-primary duration-100">Articles</div>
+                            <div className="w-full md:w-auto p-3 shadow-[8px_8px_0_#22190e] hover:shadow-[8px_8px_0_-1px_#fbf1c7,8px_8px_0_#22190e] border-solid border-[1px] border-black rounded-md bg-primary hover:bg-black hover:text-primary duration-200">Articles</div>
                         </Link>
                     </li>
                     {/*<li className="w-full">
@@ -56,7 +56,7 @@ const NavigationBar = () => {
                     </li>*/}
                     <li className="w-full">
                         <Link to="/about" onClick={toggleMenu}>
-                            <div className="w-full md:w-auto p-3 shadow-[8px_8px_0_#22190e] hover:shadow-[8px_8px_0_-1px_#fbf1c7,8px_8px_0_#22190e] border-solid border-[1px] border-black rounded-md bg-primary hover:bg-black hover:text-primary duration-100">About</div>
+                            <div className="w-full md:w-auto p-3 shadow-[8px_8px_0_#22190e] hover:shadow-[8px_8px_0_-1px_#fbf1c7,8px_8px_0_#22190e] border-solid border-[1px] border-black rounded-md bg-primary hover:bg-black hover:text-primary duration-200">About</div>
                         </Link>
                     </li>
                 </ul>

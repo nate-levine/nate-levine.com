@@ -92,7 +92,7 @@ const ArticlePage = ({ data }) => {
                 }
                 {articleOrder}
                 <svg className="-mr-1 h-5 w-5" viewBox="0 0 20 20" aria-hidden="true">
-                  <path fillRule="evenodd" className="drop-down-arrow origin-center duration-100" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/>
+                  <path fillRule="evenodd" className="drop-down-arrow origin-center duration-200" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/>
                 </svg>
               </button>
               {/* Sort dropdown */}
@@ -100,7 +100,7 @@ const ArticlePage = ({ data }) => {
                 {
                   sortOptions.map((option, id) => {
                     if (option !== articleOrder)  // Don't include currently selected sort option in the dropdown
-                      return <button key={id} className="block text-center py-2 font-sans w-full hover:font-bold hover:bg-black hover:text-primary border-solid border-black border-t-[1px] duration-100" onClick={() => setArticleOrder(option)}>{option}</button>
+                      return <button key={id} className="block text-center py-2 font-sans w-full hover:font-bold hover:bg-black hover:text-primary border-solid border-black border-t-[1px] duration-200" onClick={() => setArticleOrder(option)}>{option}</button>
                   })
                 }
               </div>
@@ -114,18 +114,18 @@ const ArticlePage = ({ data }) => {
                     // Style tag conditionally based on if it is selected or not
                     let classString = ""
                     if (selectedTags.includes(tag)) {
-                      classString = "flex flex-row border-solid border-black border-[1px] bg-black focus:bg-black text-primary focus:text-primary rounded-md px-3 py-1 duration-100"
+                      classString = "flex flex-row border-solid border-black border-[1px] bg-black focus:bg-black text-primary focus:text-primary rounded-md px-3 py-1 duration-200"
                     } else {
-                      classString = "flex flex-row border-solid border-black border-[1px] bg-primary focus:bg-primary text-black focus:text-black rounded-md px-3 py-1 duration-100"
+                      classString = "flex flex-row border-solid border-black border-[1px] bg-primary focus:bg-primary text-black focus:text-black rounded-md px-3 py-1 duration-200"
                     }
 
                     // Style featured tag conditionally based on if it is selected or not
                     let starClassString = ""
                     if (tag == "FEATURED") {
                       if (selectedTags.includes(tag)) {
-                        starClassString = "h-5 fill-primary animate-rotate duration-100"
+                        starClassString = "h-5 fill-primary animate-rotate duration-200"
                       } else {
-                        starClassString = "h-5 fill-black duration-100"
+                        starClassString = "h-5 fill-black duration-200"
                       }
                     }
 
@@ -146,14 +146,14 @@ const ArticlePage = ({ data }) => {
                             {selectedTags.includes(tag)
                             ?
                             // "x" icon
-                            <svg x="0px" y="0px" viewBox="2 2 20 20" className="my-[0.2rem] h-3 rotate-[45deg] duration-100">
+                            <svg x="0px" y="0px" viewBox="2 2 20 20" className="my-[0.2rem] h-3 rotate-[45deg] duration-200">
                               <path className="fill-primary" d="M13 3C13 2.44772 12.5523 2 12 2C11.4477 2 11 2.44772 11 3V11H3C2.44772 11 2 11.4477 2 12C2 12.5523 
                               2.44772 13 3 13H11V21C11 21.5523 11.4477 22 12 22C12.5523 22 13 21.5523 13 21V13H21C21.5523 13 22 12.5523 22 
                               12C22 11.4477 21.5523 11 21 11H13V3Z" fill="#0F0F0F"/>
                             </svg>
                             :
                             // "+" icon
-                            <svg x="0px" y="0px" viewBox="2 2 20 20" className="my-[0.2rem] h-3 rotate-0 duration-100">
+                            <svg x="0px" y="0px" viewBox="2 2 20 20" className="my-[0.2rem] h-3 rotate-0 duration-200">
                               <path className="fill-black" d="M13 3C13 2.44772 12.5523 2 12 2C11.4477 2 11 2.44772 11 3V11H3C2.44772 11 2 11.4477 2 12C2 12.5523 
                               2.44772 13 3 13H11V21C11 21.5523 11.4477 22 12 22C12.5523 22 13 21.5523 13 21V13H21C21.5523 13 22 12.5523 22 
                               12C22 11.4477 21.5523 11 21 11H13V3Z" fill="#0F0F0F"/>

@@ -62,13 +62,24 @@ const ArticleView = ({ grid_config, filterFunc, sortFunc }) => {
                 <article key={node.id}>
                     <div className="py-3 break-inside-avoid text-black">
                         <Link to={`/articles/${node.frontmatter.slug}`}>
-                            <div className="group font-sans text-xl p-3 shadow-[8px_8px_0_#22190e] border-solid border-[1px] border-black hover:shadow-[8px_8px_0_-1px_#fbf1c7,8px_8px_0_#22190e] rounded-md bg-primary hover:bg-black duration-100">
-                                <div className="flex flex-col group-hover:text-[#fbf1c7]">
+                            <div className="group font-sans text-xl p-3 shadow-[8px_8px_0_#22190e] border-solid border-[1px] border-black hover:shadow-[8px_8px_0_-1px_#fbf1c7,8px_8px_0_#22190e] rounded-md bg-primary hover:bg-black duration-200">
+                                <div className="flex flex-col group-hover:text-[#fbf1c7] duration-200">
                                     <div className="flex-auto pb-2">
                                         <div className="font-bold pb-2">{node.frontmatter.title}</div>
                                         {
-                                            getImage(node.frontmatter.hero_image) ?
-                                            <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt={node.frontmatter.hero_image_alt} className="w-[100%] flex m-auto mb-4 border-solid border-black border-[1px]" /> : <div />
+                                            getImage(node.frontmatter.hero_image) 
+                                            ?
+                                            <div className="relative max-h-[250px] overflow-hidden">
+                                                <GatsbyImage 
+                                                    image={getImage(node.frontmatter.hero_image)} 
+                                                    alt={node.frontmatter.hero_image_alt} 
+                                                    className="w-[100%] flex m-auto mb-4 border-solid border-black group-hover:border-primary rounded-sm border-[1px] duration-100" 
+                                                />
+                                                <div className="h-[250px] absolute inset-0 bg-gradient-to-t from-primary from-10% to-transparent to-25%" />
+                                                <div className="h-[250px] absolute inset-0 bg-gradient-to-t from-black from-10% to-transparent to-25% duration-200 group-hover:opacity-100 opacity-0" />
+                                            </div>
+                                            : 
+                                            <div />
                                         }
                                         <ArticleTags tags={node.frontmatter.tags} />
                                     </div>
