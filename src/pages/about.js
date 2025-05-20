@@ -19,8 +19,7 @@ const AboutPage = () => {
                             <h1 className="text-left text-6xl font-serif font-bold text-black">What's up?</h1>
                             <br />
                             <p>
-                                I'm Nate, a student at Worcester Polytechnic Institute (WPI) graduating in 2025. I'm currently pursuing a 
-                                Bachelors in mechanical engineering and a minor in computer science.
+                            I'm Nate, a graduate of the Worcester Polytechnic Institute (WPI) class of 2025 with a Bachelor in mechanical engineering and a minor in computer science.
                             </p>
                             <br />
                             <p>
