@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
             <header className="bg-[url('../images/sangre_de_cristo.png')] bg-[position:0%_56%] bg-cover py-10 border-solid border-b-[1px] border-black text-black">
                 <NavigationBar/>
             </header>
-            <main className="relative bg-primary">
+            <main className="relative bg-primary pb-10">
                 <div className="absolute top-0 w-full h-10 overflow-hidden">
                     <svg viewBox="2 0 600 4" preserveAspectRatio="none" className="w-[10000px] h-full">
                         <defs>
