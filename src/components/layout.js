@@ -6,10 +6,11 @@ const Layout = ({ children }) => {
 
     return (
         <div>
-            <header className="bg-[url('../images/sangre_de_cristo.png')] bg-[position:0%_56%] bg-cover py-10 border-solid border-b-[1px] border-black text-black">
+            <header className="text-black sticky top-10 z-10 h-0">
                 <NavigationBar/>
             </header>
-            <main className="relative bg-primary pb-10">
+            <div className="bg-[url('../images/sangre_de_cristo.png')] bg-[position:0%_56%] bg-cover pb-[400px] border-solid border-b-[1px] border-black" />
+            <main className="relative bg-primary pt-20 pb-10 relative">
                 <div className="absolute top-0 w-full h-10 overflow-hidden">
                     <svg viewBox="2 0 600 4" preserveAspectRatio="none" className="w-[10000px] h-full">
                         <defs>
