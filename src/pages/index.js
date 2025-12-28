@@ -32,7 +32,7 @@ const IndexPage = () => {
               </p>
             </div>
           </div>
-          <div className="py-20 border-dotted border-b-[1px] lg:border-b-0 lg:border-b-[1px] border-black text-2xl">
+          {/* <div className="py-20 border-dotted border-b-[1px] lg:border-b-0 lg:border-b-[1px] border-black text-2xl">
             <div className="mx-20 mx-auto leading-relaxed flex flex-col md:flex-row">
               <div className="basis-1/2 px-10">
                 <h1 className="text-left text-6xl font-serif font-bold text-black">Newsletter</h1>
@@ -53,7 +53,7 @@ const IndexPage = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           {/* Articles */}
           <div className="py-20 flex-2/3">
             <div className="w-[85%] mx-auto">
