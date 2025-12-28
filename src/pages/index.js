@@ -18,10 +18,10 @@ const IndexPage = () => {
         <div className="font-serif flex flex-col lg:flex-col">
           <div className="py-20 flex-1 border-dotted border-b-[1px] lg:border-b-0 lg:border-b-[1px] border-black text-2xl">
             <div className="w-[85%] md:w-[650px] mx-auto leading-relaxed">
-              <h1 className="text-left text-6xl font-serif font-bold text-black ">What's up?</h1>
+              <h1 className="text-left text-6xl font-serif font-bold text-black ">Nate Levine</h1>
               <br />
               <p>
-                I'm Nate, a graduate of the Worcester Polytechnic Institute (WPI) class of 2025 with a Bachelor in mechanical engineering and a minor in computer science.
+                I'm working as a Product Engineer on the Research and Development team at Diamond Diagnostics. Graduated from Worcester Polytechnic Institute (WPI) in 2025 with a Bachelor in mechanical engineering and a minor in computer science.
               </p>
               <br />
               <p>
