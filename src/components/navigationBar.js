@@ -13,7 +13,6 @@ const NavigationBar = () => {
 
         // Toggle navigation links styles
         navigationLinks.classList.toggle('left-[-100%]')
-        navigationLinks.classList.toggle('border-b-[1px]')
 
         // Toggle menu button links styles
         menuButton.classList.toggle('shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black]')
@@ -26,7 +25,7 @@ const NavigationBar = () => {
 
     return (
         <nav className="flex justify-between items-center w-[90%] mx-auto font-sans font-bold text-xl text-black pt-0 pb-20 md:pb-0">
-            <div className="font-bold">
+            <div className="font-bold z-30">
                 <Link to="/">
                     <div className="nate-levine group relative text-4xl font-serif">
                         <div className="flex flex-col -space-y-3 justify-left text-right text-black drop-shadow-[2px_2px_0px_#fbf1c7]">
@@ -42,18 +41,18 @@ const NavigationBar = () => {
                     </div>
                 </Link>
             </div>
-            <div className="navigation-links z-20 md:static absolute md:min-h-fit min-h-[10vh] top-[11%] md:w-auto w-[100%] flex items-center justify-center left-0 left-[-100%] border-solid border-black md:border-b-0">
+            <div className="navigation-links z-20 md:static absolute md:min-h-fit min-h-[10vh] top-[11%] md:w-auto w-[100%] flex items-center justify-center left-0 left-[-100%] pt-20 md:pt-0">
                 <ul className="pt-6 pb-10 md:py-0 flex flex-col md:flex-row gap-5 w-[90%] justify-center">
                     <li className="w-full">
                         <Link to="/articles" onClick={toggleMenu}>
                             <div className="w-full md:w-auto p-3 shadow-[8px_8px_0_#22190e] hover:shadow-[8px_8px_0_-1px_#fbf1c7,8px_8px_0_#22190e] border-solid border-[1px] border-black rounded-md bg-primary hover:bg-black hover:text-primary duration-0">Articles</div>
                         </Link>
                     </li>
-                    {/*<li className="w-full">
-                        <Link to="/articles" onClick={toggleMenu}>
-                            <div className="w-full md:w-auto p-3 shadow-[8px_8px_0_black] hover:shadow-[8px_8px_0_-2px_#fbf1c7,8px_8px_0_black] border-solid border-[1px] border-black rounded-2xl hover:bg-black hover:text-primary duration-0">Newsletter</div>
+                    <li className="w-full">
+                        <Link to="/about" onClick={toggleMenu}>
+                            <div className="w-full md:w-auto p-3 shadow-[8px_8px_0_#22190e] hover:shadow-[8px_8px_0_-1px_#fbf1c7,8px_8px_0_#22190e] border-solid border-[1px] border-black rounded-md bg-primary hover:bg-black hover:text-primary duration-0">Newsletter</div>
                         </Link>
-                    </li>*/}
+                    </li>
                     <li className="w-full">
                         <Link to="/about" onClick={toggleMenu}>
                             <div className="w-full md:w-auto p-3 shadow-[8px_8px_0_#22190e] hover:shadow-[8px_8px_0_-1px_#fbf1c7,8px_8px_0_#22190e] border-solid border-[1px] border-black rounded-md bg-primary hover:bg-black hover:text-primary duration-0">About</div>
@@ -100,7 +99,7 @@ const NavigationBar = () => {
                     
                 </ul>
             </div>
-            <div className="flex items-center gap-[6%]">
+            <div className="flex items-center gap-[6%] z-20">
                 {
                 menuIcon === "Closed"
                 ?

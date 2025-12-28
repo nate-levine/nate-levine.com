@@ -25,26 +25,43 @@ const IndexPage = () => {
               </p>
               <br />
               <p>
-                This site is where I share my ideas, interests, and thoughts relating to topics ranging from
-                engineering, to software, to marketing.
-              </p>
-              <br />
-              <p>
                 I'd recommend you get started by reading one of the featured articles on this page. {/* If
                 you don't have time right now, I'd suggest signing up for my newsletter, where I send
                 out a weekly article about something interesting.*/}
-                For any inquiries please email me at <a href="mailto:n8levine11@gmail.com" className="underline">n8levine11@gmail.com</a>
+                For inquiries please email me at <a href="mailto:n8levine11@gmail.com" className="underline">n8levine11@gmail.com</a>
               </p>
             </div>
           </div>
+          <div className="py-20 border-dotted border-b-[1px] lg:border-b-0 lg:border-b-[1px] border-black text-2xl">
+            <div className="mx-20 mx-auto leading-relaxed flex flex-col md:flex-row">
+              <div className="basis-1/2 px-10">
+                <h1 className="text-left text-6xl font-serif font-bold text-black">Newsletter</h1>
+                <br />
+                <p>
+                  This is my newsletter, where I share my ideas, interests, and thoughts relating to topics ranging from
+                  engineering, to food science, to sports.
+                </p>
+                <br />  
+                <p>
+                  Sign up to recieve my newsletter for free by entering your email.
+                </p>
+              </div>
+              <div className="basis-1/2 px-10">
+                <div className="font-serif text-2xl m-auto text-center h-[40vh] p-3 shadow-[8px_8px_0_#22190e] border-solid border-[1px] border-black rounded-md bg-primary my-auto py-auto">
+                  Get my newsletter in your inbox
+                  <input type="email" placeholder="example@domain.com" className="w-[80%] mt-5 p-3 shadow-[8px_8px_0_#22190e] border-solid border-[1px] border-black rounded-md bg-primary" />
+                </div>
+              </div>
+            </div>
+          </div>
           {/* Articles */}
-          <div className="py-20 flex-1">
+          <div className="py-20 flex-2/3">
             <div className="w-[85%] mx-auto">
               <ArticleView grid_config={"md:columns-2 lg:columns-5 gap-6"} filterFunc={isFeatured} />
               <Link to="/articles">
                 <div className="font-sans text-xl m-auto text-center w-[240px] mt-10 p-3 shadow-[8px_8px_0_#22190e] hover:shadow-[8px_8px_0_-1px_#fbf1c7,8px_8px_0_#22190e] border-solid border-[1px] border-black rounded-md bg-primary hover:bg-black hover:text-primary duration-0">
                   Explore more articles
-                  </div>
+                </div>
               </Link>
             </div>
           </div>
