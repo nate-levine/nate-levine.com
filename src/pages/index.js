@@ -21,7 +21,7 @@ const IndexPage = () => {
               <h1 className="text-left text-6xl font-serif font-bold text-black ">Nate Levine</h1>
               <br />
               <p>
-                I'm working as a Product Engineer on the Research and Development team at Diamond Diagnostics. Graduated from Worcester Polytechnic Institute (WPI) in 2025 with a Bachelor in mechanical engineering and a minor in computer science.
+                I'm working as a Product Engineer on the Research and Development team at Diamond Diagnostics. I graduated from Worcester Polytechnic Institute (WPI) in 2025 with a Bachelor in mechanical engineering and a minor in computer science.
               </p>
               <br />
               <p>

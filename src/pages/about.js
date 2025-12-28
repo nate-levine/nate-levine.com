@@ -16,10 +16,10 @@ const AboutPage = () => {
                 <div className="font-serif font-regular flex flex-col lg:flex-row">
                     <div className="flex-1 text-2xl">
                         <div className="py-20 w-[85%] md:w-[650px] mx-auto leading-relaxed">
-                            <h1 className="text-left text-6xl font-serif font-bold text-black">What's up?</h1>
+                            <h1 className="text-left text-6xl font-serif font-bold text-black">Nate Levine</h1>
                             <br />
                             <p>
-                            I'm working as a Product Engineer on the Research and Development team at Diamond Diagnostics. Graduated from Worcester Polytechnic Institute (WPI) in 2025 with a Bachelor in mechanical engineering and a minor in computer science.
+                            I'm working as a Product Engineer on the Research and Development team at Diamond Diagnostics. I graduated from Worcester Polytechnic Institute (WPI) in 2025 with a Bachelor in mechanical engineering and a minor in computer science.
                             </p>
                             <br />
                             <p>
@@ -36,7 +36,7 @@ const AboutPage = () => {
                                     </p>
                                     <br />
                                     <p>
-                                        One purpose of this site is to serve as:
+                                        The purpose of this site is to be:
                                     </p>
                                     <ul className="py-3 list-disc list-outside ms-8 text-left">
                                         <li>
@@ -44,9 +44,6 @@ const AboutPage = () => {
                                         </li>
                                         <li>
                                             an portfolio for projects I've finished or have set aside.
-                                        </li>
-                                        <li>
-                                            a place to reflect on projects I've finished.
                                         </li>
                                     </ul>
                                 </div>
