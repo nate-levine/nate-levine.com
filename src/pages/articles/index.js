@@ -189,7 +189,7 @@ const ArticlePage = ({ data }) => {
         </div>
       </div>
       <div className="h-auto max-w-[75vw] mx-auto py-10">
-        <ArticleView grid_config={"md:columns-2 lg:columns-3xs gap-6"} filterFunc={tagFilter} sortFunc={orderArticles} />
+        <ArticleView grid_config={"md:columns-2 lg:columns-3 gap-6"} filterFunc={tagFilter} sortFunc={orderArticles} />
       </div>
     </Layout>
   )
