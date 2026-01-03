@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import NavigationBar from "./NavigationBar";
-import Credits from "./Credits";
+import NavigationBar from "./navigationBar";
+import Credits from "./credits";
 
 const Layout = ({ children }) => {
   const [showNav, setShowNav] = useState(true);
