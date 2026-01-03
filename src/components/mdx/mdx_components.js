@@ -44,7 +44,7 @@ export const FootnotesItem = ({ children, index }) => {
         <li className="footnotes-item py-2 hover:cursor-pointer" onClick={() => 
             // Scroll to the section in the article where the indexed footnote link is
             window.scroll({
-                top: footnotesLinks[index].offsetTop - (screen.height / 3),
+                top: footnotesLinks[index].offsetTop - (window.innerHeight / 3),
                 behavior: 'smooth'
             })
         }>

@@ -123,7 +123,7 @@ const ArticlePage = ({ data }) => {
                     let starClassString = ""
                     if (tag == "FEATURED") {
                       if (selectedTags.includes(tag)) {
-                        starClassString = "h-5 fill-primary animate-rotate duration-100"
+                        starClassString = "h-5 fill-yellow animate-rotate duration-100"
                       } else {
                         starClassString = "h-5 fill-black duration-100"
                       }
