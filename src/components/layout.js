@@ -23,6 +23,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="relative">
+      <div className="noise-overlay" />
       {/* Overlay nav */}
       <header
         className={`fixed top-10 left-0 w-full z-50 transition-transform duration-1000 ${
