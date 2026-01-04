@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
         <NavigationBar />
       </header>
 
-      <main className="relative bg-primary pt-20 pb-10">
+      <main className="relative bg-primary pt-20">
         {children}
       </main>
 

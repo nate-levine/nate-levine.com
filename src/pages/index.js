@@ -32,11 +32,11 @@ const IndexPage = () => {
             </div>
           </div>
           {/* Newsletter Signup */}
-          { <div className="py-20 border-dotted border-b-[1px] lg:border-b-0 lg:border-b-[1px] border-black text-2xl">
+          { <div className="py-20 border-dotted border-b-[1px] lg:border-b-0 lg:border-b-[1px] border-black text-2xl bg-black text-primary">
             <div className="mx-20 mx-auto leading-relaxed flex flex-col lg:flex-row">
               <div className="basis-1/2 px-20">
-                <h1 className="text-left text-6xl font-serif font-bold text-black">Newsletter</h1>
-                <h3 className="text-left text-2xl font-serif font-bold text-yellow">(under construction, this doesn't do anything yet)</h3>
+                <h1 className="text-left text-6xl font-serif font-bold text-primary">Newsletter</h1>
+                <h3 className="text-left text-2xl font-serif font-bold text-yellow">(coming soon, this doesn't do anything yet)</h3>
                 <br />
                 <p>
                   This is my newsletter, where I share my ideas, interests, and thoughts relating to anything and everything.
@@ -48,10 +48,10 @@ const IndexPage = () => {
                 <br />  
               </div>
               <div className="basis-1/2 px-20 flex items-center">
-                <div className="font-serif text-2xl m-auto text-center h-[40vh] p-3 pt-8 shadow-[8px_8px_0_#22190e] border-solid border-[1px] border-black rounded-md bg-primary my-auto py-auto">
+                <div className="font-serif text-2xl m-auto text-center h-[40vh] p-3 pt-8 shadow-[8px_8px_0_#ffeacf] border-solid border-[1px] border-primary rounded-md bg-black my-auto py-auto">
                   Get my newsletter in your inbox
-                  <input type="email" placeholder="enter your email address" className="placeholder:text-black placeholder:opacity-[50%] w-[80%] mt-8 p-3 shadow-[8px_8px_0_#22190e] border-solid border-[1px] border-black rounded-sm bg-primary outline-none outline-offset-0 border-solid" />
-                  <button className="font-serif text-xl font-bold m-auto text-center w-[240px] mt-10 p-3 shadow-[8px_8px_0_#22190e] hover:shadow-[8px_8px_0_-1px_#fabd2f,8px_8px_0_#22190e] border-solid border-[1px] border-black rounded-sm bg-primary hover:bg-black hover:text-yellow duration-0">
+                  <input type="email" placeholder="enter your email address" className="placeholder:text-primary placeholder:opacity-[50%] w-[80%] mt-8 p-3 shadow-[8px_8px_0_#ffeacf] border-solid border-[1px] border-primary rounded-sm bg-black outline-none outline-offset-0 border-solid" />
+              <button className="font-serif text-xl font-bold m-auto text-center w-[240px] mt-10 p-3 shadow-[8px_8px_0_#ffeacf] hover:shadow-[8px_8px_0_-1px_#fabd2f,8px_8px_0_#22190e] border-solid border-[1px] border-primary rounded-md bg-black hover:text-yellow duration-0">
                     Subscribe
                   </button>
                 </div>
@@ -69,7 +69,7 @@ const IndexPage = () => {
               </Link>
             </div>
           </div>
-          <div className="flex-1 text-2xl">
+          <div className="flex-1 text-2xl text-primary bg-black border-b-[1px] border-dotted border-primary">
               <div className="py-20 w-[85%] sm:w-[640px] mx-auto leading-relaxed">
                   <h1 className="font-serif font-bold text-4xl pb-10">Contact Me</h1>
                   <p>
