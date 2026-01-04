@@ -27,22 +27,22 @@ const NavigationBar = () => {
         <nav className="flex justify-between items-center w-[90%] mx-auto font-sans font-bold text-xl text-black pt-0 pb-20 md:pb-0">
             <div className="font-bold z-30">
                 <Link to="/">
-                    <div className="nate-levine group relative text-3xl font-serif">
+                    <div className="nate-levine group relative text-4xl font-serif">
                         <div className="flex flex-col -space-y-3 justify-left text-right bg-primary">
                             <div>Nate</div>
                             <div>Levine</div>
                         </div>
                         <div className="grid grid-cols-4 absolute w-full aspect-square">
-                            <div className="static block w-full h-0 group-hover:h-[25%] duration-[75ms] bg-red flex items-center justify-center text-3xl">
+                            <div className="static block w-full h-0 group-hover:h-[25%] duration-[75ms] bg-red flex items-center justify-center text-4xl">
                                 <span className="opacity-0 group-hover:opacity-100 duration-[75ms] text-primary">.</span>
                             </div>
-                            <div className="static block w-full h-0 group-hover:h-[25%] duration-[150ms] bg-green flex items-center justify-center text-3xl">
+                            <div className="static block w-full h-0 group-hover:h-[25%] duration-[150ms] bg-green flex items-center justify-center text-4xl">
                                 <span className="opacity-0 group-hover:opacity-100 duration-[75ms] text-primary">d</span>
                             </div>
-                            <div className="static block w-full h-0 group-hover:h-[25%] duration-[225ms] bg-yellow flex items-center justify-center text-3xl">
+                            <div className="static block w-full h-0 group-hover:h-[25%] duration-[225ms] bg-yellow flex items-center justify-center text-4xl">
                                 <span className="opacity-0 group-hover:opacity-100 duration-[75ms] text-primary">e</span>
                             </div>
-                            <div className="static block w-full h-0 group-hover:h-[25%] duration-[300ms] bg-blue flex items-center justify-center text-3xl">
+                            <div className="static block w-full h-0 group-hover:h-[25%] duration-[300ms] bg-blue flex items-center justify-center text-4xl">
                                 <span className="opacity-0 group-hover:opacity-100 duration-[75ms] text-primary">v</span>
                             </div>
                         </div>
