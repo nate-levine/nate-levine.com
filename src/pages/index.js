@@ -28,7 +28,6 @@ const IndexPage = () => {
                 I'd recommend you get started by reading one of the featured articles on this page. If
                 you don't have time right now, I'd suggest signing up for my newsletter (coming soon), where I send
                 out a monthly article about something interesting.
-                For inquiries please email me at <a href="mailto:n8levine11@gmail.com" className="underline">n8levine11@gmail.com</a>
               </p>
             </div>
           </div>
