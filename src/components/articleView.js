@@ -15,6 +15,11 @@ const ArticleView = ({ grid_config, filterFunc, sortFunc }) => {
                         title
                         slug
                         tags
+                        hero_image {
+                            childImageSharp {
+                                gatsbyImageData
+                            }
+                        }
                     }
                     id
                     excerpt
@@ -22,14 +27,6 @@ const ArticleView = ({ grid_config, filterFunc, sortFunc }) => {
             }
         }
     `)
-    /* 
-    to add images add this at the same level as tags under tags.
-                        hero_image {
-                            childImageSharp {
-                                gatsbyImageData
-                            }
-                        }
-    */
 
     // Get a list of all the tags from all the articles
     let all_tags = []
@@ -69,7 +66,7 @@ const ArticleView = ({ grid_config, filterFunc, sortFunc }) => {
                                 <div className="flex flex-col group-hover:text-[#ffeacf] duration-0">
                                     <div className="flex-auto pb-2">
                                         <div className="font-bold pb-2">{node.frontmatter.title}</div>
-                                        {
+                                        {/*{
                                             getImage(node.frontmatter.hero_image) 
                                             ?
                                             <div className="relative max-h-[250px] overflow-hidden">
@@ -83,10 +80,10 @@ const ArticleView = ({ grid_config, filterFunc, sortFunc }) => {
                                             </div>
                                             : 
                                             <div />
-                                        }
+                                        }*/}
                                         <ArticleTags tags={node.frontmatter.tags} />
                                     </div>
-                                    <div className="h-flex text-right font-bold">{node.frontmatter.date}</div>
+                                    {/*<div className="h-flex text-right font-bold">{node.frontmatter.date}</div>*/}
                                 </div>
                             </div>
                         </Link>

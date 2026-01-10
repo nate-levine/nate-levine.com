@@ -16,7 +16,7 @@ const IndexPage = () => {
     <Layout>
       <div className="h-auto min-h-[100vh] text-black">
         <div className="font-serif flex flex-col lg:flex-col">
-          <div className="py-20 flex-1 border-dotted border-b-[1px] lg:border-b-0 lg:border-b-[1px] border-black text-2xl">
+          <div className="py-20 flex-1 text-2xl">
             <div className="w-[85%] md:w-[650px] mx-auto leading-relaxed">
               <h1 className="text-left text-6xl font-serif font-bold text-black ">Nate Levine</h1>
               <br />
@@ -59,7 +59,7 @@ const IndexPage = () => {
             </div>
           </div> }
           {/* Articles */}
-          <div className="py-20 flex-2/3 border-dotted border-b-[1px] lg:border-b-0 lg:border-b-[1px] border-black text-2xl">
+          <div className="py-20 flex-2/3 text-2xl">
             <div className="w-[85%] mx-auto">
               <ArticleView grid_config={"md:columns-1 lg:columns-1 gap-6"} filterFunc={isFeatured} />
               <Link to="/articles">
