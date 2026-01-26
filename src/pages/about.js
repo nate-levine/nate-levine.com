@@ -45,17 +45,17 @@ const AboutPage = () => {
                                 <br />  
                             </div>
                             <div className="basis-1/2 px-20 flex items-center">
-                                <div className="font-serif text-2xl m-auto text-center h-[40vh] p-3 pt-8 shadow-[8px_8px_0_#ffeacf] border-solid border-[1px] border-primary rounded-md bg-black my-auto py-auto">
+                                <div className="font-serif text-2xl m-auto text-center h-[40vh] p-3 pt-8 shadow-[8px_8px_0_#fffff] border-solid border-[1px] border-primary rounded-md bg-black my-auto py-auto">
                                 Get my newsletter in your inbox
-                                <input type="email" placeholder="enter your email address" className="placeholder:text-primary placeholder:opacity-[50%] w-[80%] mt-8 p-3 shadow-[8px_8px_0_#ffeacf] border-solid border-[1px] border-primary rounded-sm bg-black outline-none outline-offset-0 border-solid" />
-                                <button className="font-serif text-xl font-bold m-auto text-center w-[240px] mt-10 p-3 shadow-[8px_8px_0_#ffeacf] hover:shadow-[8px_8px_0_-1px_#fabd2f,8px_8px_0_#22190e] border-solid border-[1px] border-primary rounded-md bg-black hover:text-yellow duration-0">
+                                <input type="email" placeholder="enter your email address" className="placeholder:text-primary placeholder:opacity-[50%] w-[80%] mt-8 p-3 shadow-[8px_8px_0_#ffffff] border-solid border-[1px] border-primary rounded-sm bg-black outline-none outline-offset-0 border-solid" />
+                                <button className="font-serif text-xl font-bold m-auto text-center w-[240px] mt-10 p-3 shadow-[8px_8px_0_#ffeffacf] hover:shadow-[8px_8px_0_-1px_#fabd2f,8px_8px_0_#070707] border-solid border-[1px] border-primary rounded-md bg-black hover:text-yellow duration-0">
                                     Subscribe
                                 </button>
                                 </div>
                             </div>
                             </div>
                         </div> }
-                        <div className="font-serif flex flex-col lg:flex-row border-solid border-t-[1px] border-b-[1px] border-black">
+                        <div className="font-serif flex flex-col lg:flex-row border-solid border-t-[1px] border-b-[1px] border-black bg-secondary">
                             <div className="py-20 flex-1 border-dotted border-b-[1px] lg:border-b-0 lg:border-r-[1px] border-black text-2xl">
                                 <div className="w-[80%] mx-auto leading-relaxed">
                                     <h1 className="font-serif font-bold text-4xl">Projects</h1>
@@ -69,10 +69,10 @@ const AboutPage = () => {
                                     </p>
                                     <ul className="py-3 list-disc list-outside ms-8 text-left">
                                         <li>
-                                            to document projects I'm working on.
+                                            to share projects I'm working on.
                                         </li>
                                         <li>
-                                            to act as a portfolio for projects I've finished or have set aside.
+                                            to be a portfolio for projects I've finished.
                                         </li>
                                     </ul>
                                 </div>

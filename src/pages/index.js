@@ -32,11 +32,11 @@ const IndexPage = () => {
             </div>
           </div>
           {/* Articles */}
-          <div className="pb-20 flex-2/3 text-2xl">
+          <div className="py-20 flex-2/3 text-2xl bg-secondary">
             <div className="w-[85%] mx-auto">
               <ArticleView grid_config={"md:columns-1 lg:columns-1 gap-6"} filterFunc={isFeatured} />
               <Link to="/articles">
-                <div className="font-sans text-xl m-auto text-center w-[240px] mt-10 p-3 shadow-[8px_8px_0_#22190e] hover:shadow-[8px_8px_0_-1px_#ffeacf,8px_8px_0_#22190e] border-solid border-[1px] border-black rounded-md bg-primary hover:bg-black hover:text-primary duration-0">
+                <div className="font-sans text-xl m-auto text-center w-[240px] mt-10 p-3 shadow-[8px_8px_0_#070707] hover:shadow-[8px_8px_0_-1px_#ffffff,8px_8px_0_#070707] border-solid border-[1px] border-black rounded-md bg-primary hover:bg-black hover:text-primary duration-0">
                   Explore more articles
                 </div>
               </Link>
@@ -59,10 +59,10 @@ const IndexPage = () => {
                 <br />  
               </div>
               <div className="basis-1/2 px-20 flex items-center">
-                <div className="font-serif text-2xl m-auto text-center h-[40vh] p-3 pt-8 shadow-[8px_8px_0_#ffeacf] border-solid border-[1px] border-primary rounded-md bg-black my-auto py-auto">
+                <div className="font-serif text-2xl m-auto text-center h-[40vh] p-3 pt-8 shadow-[8px_8px_0_#ffffff] border-solid border-[1px] border-primary rounded-md bg-black my-auto py-auto">
                   Get my newsletter in your inbox
-                  <input type="email" placeholder="enter your email address" className="placeholder:text-primary placeholder:opacity-[50%] w-[80%] mt-8 p-3 shadow-[8px_8px_0_#ffeacf] border-solid border-[1px] border-primary rounded-sm bg-black outline-none outline-offset-0 border-solid" />
-              <button className="font-serif text-xl font-bold m-auto text-center w-[240px] mt-10 p-3 shadow-[8px_8px_0_#ffeacf] hover:shadow-[8px_8px_0_-1px_#fabd2f,8px_8px_0_#22190e] border-solid border-[1px] border-primary rounded-md bg-black hover:text-yellow duration-0">
+                  <input type="email" placeholder="enter your email address" className="placeholder:text-primary placeholder:opacity-[50%] w-[80%] mt-8 p-3 shadow-[8px_8px_0_#ffffff] border-solid border-[1px] border-primary rounded-sm bg-black outline-none outline-offset-0 border-solid" />
+              <button className="font-serif text-xl font-bold m-auto text-center w-[240px] mt-10 p-3 shadow-[8px_8px_0_#ffffff] hover:shadow-[8px_8px_0_-1px_#fabd2f,8px_8px_0_#070707] border-solid border-[1px] border-primary rounded-md bg-black hover:text-yellow duration-0">
                     Subscribe
                   </button>
                 </div>

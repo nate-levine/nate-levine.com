@@ -21,10 +21,10 @@ const ArticlePost = ({ data, children }) => {
         <div className="h-8" />
         <ArticleTags tags={data.mdx.frontmatter.tags} isFeatured={data.mdx.frontmatter.isFeatured} />
       </div>
-      <div className="h-8 border-dotted border-black border-b-[1px]" />
-      <div className="flex flex-col-reverse xl:flex-row pb-20">
+      <div className="h-8" />
+      <div className="flex flex-col-reverse xl:flex-row pt-0 pb-0 bg-secondary">
         <div className="w-[25%]" />
-        <div className="h-auto min-h-[100vh] max-w-[85%] sm:w-[640px] mx-auto">
+        <div className="h-auto min-h-[100vh] max-w-[85%] sm:w-[640px] mx-auto pt-10 pb-20">
           <div className="text-black text-2xl text-left font-serif mx-auto pb-10 leading-relaxed">   
             {/* Hero image */}    
             <div className="text-center py-5">
@@ -48,7 +48,6 @@ const ArticlePost = ({ data, children }) => {
         </div>
         <TableOfContents />
       </div>
-      <div className="border-solid border-black border-b-[1px]" />
       <div className="h-fit"> 
         <div className="py-20 max-w-[75vw] mx-auto">
           <p className="font-bold text-4xl pb-10">Related Articles</p>

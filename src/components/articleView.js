@@ -62,8 +62,8 @@ const ArticleView = ({ grid_config, filterFunc, sortFunc }) => {
                 <article key={node.id}>
                     <div className="py-3 break-inside-avoid text-black">
                         <Link to={`/articles/${node.frontmatter.slug}`}>
-                            <div className="group font-sans text-xl p-3 shadow-[8px_8px_0_#22190e] border-solid border-[1px] border-black hover:shadow-[8px_8px_0_-1px_#ffeacf,8px_8px_0_#22190e] rounded-md bg-primary hover:bg-black duration-0">
-                                <div className="flex flex-col group-hover:text-[#ffeacf] duration-0">
+                            <div className="group font-sans text-xl p-3 shadow-[8px_8px_0_#070707] border-solid border-[1px] border-black hover:shadow-[8px_8px_0_-1px_#ffffff,8px_8px_0_#070707] rounded-md bg-primary hover:bg-black duration-0">
+                                <div className="flex flex-col group-hover:text-[#ffffff] duration-0">
                                     <div className="flex-auto pb-2">
                                         <div className="flex flex-row">
                                             <div className="w-[100%] pr-4">

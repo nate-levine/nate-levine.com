@@ -20,7 +20,7 @@ const TableOfContents = () => {
                 // For each section
                 contents.map((section, id) => {
                     // Style the section based on whether it is a section or subsection
-                    let classString = (section.className == "section" ? "text-left ml-0" : "text-left ml-8")
+                    let classString = (section.className == "section" ? "text-left ml-0" : "text-left pl-8 relative before:content-['▶'] before:absolute before:left-0 before:text-green-500")
                     // Get the section header
                     let header = section.children[0]
                     
@@ -36,7 +36,7 @@ const TableOfContents = () => {
                             }>
                                 {
                                     // If the section is currently active, style it accordingly in the table of contents
-                                    header == activeSection ? <div className="font-bold duration-100">{header.innerText}</div> : <div className="p-1 duration-100">{header.innerText}</div>
+                                    header == activeSection ? <div className="italic text-yellow duration-100">{header.innerText}</div> : <div className="p-1 duration-100">{header.innerText}</div>
                                 }
                             </button>
                         </li>
@@ -81,9 +81,9 @@ const TableOfContents = () => {
     }, [activeSection])
 
     return (
-        <div className="xl:absolute xl:sticky xl:top-0 h-fit pt-10 xl:pb-14 mx-auto max-w-[85%] w-[640px] xl:w-[25%] xl:max-w-full xl:mr-auto">
-            <div className="mx-auto xl:w-[85%] border-dotted border-black border-l-[1px] p-6">
-                <p className="font-sans font-bold text-2xl pb-3">Table of Contents</p>
+        <div className="xl:absolute xl:sticky xl:top-0 h-fit mx-auto max-w-[100%] w-[100%] xl:w-[25%] xl:max-w-full xl:mr-auto bg-black text-primary">
+            <div className="justify-center mx-auto xl:w-[85%] border-dotted border-primary border-l-[1px] p-6 xl:py-10 w-[80%] sm:w-[50%] md:w-[40%] lg:w-[30%]">
+                <p className="font-sans font-bold text-2xl underline pb-3">Table of Contents</p>
                 {tableOfContents}
             </div>
         </div>
