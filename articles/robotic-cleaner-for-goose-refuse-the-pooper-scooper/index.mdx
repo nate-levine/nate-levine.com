@@ -18,7 +18,7 @@ import * as Components from '../../src/components/mdx/mdx_components'
 
 import wheelFEA from "./wheel-FEA.jpg"
 import armFEA from "./arm-FEA.jpg"
-import FPVMonitor from "./FPV-monitor.jpg"
+import FPVMonitor from "./FPV.jpg"
 import scooperArm from "./scooper-arm.jpg"
 import physicalBuild from "./physical-build.jpg"
 import explodedView from "./exploded-view.jpg"
@@ -69,7 +69,7 @@ import controlScheme from "./control-scheme.jpg"
 <Components.Subsection title="Operability">
     <Components.Paragraph>We built the control system with intuitive and robust outdoor operation in mind. The controller was a PlayStation DualShock controller, a popular game controller.<Components.FootnotesLink>2</Components.FootnotesLink> This made the control scheme more intuitive for anyone that has ever used a game controller. Pulse-width modulated motor control allowed the user to operate the robot at variable speeds and torques. Lower speed options makes it easier to navigate uneven or inclined terrain. A drone FPV camera was mounted to the front of the robot and was streamed wirelessly to an FPV monitor, allowing the operator to control the robot beyond their line of sight.</Components.Paragraph>
     
-    <Components.Image src={FPVMonitor} alt="Camera Feed Through FPV Mointor" to="">Camera Feed Through FPV Mointor</Components.Image>
+    <Components.Image src={FPVMonitor} alt="Live Camera Feed Through FPV Monitor" to="">Live Camera Feed Through FPV Monitor</Components.Image>
     <Components.Image src={controlScheme} alt="Operator Control Scheme - the sticks allow both wheel speeds to be controlled independently" to="">Operator Control Scheme - the sticks allow both wheel speeds to be controlled independently</Components.Image>
 
     <Components.Paragraph>This setup meant that even a non-technically trained operator could walk the robot around a field, see where it was going, and collect refuse without ever touching it. The emphasis here was on practical controls, not autonomy. This is a common trade off in prototypes where predictability and reliability are more important to get right first, and then automation can come later. This is discussed in more detail in the last part, <i>Future Improvements</i>.</Components.Paragraph>
