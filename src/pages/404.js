@@ -19,7 +19,7 @@ const NotFoundPage = () => {
           <div className="font-serif text-left text-xl pt-5">
             <p>Sorry, this page doesn't exist or is unavailable. Try checking the URL for typos.</p>
             <p className="pt-10">  
-              <Link to="/" className="underline">Click here to return to the main page</Link>, or check out one of the featured articles:
+              <Link to="/" className="underline">Click here to return to the main page</Link>, or check out one of the featured projects:
             </p>
           </div>
         </div>
@@ -36,6 +36,6 @@ export default NotFoundPage
 
 export const Head = () => <SEO
   title={"Page Not Found"}
-  description={"A place to share my ideas, interests, and thoughts on topics ranging from engineering, to software development, to food science."}
+  description={"Page Not Found"}
   article={false}
 />

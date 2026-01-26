@@ -23,7 +23,7 @@ const AboutPage = () => {
                             </p>
                             <br />
                             <p>
-                                I'd recommend you get started by reading one of the featured articles on this page. If
+                                I'd recommend you get started by reading one of the featured projects on this page. If
                                 you don't have time right now, I'd suggest signing up for my newsletter (coming soon), where I send
                                 out a monthly article about something interesting.
                             </p>
@@ -99,8 +99,8 @@ const AboutPage = () => {
 }
 
 export const Head = () => <SEO
-  title={"About Nate Levine"}
-  description={"A place to share my ideas, interests, and thoughts on topics ranging from engineering, to software development, to food science."}
+  title={"About"}
+  description={"About"}
   article={false}
 />
 

@@ -189,7 +189,7 @@ const ArticlePage = ({ data }) => {
         </div>
       </div>
       <div className="h-auto min-h-[100vh] max-w-[75vw] mx-auto py-10">
-        <ArticleView grid_config={"md:columns-2 lg:columns-3 gap-6"} filterFunc={tagFilter} sortFunc={orderArticles} />
+        <ArticleView grid_config={"md:columns-1 lg:columns-2 gap-6"} filterFunc={tagFilter} sortFunc={orderArticles} />
       </div>
     </Layout>
   )
@@ -215,7 +215,7 @@ export const query = graphql`
 export default ArticlePage
 
 export const Head = () => <SEO
-  title={"Explore articles on engineering, software development, food science, sports, and more."}
-  description={"A place to share my ideas, interests, and thoughts on topics ranging from engineering, to software development, to food science."}
+  title={"Articles"}
+  description={"Articles"}
   article={false}
 />

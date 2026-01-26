@@ -1,0 +1,106 @@
+---
+title: "Robotic Cleaner for Goose Refuse: The Pooper Scooper"
+date: "2025-05-04"
+slug: "robotic-cleaner-for-goose-refuse-the-pooper-scooper"
+tags:
+    - FEATURED
+    - Project
+    - Prototyping
+    - Engineering
+    - Design
+hero_image: "./full-assembly.jpg"
+hero_image_alt: "Full CAD Assembly of the Robotic Goose Poop Cleaner"
+hero_image_credit_text: "Nate Levine"
+hero_image_credit_link: "https://digital.wpi.edu/concern/student_works/6h440x90z?locale=en"
+---
+
+import * as Components from '../../src/components/mdx/mdx_components'
+
+import wheelFEA from "./wheel-FEA.jpg"
+import armFEA from "./arm-FEA.jpg"
+import FPVMonitor from "./FPV-monitor.jpg"
+import scooperArm from "./scooper-arm.jpg"
+import physicalBuild from "./physical-build.jpg"
+import explodedView from "./exploded-view.jpg"
+import wiringSchematic from "./wiring-schematic.jpg"
+import systemDiagram from "./system-diagram.jpg"
+import controlScheme from "./control-scheme.jpg"
+
+<Components.Section title="The Goose Problem">
+    <Components.Paragraph>I have a recurring dream where I’m walking through a mine field. But the field is a soccer field, and the land mines are goose poop. And I’m wearing brand new white sneakers. Anyone who’s ever walked through a goose poop-ridden field knows the struggle of keeping your eyes fixed between the blades of grass while staying ready to sidestep a potential shoe sole stainer.</Components.Paragraph>
+
+    <Components.Paragraph>“Grossness” isn’t the only reason to dislike goose poop. These droppings pose a significant problem for water sources used for drinking or recreation. Geese naturally dwell near bodies of water. Water runoff collects their droppings and contaminates bodies of water. Geese are carriers of pathogens such as E. Coli and Salmonella. In addition to this, goose poop has high nitrogen and phosphorus levels, which leads to water overenrichment and promotes the growth of algae and bacteria.</Components.Paragraph>
+
+    <Components.Paragraph>The constant need, cost, and labor for manual cleaning is a challenge that has yet to be overcome. Methods of goose control like hazing, egg interference, and relocation are costly, intrusive, and sometimes ineffective. Our team decided to build a tool that could automate the clean-up of goose refuse.<Components.FootnotesLink>1</Components.FootnotesLink> This article details the development of prototype remote-control robot designed to remove Canada goose poop from public recreation spaces efficiently.</Components.Paragraph>
+</Components.Section>
+
+<Components.Section title="The Project">
+    <Components.Paragraph>During my senior year at Worcester Polytechnic Institute, this problem became the foundation for our Major Qualifying Project: to design, build, and test a remote-operated robot capable of collecting goose refuse on uneven outdoor terrain. The result was a complete engineering solution that brought together mechanical design, embedded controls, materials engineering, and iterative testing.</Components.Paragraph>
+    <Components.Paragraph>One of the first actions we took was to identify the main problems which would need to be overcome for a prototype:</Components.Paragraph>
+    <Components.UnorderedList>
+        <Components.ListItem>Mobility: uneven terrain including hills, obstacles like tree roots and park benches would impede movement of a poop collecting robot.</Components.ListItem>
+        <Components.ListItem>Reliability: Goose refuse doesn’t have a uniform form factor so a general-purpose collection method is needed.</Components.ListItem>
+        <Components.ListItem>Manufacturability: A low-cost solution which can easily be maintained and repaired is essential for adoption by clients.</Components.ListItem>
+        <Components.ListItem>Operability: intuitive controls so even non-technical users can operate the robot easily.</Components.ListItem>
+    </Components.UnorderedList>
+    <Components.Paragraph>Breaking a real-world problem into a set of engineering requirements enabled us to think of the project as multiple, interconnected challenges to solve instead of one abstract system.</Components.Paragraph>
+
+    <Components.Image src={explodedView} alt="Exploded View of CAD Assembly" to="">Exploded View of CAD Assembly</Components.Image>
+    <Components.Image src={systemDiagram} alt="System Diagram" to="">System Diagram</Components.Image>
+    <Components.Image src={wiringSchematic} alt="Electronics Wiring Schematic" to="">Electronics Wiring Schematic</Components.Image>
+</Components.Section>
+
+<Components.Subsection title="Mobiliity">
+    <Components.Paragraph>For mobility, we opted for independently driven wheels controlled with PWM-controlled DC motors. This gave the robot a tight turning radius for easier maneuverability, enough torque to transit grassy terrain and slight inclines, and a simple control system using readily available and cheap motor driver boards. We mounted an idler tail wheel in the back for stability and designed the chassis to be both lightweight and structurally sound. Part of this process involved stress analysis of the wheel mounts and frame using ANSYS Mechanical to ensure performance in real outdoor conditions.</Components.Paragraph>
+
+    <Components.Image src={wheelFEA} alt="Wheel Stress FEA - The stress is concentrated around the wheel center where it connects to the wheel hub" to="">Wheel Stress FEA - The stress is concentrated around the wheel center where it connects to the wheel hub</Components.Image>
+</Components.Subsection>
+
+<Components.Subsection title="Realiability">
+    <Components.Paragraph>After exploring options for refuse collect, we chose a rotating scoop mechanism because of the simplicity of the design and its reliability. Because the collection mechanism had fewer moving parts, there would be fewer points of failure. Additionally, this would make the mechanism easier to manufacture, maintain, and control.</Components.Paragraph>
+
+    <Components.Image src={scooperArm} alt="Scoop is mounted at the fron of the robot and is shaped to funnel and collect soft material" to="">Scoop is mounted at the fron of the robot and is shaped to funnel and collect soft material</Components.Image>
+
+    <Components.Paragraph>The scoop was mounted at the front of the robot, powered by a dedicated DC motor, and was designed to lift collected waste onto a containment bin behind it. We opted for a trussed arm design to maximize strength while minimizing material and weight. Structural analysis via ANSYS ensured the mechanism could withstand the expected forces without failure or excess deflection.</Components.Paragraph>
+
+    <Components.Image src={armFEA} alt="Arm Deformation FEA - The arm deflects most at the end where the load is lifted" to="">Arm Deformation FEA - The arm deflects most at the end where the load is lifted</Components.Image>
+</Components.Subsection>
+
+<Components.Subsection title="Operability">
+    <Components.Paragraph>We built the control system with intuitive and robust outdoor operation in mind. The controller was a PlayStation DualShock controller, a popular game controller.<Components.FootnotesLink>2</Components.FootnotesLink> This made the control scheme more intuitive for anyone that has ever used a game controller. Pulse-width modulated motor control allowed the user to operate the robot at variable speeds and torques. Lower speed options makes it easier to navigate uneven or inclined terrain. A drone FPV camera was mounted to the front of the robot and was streamed wirelessly to an FPV monitor, allowing the operator to control the robot beyond their line of sight.</Components.Paragraph>
+    
+    <Components.Image src={FPVMonitor} alt="Camera Feed Through FPV Mointor" to="">Camera Feed Through FPV Mointor</Components.Image>
+    <Components.Image src={controlScheme} alt="Operator Control Scheme - the sticks allow both wheel speeds to be controlled independently" to="">Operator Control Scheme - the sticks allow both wheel speeds to be controlled independently</Components.Image>
+
+    <Components.Paragraph>This setup meant that even a non-technically trained operator could walk the robot around a field, see where it was going, and collect refuse without ever touching it. The emphasis here was on practical controls, not autonomy. This is a common trade off in prototypes where predictability and reliability are more important to get right first, and then automation can come later. This is discussed in more detail in the last part, <i>Future Improvements</i>.</Components.Paragraph>
+</Components.Subsection>
+
+<Components.Subsection title="Manufacturability">
+    <Components.Paragraph>For the physical build, we prioritized 3D printed PLA for most structural components, metal fixtures at high-stress points, and a plexiglass base for easy access and inspection. We emphasized design for manufacturability, specifically parts that could be remade, repaired, or replaced quickly and affordably. This was important for us since it enabled rapid prototyping of ideas and improvements to the design.</Components.Paragraph>
+</Components.Subsection>
+
+<Components.Section title="Future Improvements">
+    <Components.Paragraph>One of the main limitations of this project was the time we had to compete it. Given we were to work on it again, there are many improvements to the design we would have liked to make.</Components.Paragraph>
+
+    <Components.Image src={physicalBuild} alt="Physical Build of the Robot" to="">Physical Build of the Robot</Components.Image>
+</Components.Section>
+
+<Components.Subsection title="Semiautomatic Operation with Computer Vision">
+    <Components.Paragraph>The most crucial improvement for this project would be to transition the robot from manual control to full autonomy. Before this, it would make sense to transition the robot to a hybrid mapping approach. An operator would manually set a pre-planned route which the robot would automatically trace back afterward, similar to how drone operators set pre-planned drone routes to automatically monitor tracts of land. This approach is more feasible than a fully automated approach since it takes much of the judgement from the robot and gives it to the human operator. The operator is more aware of obstacles like tall grass or water and can make decisions about movement without the need for a complex machine vision system.</Components.Paragraph>
+
+    <Components.Paragraph>The most important feature of this hybrid approach would be incorporating a computer vision algorithm into the robot’s camera feed to identify goose poop, and an automatic control system to collect that poop. The computer vision algorithm would not need to be made from scratch. Supervised pre-training could be used on an existing large open-source computer vision model to specifically identify goose poop. The camera feed would be sent to the robot’s processor and run through the computer vision model, where if refuse was identified, the pre-planned navigation path would be temporarily overridden to collect the goose poop.</Components.Paragraph>
+</Components.Subsection>
+
+<Components.Subsection title="Trash Collection System">
+    <Components.Paragraph>Right now, the trash bin must be manually removed from the chassis to dispose of the waste. A collection station similar to a robot vacuum station could be developed to automate this task. The collection station could serve multiple purposes in addition to trash collection, such as charging, cleaning, or protection from the elements.</Components.Paragraph>
+</Components.Subsection>
+
+<Components.Subsection title="All-Weather Navigation">
+    <Components.Paragraph>Our project was only tested in near-ideal conditions. We did not test in inclement weather like rain or snow, or in mud, snow, or sand. Two steps to take would be to outfit the tires for all-weather navigation, and to better weatherproof the entire system. This would include fully water-proofing the outside, using materials that are water, salt, and UV resistant, and making the design strong enough to withstand small crashes and tumbles.</Components.Paragraph>
+</Components.Subsection>
+
+<Components.Footnotes>
+    <Components.FootnotesItem index="0">We determined toilet training the geese wouldn’t be a feasible alternative.</Components.FootnotesItem>
+
+    <Components.FootnotesItem index="1">This is similar to how the U.S. military uses Xbox 360 controllers for operating many of their unmanned vehicles to reduce training time for new recruits.</Components.FootnotesItem>
+</Components.Footnotes>

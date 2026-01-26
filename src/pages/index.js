@@ -25,14 +25,25 @@ const IndexPage = () => {
               </p>
               <br />
               <p>
-                I'd recommend you get started by reading one of the featured articles on this page. If
+                I'd recommend you get started by reading one of the featured projects on this page. If
                 you don't have time right now, I'd suggest signing up for my newsletter (coming soon), where I send
                 out a monthly article about something interesting.
               </p>
             </div>
           </div>
+          {/* Articles */}
+          <div className="pb-20 flex-2/3 text-2xl">
+            <div className="w-[85%] mx-auto">
+              <ArticleView grid_config={"md:columns-1 lg:columns-1 gap-6"} filterFunc={isFeatured} />
+              <Link to="/articles">
+                <div className="font-sans text-xl m-auto text-center w-[240px] mt-10 p-3 shadow-[8px_8px_0_#22190e] hover:shadow-[8px_8px_0_-1px_#ffeacf,8px_8px_0_#22190e] border-solid border-[1px] border-black rounded-md bg-primary hover:bg-black hover:text-primary duration-0">
+                  Explore more articles
+                </div>
+              </Link>
+            </div>
+          </div>
           {/* Newsletter Signup */}
-          { <div className="py-20 border-dotted border-b-[1px] lg:border-b-0 lg:border-b-[1px] border-black text-2xl bg-black text-primary">
+          { <div className="py-20 border-dotted border-b-[1px] lg:border-b-0 lg:border-b-[1px] border-primary text-2xl bg-black text-primary">
             <div className="mx-20 mx-auto leading-relaxed flex flex-col lg:flex-row">
               <div className="basis-1/2 px-20">
                 <h1 className="text-left text-6xl font-serif font-bold text-primary">Newsletter</h1>
@@ -58,17 +69,7 @@ const IndexPage = () => {
               </div>
             </div>
           </div> }
-          {/* Articles */}
-          <div className="py-20 flex-2/3 text-2xl">
-            <div className="w-[85%] mx-auto">
-              <ArticleView grid_config={"md:columns-1 lg:columns-1 gap-6"} filterFunc={isFeatured} />
-              <Link to="/articles">
-                <div className="font-sans text-xl m-auto text-center w-[240px] mt-10 p-3 shadow-[8px_8px_0_#22190e] hover:shadow-[8px_8px_0_-1px_#ffeacf,8px_8px_0_#22190e] border-solid border-[1px] border-black rounded-md bg-primary hover:bg-black hover:text-primary duration-0">
-                  Explore more articles
-                </div>
-              </Link>
-            </div>
-          </div>
+
           <div className="flex-1 text-2xl text-primary bg-black border-b-[1px] border-dotted border-primary">
               <div className="py-20 w-[85%] sm:w-[640px] mx-auto leading-relaxed">
                   <h1 className="font-serif font-bold text-4xl pb-10">Contact Me</h1>
@@ -85,7 +86,7 @@ const IndexPage = () => {
 
 export const Head = () => <SEO
   title={"Nate Levine"}
-  description={"A place to share my ideas, interests, and thoughts on topics ranging from engineering, to software development, to food science."}
+  description={"Nate Levine"}
   article={false}
 />
 
