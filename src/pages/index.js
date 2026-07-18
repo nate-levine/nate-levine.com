@@ -34,7 +34,7 @@ const IndexPage = () => {
           {/* Articles */}
           <div className="py-20 flex-2/3 text-2xl bg-secondary">
             <div className="w-[85%] mx-auto">
-              <ArticleView grid_config={"md:columns-1 lg:columns-1 gap-6"} filterFunc={isFeatured} />
+              <ArticleView grid_config={"md:columns-3 lg:columns-4 gap-6"} filterFunc={isFeatured} />
               <Link to="/articles">
                 <div className="font-sans text-xl m-auto text-center w-[240px] mt-10 p-3 shadow-[8px_8px_0_#070707] hover:shadow-[8px_8px_0_-1px_#ffffff,8px_8px_0_#070707] border-solid border-[1px] border-black rounded-md bg-primary hover:bg-black hover:text-primary duration-0">
                   Explore more articles

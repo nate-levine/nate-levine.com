@@ -65,19 +65,19 @@ const ArticleView = ({ grid_config, filterFunc, sortFunc }) => {
                             <div className="group font-sans text-xl p-3 shadow-[8px_8px_0_#070707] border-solid border-[1px] border-black hover:shadow-[8px_8px_0_-1px_#ffffff,8px_8px_0_#070707] rounded-md bg-primary hover:bg-black duration-0">
                                 <div className="flex flex-col group-hover:text-[#ffffff] duration-0">
                                     <div className="flex-auto pb-2">
-                                        <div className="flex flex-row">
-                                            <div className="w-[100%] pr-4">
+                                        <div className="flex flex-col">
+                                            <div className="w-[100%] pr-4 pb-4">
                                                 <div className="font-bold pb-2">{node.frontmatter.title}</div>
                                                 <ArticleTags tags={node.frontmatter.tags} />
                                             </div>
                                             {
                                                 getImage(node.frontmatter.hero_image) 
                                                 ?
-                                                <div className="relative h-[100px] overflow-hidden border-solid border-black group-hover:border-primary rounded-sm border-[1px] duration-0">
+                                                <div className="relative w-[80%] overflow-hidden border-solid border-black group-hover:border-primary rounded-sm border-[1px] duration-0 mx-auto">
                                                     <GatsbyImage 
                                                         image={getImage(node.frontmatter.hero_image)} 
                                                         alt={node.frontmatter.hero_image_alt} 
-                                                        className="h-[100px] w-[120px] flex m-auto mb-4" 
+                                                        className="h-[250px] w-[100%] flex m-auto" 
                                                     />
                                                 </div>
                                                 : 

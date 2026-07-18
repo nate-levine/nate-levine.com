@@ -33,10 +33,10 @@ const NavigationBar = () => {
                             <div>Levine</div>
                         </div>
                         <div className="grid grid-cols-4 absolute w-full aspect-square">
-                            <div className="static block w-full h-[5px] group-hover:h-[25%] duration-[75ms] bg-red flex items-center justify-center text-4xl">
+                            <div className="static block w-full h-[5px] group-hover:h-[25%] duration-[75ms] bg-black flex items-center justify-center text-4xl">
                                 <span className="opacity-0 group-hover:opacity-100 duration-[75ms] text-primary">.</span>
                             </div>
-                            <div className="static block w-full h-[5px] group-hover:h-[25%] duration-[150ms] bg-green flex items-center justify-center text-4xl">
+                            <div className="static block w-full h-[5px] group-hover:h-[25%] duration-[150ms] bg-red flex items-center justify-center text-4xl">
                                 <span className="opacity-0 group-hover:opacity-100 duration-[75ms] text-primary">d</span>
                             </div>
                             <div className="static block w-full h-[5px] group-hover:h-[25%] duration-[225ms] bg-yellow flex items-center justify-center text-4xl">
@@ -51,11 +51,12 @@ const NavigationBar = () => {
             </div>
             <div className="navigation-links z-20 md:static absolute md:min-h-fit min-h-[10vh] top-[11%] md:w-auto w-[100%] flex items-center justify-center left-0 left-[-100%] pt-20 md:pt-0">
                 <ul className="pt-6 pb-10 md:py-0 flex flex-col md:flex-row gap-5 w-[90%] justify-center">
+                    {/* OBSOLETE
                     <li className="w-full">
                         <Link to="/about" onClick={toggleMenu}>
                             <div className="w-full md:w-auto p-3 shadow-[8px_8px_0_#070707,8px_8px_0_1px_#ffffff] hover:shadow-[8px_8px_0_-1px_#ffffff,8px_8px_0_#070707] border-solid border-[1px] border-black rounded-md bg-primary hover:bg-black hover:text-primary hover:border-primary duration-0">About</div>
                         </Link>
-                    </li>
+                    </li>*/}
                     <li className="w-full">
                         <Link to="/articles" onClick={toggleMenu}>
                             <div className="w-full md:w-auto p-3 shadow-[8px_8px_0_#070707,8px_8px_0_1px_#ffffff] hover:shadow-[8px_8px_0_-1px_#ffffff,8px_8px_0_#070707] border-solid border-[1px] border-black rounded-md bg-primary hover:bg-black hover:text-primary hover:border-primary duration-0">Articles</div>
