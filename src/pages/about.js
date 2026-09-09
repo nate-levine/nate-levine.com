@@ -19,13 +19,11 @@ const AboutPage = () => {
                             <h1 className="text-left text-6xl font-serif font-bold text-black">Nate Levine</h1>
                             <br />
                             <p>
-                            I'm working as a Product Engineer on the Research and Development team at Diamond Diagnostics. I graduated from Worcester Polytechnic Institute (WPI) in 2025 with a Bachelor in mechanical engineering and a minor in computer science.
+                            I work as a Product Engineer on the Research and Development team at Diamond Diagnostics. I graduated from Worcester Polytechnic Institute (WPI) in 2025 with a Bachelor's degree in mechanical engineering and a minor in computer science.
                             </p>
                             <br />
                             <p>
-                                I'd recommend you get started by reading one of the featured projects on this page. If
-                                you don't have time right now, I'd suggest signing up for my newsletter (coming soon), where I send
-                                out a monthly article about something interesting.
+                            I'd recommend you get started by reading one of the featured projects on this page. If you're short on time, consider signing up for my newsletter (coming soon), where I share a monthly article on an interesting topic.
                             </p>
                         </div>
                         {/* Newsletter Signup */}
@@ -33,14 +31,14 @@ const AboutPage = () => {
                             <div className="mx-20 mx-auto leading-relaxed flex flex-col lg:flex-row">
                             <div className="basis-1/2 px-20">
                                 <h1 className="text-left text-6xl font-serif font-bold text-primary">Newsletter</h1>
-                                <h3 className="text-left text-2xl font-serif font-bold text-yellow">(coming soon, this doesn't do anything yet)</h3>
+                                <h3 className="text-left text-2xl font-serif font-bold text-yellow">(coming soon)</h3>
                                 <br />
                                 <p>
-                                This is my newsletter, where I share my ideas, interests, and thoughts relating to anything and everything.
+                                This is my newsletter, where I share my ideas, interests, and thoughts relating to engineering, prototyping, and software.
                                 </p>
                                 <br />  
                                 <p>
-                                Sign up to recieve my free newsletter by entering your email.
+                                Subscribe to receive my free newsletter by entering your email.
                                 </p>
                                 <br />  
                             </div>
@@ -87,7 +85,7 @@ const AboutPage = () => {
                             <div className="py-20 w-[85%] sm:w-[640px] mx-auto leading-relaxed">
                                 <h1 className="font-serif font-bold text-4xl pb-10">Contact Me</h1>
                                 <p>
-                                    For any inquiries please email me at <a href="mailto:n8levine11@gmail.com" className="underline">n8levine11@gmail.com</a>
+                                    For inquiries, please email me at <a href="mailto:n8levine11@gmail.com" className="underline">n8levine11@gmail.com</a>
                                 </p>
                             </div>
                         </div>
