@@ -62,7 +62,7 @@ const ArticleView = ({ grid_config, filterFunc, sortFunc }) => {
                 <article key={node.id}>
                     <div className="py-3 break-inside-avoid text-black">
                         <Link to={`/articles/${node.frontmatter.slug}`}>
-                            <div className="group font-sans text-xl p-3 shadow-[8px_8px_0_#070707] border-solid border-[1px] border-black hover:shadow-[8px_8px_0_-1px_#ffffff,8px_8px_0_#070707] rounded-md bg-primary hover:bg-black duration-0">
+                            <div className="group font-sans text-xl pt-3 pr-3 pl-3 pb-1 shadow-[8px_8px_0_#070707] border-solid border-[1px] border-tertiary hover:shadow-[8px_8px_0_-1px_#ffffff,8px_8px_0_#cccccc] rounded-md bg-primary hover:bg-black duration-0">
                                 <div className="flex flex-col group-hover:text-[#ffffff] duration-0">
                                     <div className="flex-auto pb-2">
                                         <div className="flex flex-col">
@@ -73,11 +73,11 @@ const ArticleView = ({ grid_config, filterFunc, sortFunc }) => {
                                             {
                                                 getImage(node.frontmatter.hero_image) 
                                                 ?
-                                                <div className="relative w-[80%] overflow-hidden border-solid border-black group-hover:border-primary rounded-sm border-[1px] duration-0 mx-auto">
+                                                <div className="relative w-[100%] overflow-hidden border-solid border-black group-hover:border-primary rounded-sm duration-0">
                                                     <GatsbyImage 
                                                         image={getImage(node.frontmatter.hero_image)} 
                                                         alt={node.frontmatter.hero_image_alt} 
-                                                        className="h-[250px] w-[100%] flex m-auto" 
+                                                        className="h-[100%] w-[100%] flex m-auto" 
                                                     />
                                                 </div>
                                                 : 
