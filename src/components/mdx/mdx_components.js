@@ -1,16 +1,47 @@
 import * as React from 'react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import katex from 'katex'
+import 'katex/dist/katex.min.css'
+
+
+export const BlockEquation = ({ children }) => {
+  const math = useRef(null);
+
+  useEffect(() => {
+    if (math.current) {
+      katex.render(children, math.current, {
+        displayMode: false,
+        throwOnError: false,
+        output: 'html',
+      });
+    }
+  }, [children]);
+
+  return (
+    <div ref={math} className="pt-5 text-center text-base" />
+  );
+}
 
 export const BlockQuote = ({ children }) => {
     return (
-        <div className="my-3">
-            <p className="p-6 border-solid border-black border-[1px] rounded-2xl shadow-[8px_8px_0_black]">
+        <div className="my-6">
+            <p className="p-6 bg-secondary border-solid border-black border-[1px] rounded-2xl shadow-[8px_8px_0_black]">
                 {children}
             </p>
         </div>
     )
+}
+
+export const EquationBlock = ({ children }) => {
+  return (
+    <div className="my-6 p-4 bg-secondary border-solid border-black border-[1px] rounded-2xl shadow-[8px_8px_0_black] text-xl">
+        <div>
+            {children}
+        </div>
+    </div>
+  );
 }
 
 export const ExternalLink = ({ children, to }) => {
@@ -68,11 +99,41 @@ export const FootnotesLink = ({ children }) => {
                 behavior: 'smooth'
             })
         }>
-            <sup><div className="italic underline">
-                {children}
-            </div></sup>
+            <sup>
+                <div className="aspect-square bg-black hover:bg-yellow italic py-2 relative rounded-full text-primary hover:text-black">
+                    <div className="relative top-[-1px]">
+                        {children}
+                    </div>
+                </div>
+            </sup>
         </button>
     )
+}
+
+export const InlineEmphasis = ({ children }) => {
+    return (
+        <div className="font-bold inline">
+            {children}
+        </div>
+    )
+}
+
+export const InlineEquation = ({ children }) => {
+  const math = useRef(null);
+
+  useEffect(() => {
+    if (math.current) {
+      katex.render(children, math.current, {
+        displayMode: false,
+        throwOnError: false,
+        output: 'html',
+      });
+    }
+  }, [children]);
+
+  return (
+    <div ref={math} className="rounded-md bg-tertiary inline p-1 text-xs" />
+  );
 }
 
 export const InternalLink = ({ children, to }) => {

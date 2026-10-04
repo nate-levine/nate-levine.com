@@ -16,8 +16,10 @@ const ArticlePost = ({ data, children }) => {
     <Layout>
       <div className="pt-20 max-w-[85%] sm:w-[640px] mx-auto">
         <h1 className="text-black text-4xl font-serif font-bold">{data.mdx.frontmatter.title}</h1>
+        {/*
         <div className="h-8" />
         <p className="text-black max-text-2xl font-sans font-regular">{data.mdx.frontmatter.date}</p>
+        */}
         <div className="h-8" />
         <ArticleTags tags={data.mdx.frontmatter.tags} isFeatured={data.mdx.frontmatter.isFeatured} />
       </div>
