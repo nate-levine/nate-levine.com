@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
+    "baseline-browser-mapping": "^2.11.27",
+    "caniuse-lite": "^1.0.30001814",
     "gatsby": "^5.13.3",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
