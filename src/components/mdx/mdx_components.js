@@ -27,7 +27,7 @@ export const BlockEquation = ({ children }) => {
 export const BlockQuote = ({ children }) => {
     return (
         <div className="my-6">
-            <p className="p-6 bg-secondary border-solid border-black border-[1px] rounded-2xl shadow-[8px_8px_0_black]">
+            <p className="p-6 bg-primary rounded-sm shadow-[8px_8px_0_black]">
                 {children}
             </p>
         </div>
@@ -36,7 +36,7 @@ export const BlockQuote = ({ children }) => {
 
 export const EquationBlock = ({ children }) => {
   return (
-    <div className="my-6 p-4 bg-secondary border-solid border-black border-[1px] rounded-2xl shadow-[8px_8px_0_black] text-xl">
+    <div className="my-6 p-4 bg-primary rounded-sm shadow-[8px_8px_0_black] text-xl">
         <div>
             {children}
         </div>
@@ -147,7 +147,7 @@ export const InternalLink = ({ children, to }) => {
 export const Image = ({ children, src, alt, to }) => {
     return (
         <div className="text-center py-5">
-            <img src={src} alt={alt} className="mx-auto rounded-md border-solid border-black border-[1px] shadow-[8px_8px_0_black]" />
+            <img src={src} alt={alt} className="mx-auto rounded-sm border-solid border-black border-[1px] shadow-[8px_8px_0_black]" />
             <div className="pt-10 text-base underline">
                 {  
                     // Link to image if credited from an external link

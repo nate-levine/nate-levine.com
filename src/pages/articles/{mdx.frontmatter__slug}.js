@@ -14,7 +14,7 @@ const ArticlePost = ({ data, children }) => {
 
   return (
     <Layout>
-      <div className="pt-20 max-w-[85%] sm:w-[640px] mx-auto">
+      <div className="pt-10 pb-10 max-w-[85%] sm:w-[640px] mx-auto">
         <h1 className="text-black text-4xl font-serif font-bold">{data.mdx.frontmatter.title}</h1>
         {/*
         <div className="h-8" />
@@ -30,7 +30,7 @@ const ArticlePost = ({ data, children }) => {
           <div className="text-black text-2xl text-left font-serif mx-auto pb-10 leading-relaxed">   
             {/* Hero image */}    
             <div className="text-center py-5">
-                <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} className="mx-auto rounded-md border-solid border-black border-[1px] shadow-[8px_8px_0_black]" />
+                <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} className="mx-auto rounded-sm border-solid border-black border-[1px] shadow-[8px_8px_0_black]" />
                 <div className="pt-10 text-base underline">
                     {  
                         // Link to image if credited from an external link
@@ -50,10 +50,10 @@ const ArticlePost = ({ data, children }) => {
         </div>
         <TableOfContents />
       </div>
-      <div className="h-fit"> 
-        <div className="py-20 max-w-[75vw] mx-auto">
+      <div className="h-fit bg-tertiary"> 
+        <div className="py-20 max-w-[95%] mx-auto">
           <p className="font-bold text-4xl pb-10">Related Articles</p>
-          <ArticleView grid_config={"md:columns-2 lg:columns-3 gap-6"} filterFunc={relatedArticles(data.mdx, 3)} />
+          <ArticleView grid_config={"md:columns-1 lg:columns-1 gap-6"} filterFunc={relatedArticles(data.mdx, 3)} />
         </div>
       </div>
     </Layout>

@@ -62,18 +62,18 @@ const ArticleView = ({ grid_config, filterFunc, sortFunc }) => {
                 <article key={node.id}>
                     <div className="py-3 break-inside-avoid text-black">
                         <Link to={`/articles/${node.frontmatter.slug}`}>
-                            <div className="group font-sans text-xl pt-3 pr-3 pl-3 pb-1 shadow-[8px_8px_0_#070707] border-solid border-[1px] border-tertiary hover:shadow-[8px_8px_0_-1px_#ffffff,8px_8px_0_#cccccc] rounded-md bg-primary hover:bg-black duration-0">
-                                <div className="flex flex-col group-hover:text-[#ffffff] duration-0">
+                            <div className="group font-sans text-xl pr-3 pl-3 pb-1 shadow-[0px_0px_0_#070707] hover:shadow-[8px_8px_0_#000000] rounded-sm bg-primary transition-all duration-100 relative hover:translate-x-[-8px] hover:translate-y-[-8px]">
+                                <div className="flex flex-col duration-0">
                                     <div className="flex-auto pb-2">
                                         <div className="flex flex-col">
-                                            <div className="w-[100%] pr-4 pb-4">
+                                            <div className="w-[50%] pr-4 pt-3 pb-4 overflow-hidden z-50">
                                                 <div className="font-bold pb-2">{node.frontmatter.title}</div>
                                                 <ArticleTags tags={node.frontmatter.tags} />
                                             </div>
                                             {
                                                 getImage(node.frontmatter.hero_image) 
                                                 ?
-                                                <div className="relative w-[100%] overflow-hidden border-solid border-black group-hover:border-primary rounded-sm duration-0">
+                                                <div className="absolute w-[70%] h-full left-[30%] overflow-hidden object-cover rounded-sm duration-0 [mask-image:linear-gradient(to_left,black_50%,transparent_100%)]">
                                                     <GatsbyImage 
                                                         image={getImage(node.frontmatter.hero_image)} 
                                                         alt={node.frontmatter.hero_image_alt} 

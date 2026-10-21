@@ -74,7 +74,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <div className="h-auto min-h-[100vh] text-black">
         <div className="font-serif flex flex-col lg:flex-col">
-          <div className="py-20 flex-1 text-2xl">
+          <div className="pt-10 pb-20 flex-1 text-2xl">
             <div className="w-[85%] md:w-[650px] mx-auto leading-relaxed">
               <h1 className="text-left text-6xl font-serif font-bold text-black ">Nate Levine</h1>
               <div className="grid grid-cols-4 w-[250px] py-3">
@@ -107,14 +107,14 @@ const IndexPage = ({ data }) => {
           </div>
           {/* Articles */}
           <div className="py-20 flex-2/3 text-2xl bg-secondary">
-            <div className="w-[85%] mx-auto">
-              <ArticleView grid_config={"md:columns-2 lg:columns-3 gap-6"} filterFunc={isFeatured} />
+            <div className="w-[95%] mx-auto">
+              <ArticleView grid_config={"md:columns-1 lg:columns-1 gap-6"} filterFunc={isFeatured} />
             </div>
           </div>
           {/* Newsletter Signup */}
           { <div className="py-20 text-2xl bg-black text-primary">
-            <div className="mx-20 mx-auto leading-relaxed flex flex-col lg:flex-row">
-              <div className="basis-1/2 px-20">
+            <div className="max-w-[90vw] mx-20 mx-auto leading-relaxed flex flex-col lg:flex-row">
+              <div className="basis-1/2">
                 <h1 className="text-left text-6xl font-serif font-bold text-primary">Newsletter</h1>
                 <div className="grid grid-cols-4 w-[250px] py-3">
                   <div className="static block w-full h-[10px] bg-primary flex items-center justify-center" />
@@ -133,11 +133,11 @@ const IndexPage = ({ data }) => {
                 </p>
                 <br />  
               </div>
-              <div className="basis-1/2 px-20 flex items-center">
-                <div className="font-serif text-2xl m-auto text-center h-[60vh] p-3 pt-8 shadow-[8px_8px_0_#ffffff] border-solid border-[1px] border-primary rounded-md bg-black my-auto py-auto">
+              <div className="basis-1/2 flex items-center">
+                <div className="font-serif text-2xl m-auto text-center p-3 pt-8 border-dashed border-[1px] border-primary rounded-sm bg-black my-auto py-auto">
                   Get my newsletter in your inbox
-                  <input type="email" placeholder="enter your email address" className="placeholder:text-primary placeholder:opacity-[50%] w-[80%] mt-8 p-3 shadow-[8px_8px_0_#ffffff] border-solid border-[1px] border-primary rounded-sm bg-black outline-none outline-offset-0 border-solid" />
-              <button className="font-serif text-xl font-bold m-auto text-center w-[240px] mt-10 p-3 shadow-[8px_8px_0_#ffffff] hover:shadow-[8px_8px_0_-1px_#fabd2f,8px_8px_0_#070707] border-solid border-[1px] border-primary rounded-md bg-black hover:text-yellow duration-0 active:text-primary">
+                  <input type="email" placeholder="enter your email address" className="placeholder:text-primary placeholder:opacity-[50%] w-[80%] mt-8 p-3 shadow-[8px_8px_#ffffff] border-solid border-[1px] border-primary rounded-sm bg-black outline-none outline-offset-0 border-solid [html:has(button:active)_&]:text-yellow [html:has(button:focus)_&]:text-yellow [html:has(button:focus)_&]:translate-x-[8px] [html:has(button:focus)_&]:translate-y-[8px] [html:has(button:focus)_&]:shadow-none duration-300" />
+                  <button className="peer font-serif text-xl font-bold m-auto text-center w-[240px] my-10 p-3 shadow-[8px_8px_#ffffff] active:shadow-none border-solid border-[1px] border-primary rounded-sm bg-black duration-100 active:text-yellow active:border-none active:translate-x-[8px] active:translate-y-[8px]">
                     Subscribe
                   </button>
                 </div>
@@ -145,7 +145,7 @@ const IndexPage = ({ data }) => {
             </div>
           </div> }
       <div className="text-black">
-        <div className="h-auto max-w-[75vw] mx-auto pt-10 pb-5">
+        <div className="h-auto max-w-[90vw] mx-auto pt-10 pb-5">
           <h1 className="text-left text-6xl font-serif font-bold pt-10 text-black">Explore Articles</h1>
           <div className="grid grid-cols-4 w-[250px] pt-3 pb-10">
             <div className="static block w-full h-[10px] bg-black flex items-center justify-center" />
@@ -154,14 +154,15 @@ const IndexPage = ({ data }) => {
             <div className="static block w-full h-[10px] bg-blue flex items-center justify-center" />
           </div>
           <div className="flex flex-row space-x-10 items-start justify-center pb-10">
+            {/* OBSOLETE
             <div className="flex flex-row space-x-5 items-start justify-left text-nowrap">
-              <p className="font-serif font-bold text-xl">Sort By:</p>
+              <p className="font-sans font-bold text-xl">Sort By:</p>
               <div className="inline-block min-w-[7vw] text-left text-sm font-sans font-regular border-solid border-black border-[1px] rounded-md">
                 <button type="button" onClick={toggleMenu} className="drop-down-button inline-flex w-full text-l justify-center gap-x-1.5 rounded-md px-2 py-2 bg-primary">
                   {
-                    /*
+                    /
                       Change article order dropdown icon based on selected sort option
-                    */
+                    /
                     articleOrder == "Latest"
                     ?
                     // Up arrow
@@ -179,19 +180,16 @@ const IndexPage = ({ data }) => {
                     </svg>
                   }
                   {articleOrder}
-                  <svg className="-mr-1 h-5 w-5" viewBox="0 0 20 20" aria-hidden="true">
-                    <path fillRule="evenodd" className="drop-down-arrow origin-center duration-0" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/>
-                  </svg>
                 </button>
-                {/* Sort dropdown */}
+                {/ Sort dropdown /}
                 <div className="group drop-down-menu left-0 z-10 w-full origin-top-right bg-primary rounded-md hidden">
                   {
                     sortOptions.map((option, id) => {
                       if (option !== articleOrder)  // Don't include currently selected sort option in the dropdown
                         return <button key={id} className="block text-center py-2 font-sans w-full hover:bg-black hover:text-primary border-solid border-black border-t-[1px] duration-0 inline-flex w-full gap-x-1.5 rounded-md px-2 py-2 bg-primary" onClick={() => setArticleOrder(option)}>{
-                    /*
+                    /
                       Change article order dropdown icon based on selected sort option
-                    */
+                    /
                     articleOrder == "Latest"
                     ?
                     // Down arrow
@@ -213,17 +211,18 @@ const IndexPage = ({ data }) => {
                 </div>
               </div>
             </div>
+            */}
             <div className="group flex flex-row flex-wrap gap-x-2 gap-y-2 font-sans font-regular text-sm items-start">
-            <p className="font-serif font-bold text-xl pr-2 items-center" >Tags:</p>
+            <p className="font-sans font-bold text-xl pr-2 items-center" >Tags:</p>
               {
                   // Enumerate over each tag
                   all_tags.map((tag, id) => {
                       // Style tag conditionally based on if it is selected or not
                       let classString = ""
                       if (selectedTags.includes(tag)) {
-                        classString = "flex flex-row border-solid border-black border-[1px] bg-black focus:bg-black text-primary focus:text-primary rounded-md px-3 py-1 duration-100"
+                        classString = "flex flex-row bg-black focus:bg-black text-primary focus:text-primary rounded-md px-3 py-1 transition-all duration-100 relative translate-x-[-4px] focus:translate-x-[-4px] translate-y-[-2px] focus:translate-y-[-2px] shadow-[6px_6px_0_-1px_#eeeeee] focus:shadow-[6px_6px_0_-1px_#eeeeee]"
                       } else {
-                        classString = "flex flex-row border-solid border-black border-[1px] bg-primary focus:bg-primary text-black focus:text-black rounded-md px-3 py-1 duration-100"
+                        classString = "flex flex-row bg-secondary focus:bg-secondary text-black focus:text-black rounded-md px-3 py-1 transition-all duration-100"
                       }
 
                       // Style featured tag conditionally based on if it is selected or not
@@ -276,6 +275,7 @@ const IndexPage = ({ data }) => {
                                     From https://logowik.com/rounded-star-vector-icon-14817.html
                                     Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)
                                 */}
+                                {/*
                                 <svg version="1.0" id="katman_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                 viewBox="60 0 480 480" className={starClassString}>
                                     <path d="M331.9,56.7l32.6,79.8c2.5,6.2,8,10.1,14.6,10.6l86,6.4c14.2,1,25.7,10.1,30.1,23.6
@@ -283,6 +283,22 @@ const IndexPage = ({ data }) => {
                                         c-11.5,8.4-26.1,8.9-38.2,1.4l-82.4-51l-82.4,51c-12.1,7.5-26.7,7-38.2-1.4c-11.5-8.4-16.5-22.1-13.2-35.9l20.5-83.8
                                         c1.6-6.5-0.5-12.9-5.6-17.2l-65.9-55.7c-10.9-9.2-14.9-23.3-10.5-36.8c4.4-13.5,15.9-22.6,30.1-23.6l86-6.4
                                         c6.7-0.5,12.10-4.4,14.6-10.6l32.6-79.8c5.4-13.2,17.5-21.3,31.8-21.3C314.4,35.3,326.5,43.5,331.9,56.7L331.9,56.7z"/>
+                                </svg>
+                                */}
+                                {/* HALLOWEEN */}
+                                <svg version="1.0" id="katman_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                viewBox="0 0 520 520" className={starClassString}>
+                                <g>
+                                    <path class="st0" d="M256.016,0C114.609,0,0,114.625,0,255.984C0,397.359,114.609,512,256.016,512
+                                        C397.391,512,512,397.359,512,255.984C512,114.625,397.391,0,256.016,0z M341.781,103.266l87.516,89.953l-127.766,33.109
+                                        L341.781,103.266z M256.016,245.781l25.859,37.016h-25.859h-25.891L256.016,245.781z M170.219,103.266l40.25,123.063
+                                        L82.703,193.219L170.219,103.266z M351.563,417.719l-3.5-26.719l-34.469,8.891v34.578c-18.188,5.688-37.5,8.828-57.625,8.828
+                                        c-14.156,0-27.953-1.563-41.219-4.5l-3.484-31.516l-40.078-4.344l1.391,21.234c-63.766-31-107.656-96.344-107.656-171.969
+                                        c0-10.922,0.922-21.609,2.672-32.016c9.484,40.938,43.531,75.844,90.813,96.344V357l43.844,3.438l1.25-29.766
+                                        c16.688,3.453,34.297,5.359,52.469,5.359c25,0,48.781-3.516,70.641-9.875l3.922,34.281l42.625-5.922l1.047-48.313
+                                        c36.422-20.922,62.141-51.297,70.203-86.016c1.75,10.406,2.703,21.094,2.703,32.016
+                                        C447.109,322.938,408.656,384.656,351.563,417.719z"/>
+                                </g>
                                 </svg>
                               </div> 
                               :
@@ -297,11 +313,11 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
       <div className="bg-secondary">
-        <div className="h-auto min-h-[100vh] max-w-[75vw] mx-auto py-10">
-          <ArticleView grid_config={"md:columns-2 lg:columns-3 gap-6"} filterFunc={tagFilter} sortFunc={orderArticles} />
+        <div className="h-auto max-w-[95%] mx-auto py-10">
+          <ArticleView grid_config={"md:columns-2 lg:columns-1 gap-6"} filterFunc={tagFilter} sortFunc={orderArticles} />
         </div>
       </div>
-          <div className="flex-1 text-2xl text-primary bg-black border-b-[1px] border-dotted border-primary">
+          <div className="flex-1 text-2xl text-primary bg-black border-b-[1px] border-dashed border-primary">
               <div className="pt-14 pb-20 w-[85%] sm:w-[640px] mx-auto leading-relaxed">
                   <h1 className="font-serif font-bold text-4xl pb-10">Contact Me</h1>
                   <p>
