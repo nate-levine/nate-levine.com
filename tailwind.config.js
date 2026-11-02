@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {},
-    /* STANDARD
+    /* STANDARD */
     colors: {
       'primary': '#ffffff',
       'secondary': '#eeeeee',
@@ -18,8 +18,7 @@ module.exports = {
       'yellow': '#fabd2f',
       'blue': '#83a598',
     },
-    */
-   /* HALLOWEEN */
+   /* HALLOWEEN
     colors: {
       'primary': '#ffffff',
       'secondary': '#eeeeee',
@@ -30,6 +29,7 @@ module.exports = {
       'yellow': '#fa8a2f',
       'blue': '#fabd2f',
     },
+    */
     fontFamily: {
       'sans': ['Geist Sans'],
       'serif': ['EB Garamond'],

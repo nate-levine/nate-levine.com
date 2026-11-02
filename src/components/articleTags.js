@@ -23,7 +23,8 @@ const ArticleTags = ({ tags }) => {
                         From https://logowik.com/rounded-star-vector-icon-14817.html
                         Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)
                     */}
-                    {/* STANDARD
+                    {/* STANDARD */}
+                    {
                     <svg version="1.0" id="katman_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                     viewBox="60 0 480 480" className="h-5 fill-primary group-hover:animate-rotate group-hover:fill-yellow">
                         <path d="M331.9,56.7l32.6,79.8c2.5,6.2,8,10.1,14.6,10.6l86,6.4c14.2,1,25.7,10.1,30.1,23.6
@@ -32,8 +33,8 @@ const ArticleTags = ({ tags }) => {
                             c1.6-6.5-0.5-12.9-5.6-17.2l-65.9-55.7c-10.9-9.2-14.9-23.3-10.5-36.8c4.4-13.5,15.9-22.6,30.1-23.6l86-6.4
                             c6.7-0.5,12.10-4.4,14.6-10.6l32.6-79.8c5.4-13.2,17.5-21.3,31.8-21.3C314.4,35.3,326.5,43.5,331.9,56.7L331.9,56.7z"/>
                     </svg>
-                    */}
-                    {/* HALLOWEEN */}
+                    }
+                    {/* HALLOWEEN
                     <svg version="1.0" id="katman_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                     viewBox="0 0 520 520" className="h-5 fill-primary group-hover:animate-rotate group-hover:fill-yellow">
                     <g>
@@ -48,6 +49,7 @@ const ArticleTags = ({ tags }) => {
                             C447.109,322.938,408.656,384.656,351.563,417.719z"/>
                     </g>
                     </svg>
+                    */}
                 </div>
             }
             {
