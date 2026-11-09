@@ -53,7 +53,7 @@ const ArticlePost = ({ data, children }) => {
       <div className="h-fit bg-tertiary"> 
         <div className="py-20 max-w-[95%] mx-auto">
           <p className="font-bold text-4xl pb-10">Related Articles</p>
-          <ArticleView grid_config={"md:columns-1 lg:columns-1 gap-6"} filterFunc={relatedArticles(data.mdx, 3)} />
+          <ArticleView grid_config={"sm:columns-1 md:columns-2 lg:columns-4 gap-6"} filterFunc={relatedArticles(data.mdx, 4)} />
         </div>
       </div>
     </Layout>
