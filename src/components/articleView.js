@@ -66,14 +66,14 @@ const ArticleView = ({ grid_config, filterFunc, sortFunc }) => {
                                 <div className="flex flex-col duration-0">
                                     <div className="flex-auto pb-2">
                                         <div className="flex flex-col">
-                                            <div className="w-[50%] pr-4 pt-3 pb-4 overflow-hidden z-50">
-                                                <div className="font-bold pb-2">{node.frontmatter.title}</div>
+                                            <div className="w-[100%] pr-4 pt-3 pb-4 overflow-hidden z-50 aspect-square">
+                                                <div className="font-bold pb-2 w-[70%]">{node.frontmatter.title}</div>
                                                 <ArticleTags tags={node.frontmatter.tags} />
                                             </div>
                                             {
                                                 getImage(node.frontmatter.hero_image) 
                                                 ?
-                                                <div className="absolute w-[70%] h-full left-[30%] overflow-hidden object-cover rounded-sm duration-0 [mask-image:linear-gradient(to_left,black_50%,transparent_100%)]">
+                                                <div className="absolute w-[50%] h-full left-[50%] overflow-hidden object-cover rounded-sm duration-0 [mask-image:linear-gradient(to_left,black_60%,transparent_100%)]">
                                                     <GatsbyImage 
                                                         image={getImage(node.frontmatter.hero_image)} 
                                                         alt={node.frontmatter.hero_image_alt} 

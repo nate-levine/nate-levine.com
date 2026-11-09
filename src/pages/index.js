@@ -82,7 +82,7 @@ const IndexPage = ({ data }) => {
                   <div className="static block w-full h-[10px] bg-red flex items-center justify-center" />
                   <div className="static block w-full h-[10px] bg-yellow flex items-center justify-center" />
                   <div className="static block w-full h-[10px] bg-blue flex items-center justify-center" />
-                </div>
+              </div>
               <br />
               <p>
               My engineering career is driven by a curiosity and passion for building physical and digital projects.
@@ -108,24 +108,23 @@ const IndexPage = ({ data }) => {
           {/* Articles */}
           <div className="py-20 flex-2/3 text-2xl bg-secondary">
             <div className="w-[95%] mx-auto">
-              <ArticleView grid_config={"md:columns-1 lg:columns-1 gap-6"} filterFunc={isFeatured} />
+              <ArticleView grid_config={"sm:columns-1 md:columns-2 lg:columns-4 gap-6"} filterFunc={isFeatured} />
             </div>
           </div>
           {/* Newsletter Signup */}
-          { <div className="py-20 text-2xl bg-black text-primary">
+          <div className="py-20 text-2xl bg-black text-primary">
             <div className="max-w-[90vw] mx-20 mx-auto leading-relaxed flex flex-col lg:flex-row">
               <div className="basis-1/2">
-                <h1 className="text-left text-6xl font-serif font-bold text-primary">Newsletter</h1>
+                <h1 className="text-left text-6xl font-serif font-bold text-primary whitespace-nowrap"><span className="text-yellow whitespace-nowrap">New</span>sletter</h1>
                 <div className="grid grid-cols-4 w-[250px] py-3">
                   <div className="static block w-full h-[10px] bg-primary flex items-center justify-center" />
                   <div className="static block w-full h-[10px] bg-red flex items-center justify-center" />
                   <div className="static block w-full h-[10px] bg-yellow flex items-center justify-center" />
                   <div className="static block w-full h-[10px] bg-blue flex items-center justify-center" />
                 </div>
-                <h3 className="text-left text-2xl font-serif font-bold text-yellow">(coming soon)</h3>
                 <br />
                 <p>
-                  This is my newsletter, where I share my ideas, interests, and thoughts relating to engineering, prototyping, and software.
+                  This is my newsletter, where I write about what's currently piquing my interest in the field of engineering. It's a new topic on the first of every month.
                 </p>
                 <br />  
                 <p>
@@ -136,14 +135,33 @@ const IndexPage = ({ data }) => {
               <div className="basis-1/2 flex items-center">
                 <div className="font-serif text-2xl m-auto text-center p-3 pt-8 border-dashed border-[1px] border-primary rounded-sm bg-black my-auto py-auto">
                   Get my newsletter in your inbox
-                  <input type="email" placeholder="enter your email address" className="placeholder:text-primary placeholder:opacity-[50%] w-[80%] mt-8 p-3 shadow-[8px_8px_#ffffff] border-solid border-[1px] border-primary rounded-sm bg-black outline-none outline-offset-0 border-solid [html:has(button:active)_&]:text-yellow [html:has(button:focus)_&]:text-yellow [html:has(button:focus)_&]:translate-x-[8px] [html:has(button:focus)_&]:translate-y-[8px] [html:has(button:focus)_&]:shadow-none duration-300" />
-                  <button className="peer font-serif text-xl font-bold m-auto text-center w-[240px] my-10 p-3 shadow-[8px_8px_#ffffff] active:shadow-none border-solid border-[1px] border-primary rounded-sm bg-black duration-100 active:text-yellow active:border-none active:translate-x-[8px] active:translate-y-[8px]">
-                    Subscribe
-                  </button>
+                  
+                  {/* Kit Integration Form */}
+                  <form 
+                    action="https://app.kit.com/forms/9927772/subscriptions" 
+                    method="post" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <input 
+                      type="email" 
+                      name="email_address" 
+                      required
+                      placeholder="enter your email address" 
+                      className="placeholder:text-primary placeholder:opacity-[50%] w-[80%] mt-8 p-3 shadow-[8px_8px_#ffffff] border-solid border-[1px] border-primary rounded-sm bg-black outline-none outline-offset-0 border-solid [html:has(button:active)_&]:text-yellow [html:has(button:focus)_&]:text-yellow [html:has(button:focus)_&]:translate-x-[8px] [html:has(button:focus)_&]:translate-y-[8px] [html:has(button:focus)_&]:shadow-none duration-300" 
+                    />
+                    <button 
+                      type="submit" 
+                      className="peer font-serif text-xl font-bold m-auto text-center w-[240px] my-10 p-3 shadow-[8px_8px_#ffffff] active:shadow-none border-solid border-[1px] border-primary rounded-sm bg-black duration-100 active:text-yellow active:border-none active:translate-x-[8px] active:translate-y-[8px]"
+                    >
+                      Subscribe
+                    </button>
+                  </form>
+
                 </div>
               </div>
             </div>
-          </div> }
+          </div>
       <div className="text-black">
         <div className="h-auto max-w-[90vw] mx-auto pt-10 pb-5">
           <h1 className="text-left text-6xl font-serif font-bold pt-10 text-black">Explore Articles</h1>
@@ -316,7 +334,7 @@ const IndexPage = ({ data }) => {
       </div>
       <div className="bg-secondary">
         <div className="h-auto max-w-[95%] mx-auto py-10">
-          <ArticleView grid_config={"md:columns-2 lg:columns-1 gap-6"} filterFunc={tagFilter} sortFunc={orderArticles} />
+          <ArticleView grid_config={"sm:columns-1 md:columns-2 lg:columns-4 gap-6"} filterFunc={tagFilter} sortFunc={orderArticles} />
         </div>
       </div>
           <div className="flex-1 text-2xl text-primary bg-black border-b-[1px] border-dashed border-primary">
